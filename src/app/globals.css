@@ -55,6 +55,21 @@ body {
   overflow-x: hidden;
   font-weight: 400;
   letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent layout shift during loading */
+html {
+  overflow-x: hidden;
+}
+
+/* Better tap targets on mobile */
+@media (hover: none) and (pointer: coarse) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
 /* Elegant transitions for page elements */
@@ -1101,4 +1116,158 @@ a:hover {
   box-shadow: 
     0 8px 32px 0 rgba(31, 38, 135, 0.15),
     inset 0 0 50px rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   UI/UX EDGE CASE FIXES & POLISH
+   ============================================ */
+
+/* Prevent text selection on interactive elements */
+button, .cursor-pointer {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Smooth focus transitions */
+*:focus {
+  transition: outline 0.2s ease;
+}
+
+/* Better image loading */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Prevent flash of unstyled content */
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main {
+  animation: fadeInContent 0.3s ease-in;
+}
+
+/* Consistent button sizing */
+button, .btn {
+  min-height: 44px; /* Touch target minimum */
+}
+
+/* Better hr styling */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 2rem 0;
+}
+
+/* Prevent orphaned words */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Loading skeleton animation improvement */
+@keyframes skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading-skeleton {
+  animation: skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background: linear-gradient(90deg, var(--cream) 25%, var(--beige) 50%, var(--cream) 75%);
+  background-size: 200% 100%;
+}
+
+/* Safe area for mobile devices with notches */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* Improved link underlines */
+.prose a {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.3s ease;
+}
+
+/* Better disabled state */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(30%);
+}
+
+/* Touch feedback for mobile */
+@media (hover: none) {
+  button:active, a:active {
+    transform: scale(0.97);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Prevent layout shift from scrollbar */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Better placeholder styling */
+::placeholder {
+  color: var(--charcoal);
+  opacity: 0.5;
+}
+
+/* Improved autocomplete styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  -webkit-text-fill-color: var(--charcoal);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Better mobile keyboard handling */
+@media (max-width: 768px) {
+  input:focus,
+  textarea:focus,
+  select:focus {
+    font-size: 16px; /* Prevents iOS zoom */
+  }
+}
+
+/* Smooth container queries */
+@container (min-width: 400px) {
+  .container-responsive {
+    padding: 2rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  nav, footer, button {
+    display: none;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+  }
 }

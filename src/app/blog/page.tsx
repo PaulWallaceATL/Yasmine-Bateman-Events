@@ -174,15 +174,17 @@ export default function Blog() {
           <div className="w-24 h-0.5 bg-sage mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {blogPosts.map((post, index) => (
-            <article key={index} className="bg-white group cursor-pointer overflow-hidden">
-              <div className="relative h-64 overflow-hidden">
+            <article key={index} className="bg-white group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="relative h-64 overflow-hidden bg-cream">
                 <Image
                   src={post.image}
                   alt={post.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />
               </div>
               <div className="p-6">
@@ -191,7 +193,7 @@ export default function Blog() {
                   <span>•</span>
                   <span>{post.readTime}</span>
                 </div>
-                <h3 className="font-serif text-xl font-bold text-navy mb-3 group-hover:text-sage transition-colors leading-tight">
+                <h3 className="text-xl font-bold text-navy mb-3 group-hover:text-[#c9a96e] transition-colors leading-tight">
                   {post.title}
                 </h3>
                 <p className="text-charcoal/70 leading-relaxed mb-4 line-clamp-3">
@@ -222,7 +224,7 @@ export default function Blog() {
             <div className="w-24 h-0.5 bg-sage mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
               { name: 'Atlanta Events', count: '32 articles' },
               { name: 'Atlanta Venues', count: '24 articles' },
@@ -236,9 +238,9 @@ export default function Blog() {
               <Link 
                 key={index}
                 href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-                className="bg-beige p-6 text-center hover:bg-sage/20 transition-colors duration-300 group"
+                className="bg-beige p-4 md:p-6 text-center rounded-lg hover:bg-gold/10 transition-all duration-300 group hover:-translate-y-1 hover:shadow-lg"
               >
-                <h3 className="font-serif text-lg font-bold text-navy mb-2 group-hover:text-sage transition-colors">
+                <h3 className="text-sm md:text-lg font-bold text-navy mb-2 group-hover:text-[#c9a96e] transition-colors">
                   {category.name}
                 </h3>
                 <p className="text-sm text-charcoal/60">{category.count}</p>
@@ -263,12 +265,13 @@ export default function Blog() {
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 px-6 py-4 font-sans text-sm focus:outline-none focus:ring-2 focus:ring-sage"
+              className="flex-1 px-6 py-4 rounded-lg border-2 border-gold/20 font-sans text-sm focus:outline-none focus:border-gold hover:border-gold/40 transition-all duration-300"
               required
+              aria-label="Email address"
             />
             <button
               type="submit"
-              className="bg-sage text-white px-8 py-4 font-sans text-sm tracking-widest uppercase hover:bg-navy transition-colors duration-300 whitespace-nowrap"
+              className="gradient-rose text-white px-8 py-4 rounded-lg font-sans text-sm tracking-widest uppercase hover:shadow-xl transition-all duration-300 whitespace-nowrap transform hover:-translate-y-1"
             >
               Subscribe
             </button>

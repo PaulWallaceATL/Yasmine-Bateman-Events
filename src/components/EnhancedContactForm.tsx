@@ -42,11 +42,18 @@ export default function EnhancedContactForm() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-sage/10 border border-sage text-sage px-6 py-4 rounded"
+          className="bg-green-50 border-2 border-green-500 text-green-700 px-6 py-4 rounded-lg flex items-start gap-3"
+          role="alert"
         >
-          <p className="font-sans text-sm">
-            Thank you for your inquiry! We'll be in touch within 24 hours.
-          </p>
+          <svg className="w-6 h-6 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+          </svg>
+          <div>
+            <p className="font-sans text-sm font-semibold mb-1">Message Sent!</p>
+            <p className="font-sans text-sm">
+              Thank you for reaching out! I'll get back to you within 24 hours.
+            </p>
+          </div>
         </motion.div>
       )}
 
@@ -67,7 +74,15 @@ export default function EnhancedContactForm() {
             )}
           />
           {errors.firstName && (
-            <p className="mt-1 text-sm text-red-500">{errors.firstName.message}</p>
+            <motion.p 
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-1 text-sm text-red-600 flex items-center gap-1"
+              role="alert"
+            >
+              <span>⚠️</span>
+              {errors.firstName.message}
+            </motion.p>
           )}
         </div>
 
@@ -87,7 +102,15 @@ export default function EnhancedContactForm() {
             )}
           />
           {errors.lastName && (
-            <p className="mt-1 text-sm text-red-500">{errors.lastName.message}</p>
+            <motion.p 
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-1 text-sm text-red-600 flex items-center gap-1"
+              role="alert"
+            >
+              <span>⚠️</span>
+              {errors.lastName.message}
+            </motion.p>
           )}
         </div>
       </div>
@@ -109,7 +132,15 @@ export default function EnhancedContactForm() {
             )}
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
+            <motion.p 
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-1 text-sm text-red-600 flex items-center gap-1"
+              role="alert"
+            >
+              <span>⚠️</span>
+              {errors.email.message}
+            </motion.p>
           )}
         </div>
 
@@ -149,7 +180,15 @@ export default function EnhancedContactForm() {
             <option value="other">Other</option>
           </select>
           {errors.eventType && (
-            <p className="mt-1 text-sm text-red-500">{errors.eventType.message}</p>
+            <motion.p 
+              initial={{ opacity: 0, y: -5 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mt-1 text-sm text-red-600 flex items-center gap-1"
+              role="alert"
+            >
+              <span>⚠️</span>
+              {errors.eventType.message}
+            </motion.p>
           )}
         </div>
 
@@ -214,7 +253,15 @@ export default function EnhancedContactForm() {
           placeholder="Share your vision, venue preferences, and any specific requirements..."
         ></textarea>
         {errors.message && (
-          <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
+          <motion.p 
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-1 text-sm text-red-600 flex items-center gap-1"
+            role="alert"
+          >
+            <span>⚠️</span>
+            {errors.message.message}
+          </motion.p>
         )}
       </div>
 

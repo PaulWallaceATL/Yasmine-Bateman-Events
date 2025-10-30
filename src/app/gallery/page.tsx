@@ -76,15 +76,15 @@ export default function Gallery() {
           <div className="ornamental-divider w-40 mx-auto mb-12"></div>
           
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">
             {categories.map((category) => (
               <button
                 key={category.value}
                 onClick={() => setSelectedCategory(category.value)}
-                className={`px-8 py-4 font-sans text-xs tracking-[0.2em] uppercase transition-all duration-500 luxury-card ${
+                className={`px-6 md:px-8 py-3 md:py-4 rounded-lg font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 shadow-lg ${
                   selectedCategory === category.value
-                    ? 'gradient-rose text-white shadow-2xl transform scale-105'
-                    : 'bg-pearl text-charcoal hover:bg-champagne border border-gold/20'
+                    ? 'gradient-rose text-white shadow-xl transform scale-105'
+                    : 'bg-white text-charcoal hover:bg-gold/5 border border-gold/20 hover:border-gold/40 hover:-translate-y-1'
                 }`}
               >
                 {category.label}
@@ -94,17 +94,19 @@ export default function Gallery() {
         </div>
 
         {/* Masonry Grid */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 md:gap-8 space-y-6 md:space-y-8">
           {filteredItems.map((item, index) => (
             <div 
               key={index} 
-              className={`break-inside-avoid luxury-card stagger-item group cursor-pointer ${getHeightClass(item.height)} relative overflow-hidden border-2 border-gold/10 hover:border-gold/40`}
+              className={`break-inside-avoid stagger-item group cursor-pointer ${getHeightClass(item.height)} relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-cream`}
             >
               <Image
                 src={item.src}
                 alt={item.title}
                 fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-115"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
@@ -144,7 +146,7 @@ export default function Gallery() {
 
         <div className="space-y-24 max-w-7xl mx-auto">
           {/* Featured Event 1 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center luxury-card bg-white p-8 shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center bg-white p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
             <div className="stagger-item">
               <div className="relative h-[600px] w-full overflow-hidden image-overlay-gold border-glow">
                 <Image
@@ -188,7 +190,7 @@ export default function Gallery() {
           </div>
 
           {/* Featured Event 2 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center luxury-card bg-white p-8 shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center bg-white p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
             <div className="order-2 lg:order-1 stagger-item">
               <div className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4">Fundraiser Gala</div>
               <h3 className="text-display text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">

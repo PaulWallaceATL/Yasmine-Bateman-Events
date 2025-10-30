@@ -5,6 +5,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import LoadingAnimation from "@/components/LoadingAnimation";
+import ScrollToTop from "@/components/ScrollToTop";
+import SkipToMain from "@/components/SkipToMain";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -35,8 +37,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Yasmine Bateman Events | Luxury Event Planning",
-  description: "Creating unforgettable moments through sophisticated event design and meticulous planning. Specializing in weddings, corporate events, and luxury celebrations.",
+  title: "Yasmine Bateman | Content Creator & Influencer",
+  description: "Atlanta-based lifestyle content creator with 300K+ followers. Fashion, beauty, wellness content and brand partnerships across YouTube, Instagram, and TikTok.",
 };
 
 export default function RootLayout({
@@ -49,11 +51,15 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${cormorant.variable} ${cinzel.variable} ${montserrat.variable} antialiased`}
       >
+        <SkipToMain />
         <LoadingAnimation />
         <SmoothScroll />
         <Navigation />
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

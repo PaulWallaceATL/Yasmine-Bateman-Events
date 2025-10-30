@@ -72,7 +72,7 @@ export default function Contact() {
               </div>
 
               {/* Office Hours */}
-              <div className="bg-cream p-6">
+              <div className="bg-cream p-6 rounded-lg">
                 <h3 className="font-serif text-xl font-bold text-navy mb-4">Office Hours</h3>
                 <div className="space-y-2 text-sm text-charcoal/70">
                   <div className="flex justify-between">
@@ -122,12 +122,12 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-3 bg-cream p-8 md:p-12">
-              <h3 className="font-serif text-3xl font-bold text-navy mb-2">
-                Start Your Journey
+            <div className="lg:col-span-3 bg-cream p-6 md:p-12 rounded-lg shadow-lg">
+              <h3 className="text-3xl font-bold text-navy mb-2">
+                Let's Connect
               </h3>
               <p className="text-charcoal/70 mb-8">
-                Fill out the form below and we'll be in touch within 24 hours.
+                Fill out the form below and I'll get back to you within 24 hours.
               </p>
 
               <EnhancedContactForm />
@@ -146,34 +146,34 @@ export default function Contact() {
             <div className="w-24 h-0.5 bg-sage mx-auto"></div>
           </div>
 
-          <div className="space-y-8">
+            <div className="space-y-6">
             {[
               {
-                question: 'How far in advance should I book your services?',
-                answer: 'We recommend booking 12-18 months in advance for weddings and 6-12 months for other events. However, we understand that timelines vary and will do our best to accommodate shorter notice when possible.'
+                question: 'How can brands work with you?',
+                answer: 'I offer sponsored content, event hosting, and long-term brand partnerships. Reach out through the contact form with details about your brand and collaboration goals.'
               },
               {
-                question: 'Do you plan events outside of Atlanta?',
-                answer: 'Absolutely! While we\'re based in Atlanta, we plan events throughout Georgia and the Southeast. We have experience coordinating celebrations in Savannah, Athens, and across the state. Travel expenses are included in our planning fee.'
+                question: 'What platforms do you create content for?',
+                answer: 'I create content for YouTube (130K+ subscribers), Instagram (100K+ followers), and TikTok (93K+ followers). I can tailor content specifically for each platform.'
               },
               {
-                question: 'What is your planning process like?',
-                answer: 'Our process begins with an initial consultation to understand your vision. From there, we develop a comprehensive plan, source and manage vendors, create design concepts, and oversee every detail through execution day.'
+                question: 'What types of content do you create?',
+                answer: 'I specialize in lifestyle, fashion, beauty, and wellness content including "Get Ready With Me" videos, product reviews, tutorials, vlogs, and authentic brand integrations.'
               },
               {
-                question: 'Can I customize a planning package?',
-                answer: 'Yes! While we offer standard packages, we understand every event is unique. We\'re happy to create a custom package that perfectly fits your needs and budget.'
+                question: 'What is your engagement rate?',
+                answer: 'My average engagement rate is 7%+ across platforms, which is excellent for influencer marketing. My content consistently reaches hundreds of thousands of views.'
               },
               {
-                question: 'Do you have preferred vendors?',
-                answer: 'We have established relationships with exceptional vendors across all categories. While we\'re happy to work with your chosen vendors, our preferred partners have proven track records of excellence.'
+                question: 'Do you host events outside of Atlanta?',
+                answer: 'While I\'m based in Atlanta, I\'m available for events and collaborations throughout Georgia and can travel for the right partnerships.'
               }
             ].map((faq, index) => (
-              <div key={index} className="bg-white p-6">
-                <h3 className="font-serif text-xl font-bold text-navy mb-3">
+              <div key={index} className="bg-white p-6 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gold/10">
+                <h3 className="text-lg md:text-xl font-bold text-navy mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-charcoal/70 leading-relaxed">
+                <p className="text-charcoal/70 leading-relaxed text-sm md:text-base">
                   {faq.answer}
                 </p>
               </div>
