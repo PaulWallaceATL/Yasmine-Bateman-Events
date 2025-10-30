@@ -8,87 +8,93 @@ export default function Services() {
     <main>
       {/* Hero Section */}
       <Hero
-        title="Our Services"
-        subtitle="Comprehensive event planning tailored to your unique vision"
-        imageSrc="https://images.unsplash.com/photo-1510076857177-7470076d4098?q=80&w=2072"
-        imageAlt="Services"
+        title="Event Services"
+        subtitle="Comprehensive solutions for corporate, social, and luxury occasions"
+        imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2072"
+        imageAlt="Luxury event services"
         height="large"
       />
 
       {/* Services Introduction */}
       <Section background="white" padding="large">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy mb-6">
-            Bespoke Event Planning Services
+        <div className="max-w-5xl mx-auto text-center">
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Excellence in Every Detail</span>
+          <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-8 text-shadow-elegant">
+            Bespoke Event Solutions
           </h2>
-          <div className="w-24 h-0.5 bg-sage mx-auto mb-8"></div>
-          <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-            From intimate gatherings of 20 to grand celebrations of 500+, we offer comprehensive planning services 
-            designed to bring your vision to life with precision and artistry. Every event is unique, and our 
-            approach is meticulously tailored to meet your specific needs, preferences, and style.
+          <div className="ornamental-divider w-40 mx-auto mb-10"></div>
+          <p className="text-elegant text-2xl text-charcoal/80 leading-relaxed mb-8">
+            From intimate gatherings to grand galas of 500+ attendees, we orchestrate events that elevate 
+            your brand, celebrate milestones, and create lasting memories through impeccable design and execution.
           </p>
-          <p className="text-lg text-charcoal/80 leading-relaxed">
-            Whether you're planning a corporate gala, milestone celebration, or luxury social event, our team 
-            brings decades of combined experience, industry connections, and creative vision to ensure your 
-            event is executed flawlessly and exceeds all expectations.
+          <p className="text-elegant text-xl text-charcoal/70 leading-relaxed max-w-4xl mx-auto">
+            Our team brings decades of combined expertise, elite industry partnerships, and innovative creative 
+            vision to transform your objectives into extraordinary experiences.
           </p>
         </div>
       </Section>
 
-      {/* Wedding Planning */}
-      <Section background="cream" padding="large">
+      {/* Luxury Galas & Fundraisers */}
+      <Section background="pearl" padding="large">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div className="order-2 lg:order-1">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy mb-6">
-              Wedding Planning & Design
+            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Premium Events</span>
+            <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
+              Luxury Galas & Fundraisers
             </h2>
-            <div className="w-24 h-0.5 bg-sage mb-8"></div>
-            <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              Your wedding day should be a perfect reflection of your love story. We specialize in 
-              creating sophisticated, personalized weddings that capture your unique style and vision. 
-              From intimate elopements to grand celebrations, we handle every detail with care, ensuring 
-              your special day is everything you've dreamed of and more.
+            <div className="h-1 w-24 gradient-gold mb-8"></div>
+            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
+              Transform your fundraising goals into unforgettable evenings that inspire generosity and celebration. 
+              We specialize in creating high-impact galas that blend sophisticated entertainment, elegant design, 
+              and seamless logistics to maximize both guest experience and charitable outcomes.
             </p>
-            <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              Our wedding planning services include complete design conceptualization, venue sourcing and 
-              selection, vendor management, budget oversight, timeline creation, and full day-of coordination. 
-              We work closely with you from engagement to send-off, providing guidance, support, and expertise 
-              every step of the way.
+            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
+              From silent auctions to live entertainment coordination, we manage every element to ensure your 
+              gala achieves its objectives while providing an exceptional experience that reflects your organization's 
+              values and mission.
             </p>
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-4 mb-10">
               {[
-                'Full-service wedding planning',
-                'Venue selection and coordination',
-                'Design concept and styling',
-                'Vendor management and negotiation',
-                'Timeline and logistics planning',
-                'Day-of coordination and management',
-                'Destination wedding services'
+                'Fundraising strategy and execution',
+                'Celebrity and speaker coordination',
+                'Auction management (live & silent)',
+                'Sponsorship activation and branding',
+                'Entertainment and performance booking',
+                'VIP guest experience management',
+                'Award ceremony coordination'
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <svg className="w-6 h-6 text-sage mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span className="text-charcoal/70">{item}</span>
+                  <span className="text-charcoal/70 text-lg">{item}</span>
                 </li>
               ))}
             </ul>
             <Link 
               href="/contact"
-              className="inline-block bg-navy text-white px-8 py-3 font-sans text-sm tracking-widest uppercase hover:bg-sage transition-colors duration-300"
+              className="inline-flex items-center gap-3 gradient-rose text-white px-10 py-4 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-1"
             >
-              Inquire About Wedding Planning
+              <span>Inquire About Galas</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="relative h-[600px] w-full">
+            <div className="relative h-[700px] w-full luxury-card overflow-hidden border-2 border-[#c9a96e]/20">
               <Image
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070"
-                alt="Wedding planning"
+                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070"
+                alt="Luxury gala planning"
                 fill
                 className="object-cover"
               />
+              <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl max-w-xs">
+                <div className="text-[#c9a96e] text-sm tracking-wider uppercase mb-2">Featured</div>
+                <div className="text-2xl font-bold text-navy mb-1">$2.5M+</div>
+                <div className="text-sm text-charcoal/70">Raised for charities in 2024</div>
+              </div>
             </div>
           </div>
         </div>
@@ -98,116 +104,128 @@ export default function Services() {
       <Section background="white" padding="large">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div>
-            <div className="relative h-[600px] w-full">
+            <div className="relative h-[700px] w-full luxury-card overflow-hidden border-2 border-[#c9a96e]/20">
               <Image
                 src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069"
                 alt="Corporate events"
                 fill
                 className="object-cover"
               />
+              <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl">
+                <div className="text-[#c9a96e] text-sm tracking-wider uppercase mb-2">Recent Success</div>
+                <div className="text-2xl font-bold text-navy mb-1">Fortune 500</div>
+                <div className="text-sm text-charcoal/70">Client portfolio includes top-tier companies</div>
+              </div>
             </div>
           </div>
 
           <div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy mb-6">
+            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Business Excellence</span>
+            <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
               Corporate Events
             </h2>
-            <div className="w-24 h-0.5 bg-sage mb-8"></div>
-            <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              Elevate your brand with sophisticated corporate events that leave lasting impressions on clients, 
-              employees, and stakeholders. From executive retreats and shareholder meetings to product launches 
-              and brand activations, we create experiences that align with your business objectives while 
-              showcasing your company's values and culture.
+            <div className="h-1 w-24 gradient-gold mb-8"></div>
+            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
+              Elevate your brand presence with sophisticated corporate events that drive engagement, strengthen 
+              relationships, and achieve measurable business outcomes. We transform company milestones, product 
+              launches, and executive gatherings into powerful brand experiences.
             </p>
-            <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              We understand that corporate events serve multiple purposes—building relationships, celebrating 
-              achievements, launching initiatives, and strengthening company culture. Our approach combines 
-              strategic thinking with creative execution to deliver events that are professional, engaging, 
-              and memorable, ensuring your message resonates long after the event concludes.
+            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
+              Our strategic approach combines business intelligence with creative execution, ensuring every element—from 
+              keynote presentations to networking lounges—aligns with your corporate objectives and brand identity.
             </p>
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-4 mb-10">
               {[
-                'Corporate galas and award ceremonies',
+                'Executive summits and conferences',
                 'Product launches and brand activations',
-                'Executive retreats and team building',
-                'Board meetings and conferences',
-                'Holiday parties and celebrations',
-                'Client appreciation events',
-                'Trade shows and exhibitions'
+                'Award ceremonies and recognition events',
+                'Board meetings and shareholder events',
+                'Team building and corporate retreats',
+                'Client appreciation experiences',
+                'Trade shows and industry exhibitions'
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <svg className="w-6 h-6 text-sage mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span className="text-charcoal/70">{item}</span>
+                  <span className="text-charcoal/70 text-lg">{item}</span>
                 </li>
               ))}
             </ul>
             <Link 
               href="/contact"
-              className="inline-block bg-navy text-white px-8 py-3 font-sans text-sm tracking-widest uppercase hover:bg-sage transition-colors duration-300"
+              className="inline-flex items-center gap-3 gradient-rose text-white px-10 py-4 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-1"
             >
-              Inquire About Corporate Events
+              <span>Inquire About Corporate Events</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
         </div>
       </Section>
 
-      {/* Social Celebrations */}
-      <Section background="cream" padding="large">
+      {/* Private Celebrations */}
+      <Section background="pearl" padding="large">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div className="order-2 lg:order-1">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy mb-6">
-              Social Celebrations
+            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Personal Events</span>
+            <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
+              Private Celebrations
             </h2>
-            <div className="w-24 h-0.5 bg-sage mb-8"></div>
-            <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              Life's milestones deserve to be celebrated with style, sophistication, and joy. We create 
-              memorable social events that honor your special moments and bring together the people 
-              you love most. Whether it's a landmark birthday, anniversary celebration, or any significant 
-              life achievement, we design experiences that reflect the significance of the occasion and 
-              the personality of the honoree.
+            <div className="h-1 w-24 gradient-gold mb-8"></div>
+            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
+              Mark life's most meaningful moments with celebrations designed to reflect your unique story and style. 
+              From milestone birthdays to anniversary galas, we create intimate yet sophisticated experiences that 
+              bring together your closest friends and family in memorable settings.
             </p>
-            <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              From intimate dinner parties to lavish themed celebrations, we handle all aspects of planning 
-              and execution. Our social event services include venue selection, theme development, decor design, 
-              entertainment booking, catering coordination, and complete event management. We create atmospheres 
-              where memories are made and celebrations feel truly special.
+            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
+              Every private celebration receives our signature attention to detail—from custom design concepts and 
+              venue transformation to entertainment curation and personalized guest experiences. We handle the complexities 
+              so you can be fully present for your special moment.
             </p>
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-4 mb-10">
               {[
                 'Milestone birthday celebrations',
-                'Anniversary parties',
-                'Engagement parties',
-                'Baby showers and gender reveals',
-                'Graduation celebrations',
-                'Retirement parties',
-                'Holiday gatherings'
+                'Anniversary galas and parties',
+                'Retirement celebrations',
+                'Graduation events',
+                'Holiday gatherings',
+                'Intimate dinner parties',
+                'Themed celebrations'
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <svg className="w-6 h-6 text-sage mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span className="text-charcoal/70">{item}</span>
+                  <span className="text-charcoal/70 text-lg">{item}</span>
                 </li>
               ))}
             </ul>
             <Link 
               href="/contact"
-              className="inline-block bg-navy text-white px-8 py-3 font-sans text-sm tracking-widest uppercase hover:bg-sage transition-colors duration-300"
+              className="inline-flex items-center gap-3 gradient-rose text-white px-10 py-4 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-1"
             >
-              Inquire About Social Events
+              <span>Inquire About Private Events</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="relative h-[600px] w-full">
+            <div className="relative h-[700px] w-full luxury-card overflow-hidden border-2 border-[#c9a96e]/20">
               <Image
                 src="https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=2070"
-                alt="Social celebrations"
+                alt="Private celebrations"
                 fill
                 className="object-cover"
               />
+              <div className="absolute top-8 left-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl max-w-xs">
+                <div className="text-[#c9a96e] text-sm tracking-wider uppercase mb-2">Client Love</div>
+                <div className="text-2xl font-bold text-navy mb-1">98%</div>
+                <div className="text-sm text-charcoal/70">Satisfaction rate across all events</div>
+              </div>
             </div>
           </div>
         </div>
@@ -215,48 +233,57 @@ export default function Services() {
 
       {/* Additional Services */}
       <Section background="white" padding="large">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy mb-6">
-            Additional Services
+        <div className="text-center mb-20">
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Comprehensive Solutions</span>
+          <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-6 text-shadow-elegant">
+            Specialized Services
           </h2>
-          <div className="w-24 h-0.5 bg-sage mx-auto mb-4"></div>
-          <p className="text-charcoal/70 max-w-2xl mx-auto">
-            Comprehensive planning support to ensure every detail is perfect
+          <div className="ornamental-divider w-40 mx-auto mb-6"></div>
+          <p className="text-elegant text-2xl text-charcoal/70 max-w-3xl mx-auto">
+            End-to-end support for every element of your perfect event
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {[
             {
-              title: 'Floral Design',
-              description: 'Bespoke floral arrangements that complement your event aesthetic and bring natural beauty to your celebration.'
+              title: 'Floral & Botanical Design',
+              description: 'Stunning arrangements from luxury florists that transform spaces and create breathtaking focal points.',
+              icon: '🌸'
             },
             {
-              title: 'Lighting Design',
-              description: 'Strategic lighting solutions to create ambiance, highlight key areas, and transform your venue.'
+              title: 'Lighting & Ambiance',
+              description: 'Theatrical lighting design that sets the perfect mood and highlights architectural features.',
+              icon: '💡'
             },
             {
-              title: 'Stationery & Paper Goods',
-              description: 'Custom invitations, programs, menus, and signage designed to match your event style.'
+              title: 'Branding & Signage',
+              description: 'Custom graphics, displays, and branded elements that reinforce your message and aesthetic.',
+              icon: '🎨'
             },
             {
-              title: 'Rentals Coordination',
-              description: 'Selection and coordination of furniture, linens, tableware, and decorative elements.'
+              title: 'Premium Rentals',
+              description: 'Curated furniture, linens, tableware, and décor from top luxury rental partners.',
+              icon: '✨'
             },
             {
-              title: 'Entertainment Booking',
-              description: 'Sourcing and managing musicians, DJs, performers, and other entertainment options.'
+              title: 'Entertainment & Production',
+              description: 'World-class performers, DJs, bands, and production technology for unforgettable moments.',
+              icon: '🎭'
             },
             {
-              title: 'Catering Management',
-              description: 'Menu development, vendor selection, and coordination with top culinary professionals.'
+              title: 'Culinary Experiences',
+              description: 'Gourmet catering, custom menus, and beverage programs from award-winning culinary teams.',
+              icon: '🍽️'
             }
           ].map((service, index) => (
-            <div key={index} className="bg-cream p-8 group hover:bg-sage/10 transition-colors duration-300">
-              <h3 className="font-serif text-xl font-bold text-navy mb-4 group-hover:text-sage transition-colors">
+            <div key={index} className="luxury-card bg-white p-10 border border-[#c9a96e]/20 hover:border-[#c9a96e]/60">
+              <div className="text-5xl mb-6">{service.icon}</div>
+              <h3 className="text-display text-2xl font-bold text-navy mb-4 group-hover:text-[#c9a96e] transition-colors">
                 {service.title}
               </h3>
-              <p className="text-charcoal/70 leading-relaxed">
+              <div className="h-1 w-16 bg-[#c9a96e] mb-4"></div>
+              <p className="text-elegant text-lg text-charcoal/70 leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -265,14 +292,15 @@ export default function Services() {
       </Section>
 
       {/* Planning Packages */}
-      <Section background="beige" padding="large">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy mb-6">
-            Planning Packages
+      <Section background="champagne" padding="large">
+        <div className="text-center mb-20">
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Investment Options</span>
+          <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-6 text-shadow-elegant">
+            Service Packages
           </h2>
-          <div className="w-24 h-0.5 bg-sage mx-auto mb-4"></div>
-          <p className="text-charcoal/70 max-w-2xl mx-auto">
-            Flexible options designed to meet your specific needs and level of support
+          <div className="ornamental-divider w-40 mx-auto mb-6"></div>
+          <p className="text-elegant text-2xl text-charcoal/70 max-w-3xl mx-auto">
+            Flexible planning solutions tailored to your timeline, budget, and vision
           </p>
         </div>
 
@@ -322,19 +350,20 @@ export default function Services() {
           ].map((pkg, index) => (
             <div 
               key={index} 
-              className={`bg-white p-8 ${pkg.featured ? 'ring-2 ring-sage transform md:-translate-y-4' : ''}`}
+              className={`luxury-card bg-white p-10 ${pkg.featured ? 'border-2 border-[#c9a96e] transform md:-translate-y-6 shadow-2xl' : 'border border-[#c9a96e]/20'}`}
             >
               {pkg.featured && (
-                <div className="bg-sage text-white text-xs tracking-widest uppercase px-4 py-2 inline-block mb-4">
+                <div className="gradient-gold text-white text-xs tracking-widest uppercase px-6 py-3 inline-block mb-6 shadow-md">
                   Most Popular
                 </div>
               )}
-              <h3 className="font-serif text-2xl font-bold text-navy mb-4">{pkg.name}</h3>
-              <p className="text-charcoal/70 mb-6 leading-relaxed">{pkg.description}</p>
-              <ul className="space-y-3 mb-8">
+              <h3 className="text-display text-3xl font-bold text-navy mb-4">{pkg.name}</h3>
+              <div className="h-1 w-20 bg-[#c9a96e] mb-6"></div>
+              <p className="text-elegant text-lg text-charcoal/70 mb-8 leading-relaxed">{pkg.description}</p>
+              <ul className="space-y-4 mb-10">
                 {pkg.features.map((feature, i) => (
-                  <li key={i} className="flex items-start text-sm">
-                    <svg className="w-5 h-5 text-sage mr-2 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <li key={i} className="flex items-start">
+                    <svg className="w-5 h-5 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                       <path d="M5 13l4 4L19 7"></path>
                     </svg>
                     <span className="text-charcoal/70">{feature}</span>
@@ -343,13 +372,16 @@ export default function Services() {
               </ul>
               <Link 
                 href="/contact"
-                className={`block text-center py-3 font-sans text-sm tracking-widest uppercase transition-colors duration-300 ${
+                className={`inline-flex items-center justify-center gap-2 w-full py-4 font-sans text-sm tracking-widest uppercase transition-all duration-500 transform hover:-translate-y-1 ${
                   pkg.featured 
-                    ? 'bg-sage text-white hover:bg-navy' 
-                    : 'border-2 border-navy text-navy hover:bg-navy hover:text-white'
+                    ? 'gradient-rose text-white hover:shadow-2xl glow-effect' 
+                    : 'border-2 border-[#c9a96e] text-[#c9a96e] hover:bg-[#c9a96e] hover:text-white'
                 }`}
               >
-                Get Started
+                <span>Get Started</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
             </div>
           ))}
@@ -358,20 +390,30 @@ export default function Services() {
 
       {/* Call to Action */}
       <Section background="white" padding="large">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy mb-6">
-            Ready to Start Planning?
-          </h2>
-          <div className="w-24 h-0.5 bg-sage mx-auto mb-8"></div>
-          <p className="text-lg text-charcoal/80 leading-relaxed mb-10">
-            Let's schedule a consultation to discuss your event vision and how we can bring it to life.
-          </p>
-          <Link 
-            href="/contact"
-            className="inline-block bg-sage text-white px-12 py-5 font-sans text-sm tracking-widest uppercase hover:bg-navy transition-colors duration-300"
-          >
-            Schedule Consultation
-          </Link>
+        <div className="max-w-5xl mx-auto text-center relative">
+          {/* Background glow */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#c9a96e]/5 via-transparent to-[#b76e79]/5 blur-3xl"></div>
+          
+          <div className="relative z-10">
+            <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block">Next Steps</span>
+            <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-8 text-shadow-elegant leading-tight">
+              Let's Create Your<br/>
+              <span className="text-[#c9a96e]">Perfect Event</span>
+            </h2>
+            <div className="ornamental-divider w-48 mx-auto mb-12"></div>
+            <p className="text-elegant text-2xl md:text-3xl text-charcoal/80 leading-relaxed mb-16 max-w-4xl mx-auto">
+              Schedule a complimentary consultation to discuss your vision, objectives, and how we can exceed your expectations.
+            </p>
+            <Link 
+              href="/contact"
+              className="inline-flex items-center gap-4 gradient-rose text-white px-16 py-7 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-2"
+            >
+              <span>Schedule Consultation</span>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </Section>
     </main>
