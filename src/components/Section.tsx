@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 interface SectionProps {
   children: ReactNode;
   className?: string;
-  background?: 'white' | 'cream' | 'beige';
+  background?: 'white' | 'cream' | 'beige' | 'pearl' | 'champagne';
   padding?: 'small' | 'medium' | 'large';
 }
 
@@ -16,7 +16,9 @@ export default function Section({
   const bgClasses = {
     white: 'bg-white',
     cream: 'bg-cream',
-    beige: 'bg-beige'
+    beige: 'bg-beige',
+    pearl: 'bg-pearl',
+    champagne: 'bg-champagne'
   };
 
   const paddingClasses = {
