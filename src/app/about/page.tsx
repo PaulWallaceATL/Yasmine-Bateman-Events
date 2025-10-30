@@ -18,16 +18,29 @@ export default function About() {
       <Section background="white" padding="large">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="slide-up">
-            <div className="relative h-[700px] w-full luxury-card overflow-hidden border-2 border-[#c9a96e]/30 shadow-2xl">
+            <div className="relative h-[700px] w-full luxury-card overflow-hidden border-2 border-[#c9a96e]/30 shadow-2xl bg-gradient-to-br from-[#ffc0cb] via-[#ffb6c1] to-[#ff69b4]">
               <Image
                 src="/yasmine-bateman.jpg"
                 alt="Yasmine Bateman - Event Planner"
                 fill
                 className="object-cover object-center"
                 priority
+                onError={(e) => {
+                  // Fallback to placeholder if image not found
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                }}
               />
               {/* Elegant frame effect */}
               <div className="absolute inset-0 border-8 border-white/10 pointer-events-none"></div>
+              
+              {/* Placeholder text if image not loaded */}
+              <div className="absolute inset-0 flex items-center justify-center text-white/80 text-center p-8">
+                <div>
+                  <div className="text-6xl mb-4">📸</div>
+                  <p className="text-sm tracking-wider">Photo: Save yasmine-bateman.jpg to /public/</p>
+                </div>
+              </div>
             </div>
           </div>
 

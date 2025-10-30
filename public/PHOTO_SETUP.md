@@ -1,20 +1,44 @@
-# Photo Setup Instructions
+# 📸 Photo Setup Instructions
 
-## Yasmine's Photo
+## Yasmine's Profile Photo
 
-Please save Yasmine's photo (the one you provided) as:
-`/public/yasmine-bateman.jpg`
+### IMPORTANT: Action Required
 
-The photo should be:
-- **Filename**: `yasmine-bateman.jpg`
+1. **Save the attached photo** (blonde woman in black turtleneck on pink background)
+2. **Rename it to**: `yasmine-bateman.jpg`
+3. **Place it in**: `/public/` folder of this project
+4. **Final path should be**: `/Users/paulwallace/Desktop/yasmine-bateman-events/public/yasmine-bateman.jpg`
+
+### Quick Steps:
+```bash
+# From your Desktop or Downloads folder:
+cp ~/Desktop/yasmine-photo.jpg /Users/paulwallace/Desktop/yasmine-bateman-events/public/yasmine-bateman.jpg
+
+# Or drag and drop the photo into the /public folder and rename it
+```
+
+### Photo Specifications:
+- **Filename**: `yasmine-bateman.jpg` (exact name required)
 - **Location**: `/public/` folder
 - **Format**: JPG or PNG
-- **Recommended size**: 800x1000px (or similar portrait dimensions)
+- **Current image**: Portrait on pink background ✅
+- **Will be used on**: About page (main profile section)
 
-This photo will be used on:
-1. About page - main profile image
-2. Contact page - optional placement
-3. Any future team/profile sections
+### After Saving:
+The website will automatically display Yasmine's professional photo on the About page with an elegant border and frame effect!
 
-Once you save the image to `/public/yasmine-bateman.jpg`, the website will automatically display it!
+### Current Status:
+⚠️ **Photo not yet placed** - Currently using placeholder
+✅ Code is ready and waiting for the image
+✅ Styling applied (luxury card with border)
+✅ Responsive and optimized
+
+---
+
+**Once you place the photo, commit it:**
+```bash
+git add public/yasmine-bateman.jpg
+git commit -m "Add Yasmine's professional photo"
+git push
+```
 
