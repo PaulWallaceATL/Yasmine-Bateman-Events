@@ -57,19 +57,11 @@ export default function TestimonialCarousel() {
     },
     center: {
       opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.22, 1, 0.36, 1]
-      }
+      scale: 1
     },
     exit: {
       opacity: 0,
-      scale: 0.98,
-      transition: {
-        duration: 0.6,
-        ease: [0.22, 1, 0.36, 1]
-      }
+      scale: 0.98
     }
   };
 
@@ -92,6 +84,10 @@ export default function TestimonialCarousel() {
           initial="enter"
           animate="center"
           exit="exit"
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1]
+          }}
           className="luxury-card bg-white p-12 shadow-2xl"
         >
           <div className="text-[#c9a96e] text-7xl mb-6 font-serif leading-none">"</div>
