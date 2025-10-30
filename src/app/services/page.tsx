@@ -228,13 +228,13 @@ export default function Services() {
       {/* Additional Services */}
       <Section background="white" padding="large">
         <div className="text-center mb-20">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Comprehensive Solutions</span>
-          <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-6 text-shadow-elegant">
-            Specialized Services
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Additional Services</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
+            What I Offer
           </h2>
-          <div className="ornamental-divider w-40 mx-auto mb-6"></div>
-          <p className="text-elegant text-2xl text-charcoal/70 max-w-3xl mx-auto">
-            End-to-end support for every element of your perfect event
+          <div className="h-1 w-24 gradient-gold mx-auto mb-6"></div>
+          <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
+            Full range of content creation and brand collaboration services
           </p>
         </div>
 
@@ -271,13 +271,13 @@ export default function Services() {
               icon: '🍽️'
             }
           ].map((service, index) => (
-            <div key={index} className="luxury-card bg-white p-10 border border-[#c9a96e]/20 hover:border-[#c9a96e]/60">
+            <div key={index} className="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#c9a96e]/10">
               <div className="text-5xl mb-6">{service.icon}</div>
-              <h3 className="text-display text-2xl font-bold text-navy mb-4 group-hover:text-[#c9a96e] transition-colors">
+              <h3 className="text-2xl font-bold text-navy mb-4 transition-colors">
                 {service.title}
               </h3>
               <div className="h-1 w-16 bg-[#c9a96e] mb-4"></div>
-              <p className="text-elegant text-lg text-charcoal/70 leading-relaxed">
+              <p className="text-lg text-charcoal/70 leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -288,13 +288,13 @@ export default function Services() {
       {/* Planning Packages */}
       <Section background="champagne" padding="large">
         <div className="text-center mb-20">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Investment Options</span>
-          <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-6 text-shadow-elegant">
-            Service Packages
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Pricing</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
+            Collaboration Packages
           </h2>
-          <div className="ornamental-divider w-40 mx-auto mb-6"></div>
-          <p className="text-elegant text-2xl text-charcoal/70 max-w-3xl mx-auto">
-            Flexible planning solutions tailored to your timeline, budget, and vision
+          <div className="h-1 w-24 gradient-gold mx-auto mb-6"></div>
+          <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
+            Flexible options for different types of brand collaborations
           </p>
         </div>
 
@@ -344,16 +344,16 @@ export default function Services() {
           ].map((pkg, index) => (
             <div 
               key={index} 
-              className={`luxury-card bg-white p-10 ${pkg.featured ? 'border-2 border-[#c9a96e] transform md:-translate-y-6 shadow-2xl' : 'border border-[#c9a96e]/20'}`}
+              className={`bg-white p-10 rounded-lg ${pkg.featured ? 'border-2 border-[#c9a96e] shadow-2xl' : 'border border-[#c9a96e]/20 shadow-lg'} hover:shadow-xl transition-all duration-300`}
             >
               {pkg.featured && (
                 <div className="gradient-gold text-white text-xs tracking-widest uppercase px-6 py-3 inline-block mb-6 shadow-md">
                   Most Popular
                 </div>
               )}
-              <h3 className="text-display text-3xl font-bold text-navy mb-4">{pkg.name}</h3>
+              <h3 className="text-3xl font-bold text-navy mb-4">{pkg.name}</h3>
               <div className="h-1 w-20 bg-[#c9a96e] mb-6"></div>
-              <p className="text-elegant text-lg text-charcoal/70 mb-8 leading-relaxed">{pkg.description}</p>
+              <p className="text-lg text-charcoal/70 mb-8 leading-relaxed">{pkg.description}</p>
               <ul className="space-y-4 mb-10">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="flex items-start">
@@ -366,9 +366,9 @@ export default function Services() {
               </ul>
               <Link 
                 href="/contact"
-                className={`inline-flex items-center justify-center gap-2 w-full py-4 font-sans text-sm tracking-widest uppercase transition-all duration-500 transform hover:-translate-y-1 ${
+                className={`inline-flex items-center justify-center gap-2 w-full py-4 rounded-lg font-sans text-sm tracking-widest uppercase transition-all duration-300 transform hover:-translate-y-1 ${
                   pkg.featured 
-                    ? 'gradient-rose text-white hover:shadow-2xl glow-effect' 
+                    ? 'gradient-rose text-white shadow-lg hover:shadow-xl' 
                     : 'border-2 border-[#c9a96e] text-[#c9a96e] hover:bg-[#c9a96e] hover:text-white'
                 }`}
               >
@@ -389,21 +389,20 @@ export default function Services() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#c9a96e]/5 via-transparent to-[#b76e79]/5 blur-3xl"></div>
           
           <div className="relative z-10">
-            <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block">Next Steps</span>
-            <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-8 text-shadow-elegant leading-tight">
-              Let's Create Your<br/>
-              <span className="text-[#c9a96e]">Perfect Event</span>
+            <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block">Get Started</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-8 leading-tight">
+              Ready to Collaborate?
             </h2>
-            <div className="ornamental-divider w-48 mx-auto mb-12"></div>
-            <p className="text-elegant text-2xl md:text-3xl text-charcoal/80 leading-relaxed mb-16 max-w-4xl mx-auto">
-              Schedule a complimentary consultation to discuss your vision, objectives, and how we can exceed your expectations.
+            <div className="h-1 w-24 gradient-gold mx-auto mb-12"></div>
+            <p className="text-xl text-charcoal/80 leading-relaxed mb-16 max-w-3xl mx-auto">
+              Let's discuss how we can work together to create authentic content that connects with my audience.
             </p>
             <Link 
               href="/contact"
-              className="inline-flex items-center gap-4 gradient-rose text-white px-16 py-7 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-2"
+              className="inline-flex items-center gap-4 gradient-rose text-white px-12 py-4 rounded-lg font-sans text-sm tracking-widest uppercase shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
             >
-              <span>Schedule Consultation</span>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span>Get In Touch</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </Link>
