@@ -59,8 +59,8 @@ export default function Gallery() {
     <main>
       {/* Hero Section */}
       <Hero
-        title="Our Portfolio"
-        subtitle="A collection of our most memorable celebrations"
+        title="Atlanta Event Portfolio"
+        subtitle="A collection of our most memorable celebrations across Atlanta's premier venues"
         imageSrc="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=2070"
         imageAlt="Gallery"
         height="large"
@@ -158,18 +158,18 @@ export default function Gallery() {
             <div className="stagger-item">
               <div className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4">Corporate Gala</div>
               <h3 className="text-display text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
-                Annual Executive Summit
+                Tech Fortune 500 Summit
               </h3>
               <div className="h-1 w-24 gradient-gold mb-8"></div>
               <p className="text-elegant text-xl text-charcoal/70 leading-relaxed mb-8">
-                A prestigious corporate gathering featuring state-of-the-art presentations, networking lounges, 
-                and exquisite dining experiences. This event elevated the company's brand presence and fostered 
-                meaningful connections among industry leaders.
+                A prestigious corporate gathering at Atlanta's premier event venue featuring state-of-the-art 
+                presentations, sophisticated networking lounges, and exquisite Southern-inspired dining experiences. 
+                This event elevated the company's brand presence and fostered meaningful connections among tech leaders.
               </p>
               <div className="grid grid-cols-2 gap-6 text-sm">
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Location</div>
-                  <div className="text-charcoal/70">Grand Hotel NYC</div>
+                  <div className="text-charcoal/70">Ventanas Atlanta</div>
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Guest Count</div>
@@ -177,7 +177,7 @@ export default function Gallery() {
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Season</div>
-                  <div className="text-charcoal/70">Fall 2024</div>
+                  <div className="text-charcoal/70">Fall 2025</div>
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Style</div>
@@ -192,18 +192,19 @@ export default function Gallery() {
             <div className="order-2 lg:order-1 stagger-item">
               <div className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4">Fundraiser Gala</div>
               <h3 className="text-display text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
-                Charity Fundraiser Evening
+                Swan House Charity Gala
               </h3>
               <div className="h-1 w-24 gradient-gold mb-8"></div>
               <p className="text-elegant text-xl text-charcoal/70 leading-relaxed mb-8">
-                An elegant fundraising gala featuring live entertainment, silent auction displays, 
-                and sophisticated dining experiences. This event raised record contributions while 
-                providing guests with an unforgettable evening of purpose and luxury.
+                An elegant fundraising gala at Atlanta's historic Swan House featuring live jazz entertainment, 
+                silent auction displays, and sophisticated Southern-inspired dining. This landmark event raised 
+                record contributions while providing guests with an unforgettable evening combining Atlanta history 
+                with modern luxury.
               </p>
               <div className="grid grid-cols-2 gap-6 text-sm">
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Location</div>
-                  <div className="text-charcoal/70">Museum Venue</div>
+                  <div className="text-charcoal/70">Swan House, Atlanta</div>
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Guest Count</div>
@@ -211,11 +212,11 @@ export default function Gallery() {
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Season</div>
-                  <div className="text-charcoal/70">Spring 2024</div>
+                  <div className="text-charcoal/70">Spring 2025</div>
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Style</div>
-                  <div className="text-charcoal/70">Classic Elegance</div>
+                  <div className="text-charcoal/70">Classic Southern Elegance</div>
                 </div>
               </div>
             </div>

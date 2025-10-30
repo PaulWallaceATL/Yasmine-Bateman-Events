@@ -15,96 +15,96 @@ interface BlogPost {
 
 export default function Blog() {
   const featuredPost: BlogPost = {
-    title: '10 Timeless Wedding Trends That Never Go Out of Style',
-    excerpt: 'Discover the classic elements that continue to define elegant weddings year after year. From romantic florals to candlelit ambiance, these trends stand the test of time.',
+    title: 'Atlanta\'s Most Spectacular Event Venues for 2025',
+    excerpt: 'From the historic elegance of the Georgian Terrace to the modern sophistication of Ventanas, discover Atlanta\'s premier venues that are transforming luxury celebrations. We share insider tips from our recent events at these iconic locations.',
     image: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070',
-    date: 'October 15, 2024',
-    category: 'Wedding Planning',
+    date: 'October 28, 2025',
+    category: 'Atlanta Events',
     readTime: '8 min read',
-    slug: 'timeless-wedding-trends'
+    slug: 'atlanta-spectacular-venues-2025'
   };
 
   const blogPosts: BlogPost[] = [
     {
-      title: 'The Art of Creating an Unforgettable Guest Experience',
-      excerpt: 'Learn how thoughtful details and personalized touches can transform your event into an extraordinary experience for every guest.',
+      title: 'Ponce City Market: Atlanta\'s Hottest Event Space Trend',
+      excerpt: 'Inside look at how we transformed the historic Ponce City Market rooftop for a stunning fall gala. Learn why Atlanta\'s most iconic mixed-use development is becoming the go-to venue for memorable celebrations.',
       image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069',
-      date: 'October 12, 2024',
-      category: 'Event Tips',
+      date: 'October 25, 2025',
+      category: 'Atlanta Events',
       readTime: '6 min read',
-      slug: 'unforgettable-guest-experience'
+      slug: 'ponce-city-market-event-space'
     },
     {
-      title: 'Seasonal Color Palettes for Luxury Events',
-      excerpt: 'Explore sophisticated color combinations that capture the essence of each season while maintaining timeless elegance.',
+      title: 'Holiday Events in Atlanta: 2025 Seasonal Trends',
+      excerpt: 'From Buckhead galas to Midtown celebrations, discover the color palettes and design themes dominating Atlanta\'s luxury holiday events this year. Plus, our top vendor recommendations.',
       image: 'https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=2070',
-      date: 'October 8, 2024',
-      category: 'Design & Styling',
+      date: 'October 20, 2025',
+      category: 'Atlanta Events',
       readTime: '5 min read',
-      slug: 'seasonal-color-palettes'
+      slug: 'atlanta-holiday-events-2025'
     },
     {
-      title: 'Corporate Event Planning: Strategies for Success',
-      excerpt: 'Essential tips for organizing professional events that impress clients, motivate employees, and achieve business objectives.',
+      title: 'Corporate Excellence: Atlanta Tech Hub Events',
+      excerpt: 'How Atlanta\'s booming tech scene is redefining corporate celebrations. Featuring our recent successes with Fortune 500 companies at the Atlanta Tech Village and Terminus.',
       image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070',
-      date: 'October 5, 2024',
+      date: 'October 18, 2025',
       category: 'Corporate Events',
       readTime: '7 min read',
-      slug: 'corporate-event-strategies'
+      slug: 'atlanta-tech-corporate-events'
     },
     {
-      title: 'Choosing the Perfect Venue: A Comprehensive Guide',
-      excerpt: 'Navigate the venue selection process with confidence using our expert advice on location, capacity, amenities, and more.',
+      title: 'The Beltline Effect: Unique Atlanta Event Venues',
+      excerpt: 'Explore how Atlanta\'s Beltline has opened up incredible new event possibilities. From intimate gatherings at Krog Street Market to grand affairs at Ponce City rooftop.',
       image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070',
-      date: 'October 1, 2024',
-      category: 'Venue Selection',
+      date: 'October 15, 2025',
+      category: 'Atlanta Venues',
       readTime: '10 min read',
-      slug: 'choosing-perfect-venue'
+      slug: 'atlanta-beltline-venues'
     },
     {
-      title: 'Sustainable Event Planning: Luxury Meets Responsibility',
-      excerpt: 'Discover how to create stunning events while minimizing environmental impact through thoughtful planning and eco-conscious choices.',
+      title: 'Eco-Luxury Events in Atlanta\'s Piedmont Park',
+      excerpt: 'Creating stunning sustainable celebrations in Atlanta\'s most beloved green space. Our latest event featured locally-sourced florals and zero-waste catering from Atlanta\'s finest vendors.',
       image: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2062',
-      date: 'September 28, 2024',
+      date: 'October 12, 2025',
       category: 'Sustainability',
       readTime: '6 min read',
-      slug: 'sustainable-event-planning'
+      slug: 'atlanta-sustainable-events'
     },
     {
-      title: 'The Rise of Intimate Celebrations: Less is More',
-      excerpt: 'Why smaller gatherings are becoming the gold standard for meaningful celebrations and how to make them extraordinary.',
+      title: 'Intimate Atlanta Celebrations: Historic Home Venues',
+      excerpt: 'Why Inman Park and Virginia-Highland mansions are perfect for smaller, meaningful gatherings. Plus exclusive access tips for these coveted private venues.',
       image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=2070',
-      date: 'September 25, 2024',
-      category: 'Trends',
+      date: 'October 8, 2025',
+      category: 'Atlanta Events',
       readTime: '5 min read',
-      slug: 'intimate-celebrations'
+      slug: 'atlanta-intimate-historic-venues'
     },
     {
-      title: 'Floral Design 101: Creating Stunning Arrangements',
-      excerpt: 'A deep dive into the principles of floral design, from selecting blooms to creating cohesive arrangements that wow.',
+      title: 'Atlanta Florists We Love: Southern Botanical Design',
+      excerpt: 'Spotlight on Atlanta\'s premier floral designers bringing Southern charm to luxury events. Featuring arrangements from our recent Swan House gala and tips for working with local blooms.',
       image: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=2070',
-      date: 'September 20, 2024',
+      date: 'October 5, 2025',
       category: 'Design & Styling',
       readTime: '9 min read',
-      slug: 'floral-design-guide'
+      slug: 'atlanta-luxury-florists'
     },
     {
-      title: 'Destination Weddings: Planning Your Dream Celebration',
-      excerpt: 'Everything you need to know about planning a destination wedding, from logistics to creating an unforgettable experience.',
+      title: 'Georgia Aquarium After Dark: Underwater Elegance',
+      excerpt: 'Planning the ultimate Atlanta celebration at the world\'s largest aquarium. Our insider guide to creating magical moments with whale sharks as your backdrop.',
       image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069',
-      date: 'September 15, 2024',
-      category: 'Wedding Planning',
+      date: 'October 2, 2025',
+      category: 'Atlanta Venues',
       readTime: '12 min read',
-      slug: 'destination-weddings-guide'
+      slug: 'georgia-aquarium-events'
     },
     {
-      title: 'Lighting Design: Setting the Perfect Mood',
-      excerpt: 'Learn how strategic lighting transforms spaces and creates the perfect ambiance for your celebration.',
+      title: 'Atlanta Spring Event Season: 2026 Planning Guide',
+      excerpt: 'Book now for Atlanta\'s most sought-after spring dates. From dogwood season celebrations to Derby Day parties, here\'s how to plan ahead for Atlanta\'s most beautiful time of year.',
       image: 'https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=2070',
-      date: 'September 10, 2024',
-      category: 'Design & Styling',
+      date: 'September 28, 2025',
+      category: 'Atlanta Events',
       readTime: '7 min read',
-      slug: 'lighting-design-guide'
+      slug: 'atlanta-spring-planning-2026'
     }
   ];
 
@@ -112,8 +112,8 @@ export default function Blog() {
     <main>
       {/* Hero Section */}
       <Hero
-        title="Insights & Inspiration"
-        subtitle="Expert advice, trends, and stories from the world of luxury events"
+        title="Lifestyle & Influence"
+        subtitle="Fashion, beauty, wellness tips, and Atlanta lifestyle insights from your favorite influencer"
         imageSrc="https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=2069"
         imageAlt="Blog"
         height="large"
@@ -224,14 +224,14 @@ export default function Blog() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { name: 'Wedding Planning', count: '24 articles' },
-              { name: 'Design & Styling', count: '18 articles' },
-              { name: 'Corporate Events', count: '12 articles' },
-              { name: 'Event Tips', count: '21 articles' },
-              { name: 'Venue Selection', count: '15 articles' },
-              { name: 'Trends', count: '19 articles' },
-              { name: 'Sustainability', count: '8 articles' },
-              { name: 'Real Events', count: '32 articles' }
+              { name: 'Atlanta Events', count: '32 articles' },
+              { name: 'Atlanta Venues', count: '24 articles' },
+              { name: 'Corporate Events', count: '18 articles' },
+              { name: 'Design & Styling', count: '21 articles' },
+              { name: 'Buckhead Galas', count: '15 articles' },
+              { name: 'Midtown Events', count: '19 articles' },
+              { name: 'Sustainability', count: '12 articles' },
+              { name: 'Georgia Celebrations', count: '28 articles' }
             ].map((category, index) => (
               <Link 
                 key={index}

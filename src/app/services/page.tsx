@@ -8,8 +8,8 @@ export default function Services() {
     <main>
       {/* Hero Section */}
       <Hero
-        title="Event Services"
-        subtitle="Comprehensive solutions for corporate, social, and luxury occasions"
+        title="Collaborations & Services"
+        subtitle="Brand partnerships, content creation, and unforgettable event experiences across Atlanta"
         imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2072"
         imageAlt="Luxury event services"
         height="large"
@@ -18,18 +18,20 @@ export default function Services() {
       {/* Services Introduction */}
       <Section background="white" padding="large">
         <div className="max-w-5xl mx-auto text-center">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Excellence in Every Detail</span>
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">What I Offer</span>
           <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-8 text-shadow-elegant">
-            Bespoke Event Solutions
+            Brand Collaborations
           </h2>
           <div className="ornamental-divider w-40 mx-auto mb-10"></div>
           <p className="text-elegant text-2xl text-charcoal/80 leading-relaxed mb-8">
-            From intimate gatherings to grand galas of 500+ attendees, we orchestrate events that elevate 
-            your brand, celebrate milestones, and create lasting memories through impeccable design and execution.
+            With 300K+ engaged followers across YouTube, Instagram, and TikTok, I partner with brands to create 
+            authentic content that resonates. From beauty and fashion to wellness and lifestyle, I bring Atlanta's 
+            vibrant energy and Southern charm to every collaboration.
           </p>
           <p className="text-elegant text-xl text-charcoal/70 leading-relaxed max-w-4xl mx-auto">
-            Our team brings decades of combined expertise, elite industry partnerships, and innovative creative 
-            vision to transform your objectives into extraordinary experiences.
+            Whether you're looking for sponsored content, event hosting, brand ambassadorships, or influencer marketing 
+            campaigns, I deliver measurable results with genuine engagement and creative excellence that connects with 
+            the Atlanta community and beyond.
           </p>
         </div>
       </Section>
@@ -38,30 +40,30 @@ export default function Services() {
       <Section background="pearl" padding="large">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div className="order-2 lg:order-1">
-            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Premium Events</span>
+            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Content Creation</span>
             <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
-              Luxury Galas & Fundraisers
+              Sponsored Content & Brand Stories
             </h2>
             <div className="h-1 w-24 gradient-gold mb-8"></div>
             <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
-              Transform your fundraising goals into unforgettable evenings that inspire generosity and celebration. 
-              We specialize in creating high-impact galas that blend sophisticated entertainment, elegant design, 
-              and seamless logistics to maximize both guest experience and charitable outcomes.
+              Transform your brand message into authentic, engaging content that connects with my 300K+ followers. 
+              From dedicated YouTube videos and Instagram reels to TikTok trends and "Get Ready With Me" integrations, 
+              I create content that feels natural, relatable, and drives real engagement with your target audience.
             </p>
             <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
-              From silent auctions to live entertainment coordination, we manage every element to ensure your 
-              gala achieves its objectives while providing an exceptional experience that reflects your organization's 
-              values and mission.
+              My content consistently achieves high engagement rates (7%+ across platforms), with videos reaching 
+              hundreds of thousands of views. I specialize in beauty, fashion, wellness, and lifestyle content that 
+              showcases products authentically while maintaining the trust I've built with my Atlanta community.
             </p>
             <ul className="space-y-4 mb-10">
               {[
-                'Fundraising strategy and execution',
-                'Celebrity and speaker coordination',
-                'Auction management (live & silent)',
-                'Sponsorship activation and branding',
-                'Entertainment and performance booking',
-                'VIP guest experience management',
-                'Award ceremony coordination'
+                'YouTube sponsored videos & integrations',
+                'Instagram posts, reels & stories',
+                'TikTok content & trending videos',
+                'Product reviews & unboxing videos',
+                '"Get Ready With Me" brand integrations',
+                'Tutorial & how-to content featuring products',
+                'Multi-platform campaign coordination'
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <svg className="w-6 h-6 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -75,7 +77,7 @@ export default function Services() {
               href="/contact"
               className="inline-flex items-center gap-3 gradient-rose text-white px-10 py-4 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-1"
             >
-              <span>Inquire About Galas</span>
+              <span>Partner With Me</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -91,9 +93,9 @@ export default function Services() {
                 className="object-cover"
               />
               <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl max-w-xs">
-                <div className="text-[#c9a96e] text-sm tracking-wider uppercase mb-2">Featured</div>
-                <div className="text-2xl font-bold text-navy mb-1">$2.5M+</div>
-                <div className="text-sm text-charcoal/70">Raised for charities in 2024</div>
+                <div className="text-[#c9a96e] text-sm tracking-wider uppercase mb-2">Popular Content</div>
+                <div className="text-2xl font-bold text-navy mb-1">400K+</div>
+                <div className="text-sm text-charcoal/70">Views on top video</div>
               </div>
             </div>
           </div>
@@ -120,29 +122,30 @@ export default function Services() {
           </div>
 
           <div>
-            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Business Excellence</span>
+            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Event Hosting</span>
             <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
-              Corporate Events
+              Brand Events & Activations
             </h2>
             <div className="h-1 w-24 gradient-gold mb-8"></div>
             <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
-              Elevate your brand presence with sophisticated corporate events that drive engagement, strengthen 
-              relationships, and achieve measurable business outcomes. We transform company milestones, product 
-              launches, and executive gatherings into powerful brand experiences.
+              Elevate your brand presence with influencer-hosted events that drive engagement and create buzz throughout 
+              Atlanta. From product launches at Ponce City Market to exclusive brand experiences in Buckhead, I bring my 
+              engaged community to your activations and create memorable moments that extend far beyond the event.
             </p>
             <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
-              Our strategic approach combines business intelligence with creative execution, ensuring every element—from 
-              keynote presentations to networking lounges—aligns with your corporate objectives and brand identity.
+              My event hosting ensures authentic promotion before, during, and after your activation. With cross-platform 
+              coverage and genuine excitement, I help brands connect with Atlanta's lifestyle-focused audience in meaningful, 
+              measurable ways that drive both attendance and online engagement.
             </p>
             <ul className="space-y-4 mb-10">
               {[
-                'Executive summits and conferences',
-                'Product launches and brand activations',
-                'Award ceremonies and recognition events',
-                'Board meetings and shareholder events',
-                'Team building and corporate retreats',
-                'Client appreciation experiences',
-                'Trade shows and industry exhibitions'
+                'Product launch event hosting',
+                'Brand pop-up shop appearances',
+                'Influencer meetups & fan events',
+                'Store opening celebrations',
+                'Brand partnership announcements',
+                'VIP shopping events & previews',
+                'Launch party hosting & MC services'
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <svg className="w-6 h-6 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -156,7 +159,7 @@ export default function Services() {
               href="/contact"
               className="inline-flex items-center gap-3 gradient-rose text-white px-10 py-4 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-1"
             >
-              <span>Inquire About Corporate Events</span>
+              <span>Book Event Hosting</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -169,30 +172,30 @@ export default function Services() {
       <Section background="pearl" padding="large">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div className="order-2 lg:order-1">
-            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Personal Events</span>
+            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Long-Term Partnerships</span>
             <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
-              Private Celebrations
+              Brand Ambassadorships
             </h2>
             <div className="h-1 w-24 gradient-gold mb-8"></div>
             <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
-              Mark life's most meaningful moments with celebrations designed to reflect your unique story and style. 
-              From milestone birthdays to anniversary galas, we create intimate yet sophisticated experiences that 
-              bring together your closest friends and family in memorable settings.
+              Build lasting connections with my engaged community through ongoing brand ambassador partnerships. 
+              Perfect for brands looking for authentic, consistent representation across multiple campaigns and 
+              platforms. I become a genuine advocate for products and services I believe in.
             </p>
             <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
-              Every private celebration receives our signature attention to detail—from custom design concepts and 
-              venue transformation to entertainment curation and personalized guest experiences. We handle the complexities 
-              so you can be fully present for your special moment.
+              Ambassador partnerships include regular content creation, event appearances, exclusive product launches, 
+              and authentic integration into my lifestyle content. Together, we build trust with my Atlanta audience 
+              while achieving your long-term marketing goals through genuine, measurable engagement.
             </p>
             <ul className="space-y-4 mb-10">
               {[
-                'Milestone birthday celebrations',
-                'Anniversary galas and parties',
-                'Retirement celebrations',
-                'Graduation events',
-                'Holiday gatherings',
-                'Intimate dinner parties',
-                'Themed celebrations'
+                'Multi-month campaign partnerships',
+                'Exclusive product line representation',
+                'Regular content featuring brand',
+                'Brand event appearances',
+                'Product development collaboration',
+                'Social media takeovers',
+                'Affiliate & discount code programs'
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <svg className="w-6 h-6 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -206,7 +209,7 @@ export default function Services() {
               href="/contact"
               className="inline-flex items-center gap-3 gradient-rose text-white px-10 py-4 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-1"
             >
-              <span>Inquire About Private Events</span>
+              <span>Explore Partnerships</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -222,9 +225,9 @@ export default function Services() {
                 className="object-cover"
               />
               <div className="absolute top-8 left-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl max-w-xs">
-                <div className="text-[#c9a96e] text-sm tracking-wider uppercase mb-2">Client Love</div>
-                <div className="text-2xl font-bold text-navy mb-1">98%</div>
-                <div className="text-sm text-charcoal/70">Satisfaction rate across all events</div>
+                <div className="text-[#c9a96e] text-sm tracking-wider uppercase mb-2">Engagement</div>
+                <div className="text-2xl font-bold text-navy mb-1">7.5%</div>
+                <div className="text-sm text-charcoal/70">Average engagement rate</div>
               </div>
             </div>
           </div>

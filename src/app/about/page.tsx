@@ -47,36 +47,36 @@ export default function About() {
           </div>
 
           <div className="slide-up">
-            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Founder & Creative Director</span>
+            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Atlanta Lifestyle Influencer & Event Curator</span>
             <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
               Meet Yasmine Bateman
             </h2>
             <div className="h-1 w-24 gradient-gold mb-8"></div>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              With over 15 years of experience in luxury event planning, Yasmine Bateman has built a 
-              reputation for creating extraordinary celebrations that exceed expectations. Her journey 
-              began in the heart of New York City's event scene, where she discovered her calling: 
-              transforming ordinary spaces into unforgettable experiences.
+              Born and raised in Mableton, Georgia, Yasmine Bateman has become one of Atlanta's most influential voices 
+              in lifestyle, fashion, and beauty. With over 130,000 YouTube subscribers, 100,000+ Instagram followers, 
+              and 93,000 TikTok fans, she's built a devoted community that looks to her for inspiration, authenticity, 
+              and that perfect Atlanta vibe.
             </p>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              After training under some of the industry's most prestigious event designers and working 
-              with Fortune 500 companies, A-list celebrities, and discerning private clients, Yasmine 
-              founded her eponymous company with a clear vision: to create bespoke events that tell 
-              authentic stories and celebrate life's most meaningful moments.
+              What started as a passion for sharing "get ready with me" videos and workout routines has evolved into a 
+              full-fledged brand. Yasmine now curates exclusive events, collaborates with premium brands, and hosts 
+              unforgettable experiences throughout Atlanta. From intimate influencer meetups to large-scale brand activations, 
+              she brings her signature aesthetic and authentic Southern charm to every occasion.
             </p>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              What sets Yasmine apart is her unique blend of creative artistry and operational excellence. 
-              She approaches each event as a blank canvas, carefully considering every detail from color 
-              palettes and lighting design to guest flow and experiential moments. Her signature style 
-              combines timeless elegance with contemporary flair, always reflecting her clients' unique 
-              personalities and visions.
+              What sets Yasmine apart is her genuine connection to Atlanta's culture and her ability to create content 
+              that resonates. Whether she's filming travel vlogs, hosting brand events at Atlanta's hottest venues like 
+              Ponce City Market, or collaborating with fellow influencers, her engaging personality and creative eye make 
+              every experience memorable. Her content has garnered millions of views, with her most popular video reaching 
+              over 400,000 views.
             </p>
             <p className="text-lg text-charcoal/80 leading-relaxed">
-              Today, Yasmine and her dedicated team of event specialists, designers, and coordinators 
-              work with clients across the country and internationally. From intimate gatherings to 
-              grand galas, corporate summits to milestone celebrations, every event receives the same 
-              level of meticulous attention and creative passion that has become the hallmark of 
-              Yasmine Bateman Events.
+              Today, Yasmine works with brands across beauty, fashion, wellness, and lifestyle sectors, creating authentic 
+              content and hosting events that connect with her engaged community. From Buckhead brand launches to Midtown 
+              influencer gatherings, she brings Atlanta's vibrant energy and Southern hospitality to every collaboration. 
+              As both a content creator and event curator, she's redefining what it means to be a lifestyle influencer in 
+              the modern age.
             </p>
           </div>
         </div>

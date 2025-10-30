@@ -60,8 +60,10 @@ export default function EnhancedContactForm() {
             type="text"
             id="firstName"
             className={cn(
-              "w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 transition-all",
-              errors.firstName ? "ring-2 ring-red-500" : "focus:ring-sage"
+              "w-full px-4 py-3 bg-white border-2 focus:outline-none transition-all duration-300",
+              errors.firstName 
+                ? "border-red-500 focus:border-red-500" 
+                : "border-gold/20 focus:border-gold hover:border-gold/40"
             )}
           />
           {errors.firstName && (
@@ -78,8 +80,10 @@ export default function EnhancedContactForm() {
             type="text"
             id="lastName"
             className={cn(
-              "w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 transition-all",
-              errors.lastName ? "ring-2 ring-red-500" : "focus:ring-sage"
+              "w-full px-4 py-3 bg-white border-2 focus:outline-none transition-all duration-300",
+              errors.lastName 
+                ? "border-red-500 focus:border-red-500" 
+                : "border-gold/20 focus:border-gold hover:border-gold/40"
             )}
           />
           {errors.lastName && (
@@ -98,8 +102,10 @@ export default function EnhancedContactForm() {
             type="email"
             id="email"
             className={cn(
-              "w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 transition-all",
-              errors.email ? "ring-2 ring-red-500" : "focus:ring-sage"
+              "w-full px-4 py-3 bg-white border-2 focus:outline-none transition-all duration-300",
+              errors.email 
+                ? "border-red-500 focus:border-red-500" 
+                : "border-gold/20 focus:border-gold hover:border-gold/40"
             )}
           />
           {errors.email && (
@@ -115,7 +121,7 @@ export default function EnhancedContactForm() {
             {...register('phone')}
             type="tel"
             id="phone"
-            className="w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-sage transition-all"
+            className="w-full px-4 py-3 bg-white border-2 border-gold/20 focus:outline-none focus:border-gold hover:border-gold/40 transition-all duration-300"
           />
         </div>
       </div>
@@ -129,14 +135,17 @@ export default function EnhancedContactForm() {
             {...register('eventType')}
             id="eventType"
             className={cn(
-              "w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 transition-all",
-              errors.eventType ? "ring-2 ring-red-500" : "focus:ring-sage"
+              "w-full px-4 py-3 bg-white border-2 focus:outline-none transition-all duration-300",
+              errors.eventType 
+                ? "border-red-500 focus:border-red-500" 
+                : "border-gold/20 focus:border-gold hover:border-gold/40"
             )}
           >
             <option value="">Select an option</option>
-            <option value="wedding">Wedding</option>
+            <option value="atlanta-gala">Atlanta Gala / Fundraiser</option>
             <option value="corporate">Corporate Event</option>
-            <option value="social">Social Celebration</option>
+            <option value="buckhead-social">Buckhead Social Event</option>
+            <option value="wedding">Wedding Celebration</option>
             <option value="other">Other</option>
           </select>
           {errors.eventType && (
@@ -152,7 +161,7 @@ export default function EnhancedContactForm() {
             {...register('eventDate')}
             type="date"
             id="eventDate"
-            className="w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-sage transition-all"
+            className="w-full px-4 py-3 bg-white border-2 border-gold/20 focus:outline-none focus:border-gold hover:border-gold/40 transition-all duration-300"
           />
         </div>
       </div>
@@ -166,7 +175,7 @@ export default function EnhancedContactForm() {
             {...register('guestCount')}
             type="number"
             id="guestCount"
-            className="w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-sage transition-all"
+            className="w-full px-4 py-3 bg-white border-2 border-gold/20 focus:outline-none focus:border-gold hover:border-gold/40 transition-all duration-300"
           />
         </div>
 
@@ -177,7 +186,7 @@ export default function EnhancedContactForm() {
           <select
             {...register('budget')}
             id="budget"
-            className="w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-sage transition-all"
+            className="w-full px-4 py-3 bg-white border-2 border-gold/20 focus:outline-none focus:border-gold hover:border-gold/40 transition-all duration-300"
           >
             <option value="">Select a range</option>
             <option value="25k-50k">$25,000 - $50,000</option>
@@ -197,10 +206,12 @@ export default function EnhancedContactForm() {
           id="message"
           rows={6}
           className={cn(
-            "w-full px-4 py-3 bg-white focus:outline-none focus:ring-2 resize-none transition-all",
-            errors.message ? "ring-2 ring-red-500" : "focus:ring-sage"
+            "w-full px-4 py-3 bg-white border-2 focus:outline-none resize-none transition-all duration-300",
+            errors.message 
+              ? "border-red-500 focus:border-red-500" 
+              : "border-gold/20 focus:border-gold hover:border-gold/40"
           )}
-          placeholder="Share your ideas, preferences, and any specific requirements..."
+          placeholder="Share your vision, venue preferences, and any specific requirements..."
         ></textarea>
         {errors.message && (
           <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
@@ -210,13 +221,13 @@ export default function EnhancedContactForm() {
       <motion.button
         type="submit"
         disabled={isSubmitting}
-        whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+        whileHover={{ scale: isSubmitting ? 1 : 1.02, y: isSubmitting ? 0 : -2 }}
         whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
         className={cn(
-          "w-full py-4 font-sans text-sm tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2",
+          "w-full py-5 font-sans text-sm tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 shadow-lg",
           isSubmitting 
             ? "bg-charcoal/50 text-white cursor-not-allowed" 
-            : "bg-sage text-white hover:bg-navy"
+            : "gradient-rose text-white hover:shadow-2xl glow-effect"
         )}
       >
         {isSubmitting ? (

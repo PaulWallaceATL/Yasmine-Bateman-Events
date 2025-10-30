@@ -16,8 +16,8 @@ export default function Home() {
       <div className="relative">
         <ParticlesBackground />
         <ParallaxHero
-          title="Elevate Every Occasion"
-          subtitle="Transforming visions into extraordinary experiences through masterful event design"
+          title="Atlanta's Lifestyle Influencer & Event Curator"
+          subtitle="Creating unforgettable experiences, authentic content, and meaningful connections throughout Atlanta"
           imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop"
           imageAlt="Luxury event"
           height="full"
@@ -26,9 +26,13 @@ export default function Home() {
 
       {/* Statistics Section */}
       <Section background="white" padding="large">
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden gradient-mesh particles-bg">
           {/* Background glow effect */}
           <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-rose-gold/5"></div>
+          
+          {/* Floating decorative elements */}
+          <div className="absolute top-10 left-10 w-32 h-32 bg-gold/10 rounded-full blur-3xl float-smooth"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-rose-gold/10 rounded-full blur-3xl float-smooth" style={{animationDelay: '3s'}}></div>
           
           <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-16 max-w-6xl mx-auto">
             <motion.div 
@@ -36,16 +40,16 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-center group"
+              className="text-center group perspective-container"
             >
-              <div className="mb-4 inline-block">
-                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
-                  <AnimatedCounter end={500} suffix="+" />
+              <div className="mb-4 inline-block card-3d p-6 neumorphic magnetic">
+                <div className="text-5xl md:text-7xl font-bold text-gradient-flow mb-2">
+                  <AnimatedCounter end={300} suffix="K+" />
                 </div>
                 <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
-              <p className="text-elegant text-lg md:text-xl text-charcoal/70">
-                Events Planned
+              <p className="text-elegant text-lg md:text-xl text-charcoal/70 font-semibold">
+                Total Followers
               </p>
             </motion.div>
 
@@ -54,16 +58,16 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-center group"
+              className="text-center group perspective-container"
             >
-              <div className="mb-4 inline-block">
-                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
-                  <AnimatedCounter end={15} suffix="+" />
+              <div className="mb-4 inline-block card-3d p-6 neumorphic magnetic">
+                <div className="text-5xl md:text-7xl font-bold text-gradient-flow mb-2">
+                  <AnimatedCounter end={130} suffix="K+" />
                 </div>
                 <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
-              <p className="text-elegant text-lg md:text-xl text-charcoal/70">
-                Years Experience
+              <p className="text-elegant text-lg md:text-xl text-charcoal/70 font-semibold">
+                YouTube Subscribers
               </p>
             </motion.div>
 
@@ -72,16 +76,16 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-center group"
+              className="text-center group perspective-container"
             >
-              <div className="mb-4 inline-block">
-                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
-                  <AnimatedCounter end={98} suffix="%" />
+              <div className="mb-4 inline-block card-3d p-6 neumorphic magnetic">
+                <div className="text-5xl md:text-7xl font-bold text-gradient-flow mb-2">
+                  <AnimatedCounter end={5} suffix="M+" />
                 </div>
                 <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
-              <p className="text-elegant text-lg md:text-xl text-charcoal/70">
-                Client Satisfaction
+              <p className="text-elegant text-lg md:text-xl text-charcoal/70 font-semibold">
+                Total Video Views
               </p>
             </motion.div>
 
@@ -90,16 +94,16 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-center group"
+              className="text-center group perspective-container"
             >
-              <div className="mb-4 inline-block">
-                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
-                  <AnimatedCounter end={50} suffix="+" />
+              <div className="mb-4 inline-block card-3d p-6 neumorphic magnetic">
+                <div className="text-5xl md:text-7xl font-bold text-gradient-flow mb-2">
+                  <AnimatedCounter end={7} suffix="%" />
                 </div>
                 <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
-              <p className="text-elegant text-lg md:text-xl text-charcoal/70">
-                Industry Awards
+              <p className="text-elegant text-lg md:text-xl text-charcoal/70 font-semibold">
+                Engagement Rate
               </p>
             </motion.div>
           </div>
@@ -122,18 +126,20 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">About Us</span>
+                <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">About Yasmine</span>
                 <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 text-shadow-elegant leading-tight">
-                  Redefining <span className="text-[#c9a96e]">Event Excellence</span>
+                  Atlanta's <span className="text-gradient-flow">Influencer Icon</span>
                 </h2>
                 <div className="h-1 w-24 gradient-gold mb-8"></div>
                 <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
-                  We specialize in orchestrating exceptional events that leave lasting impressions. From corporate galas 
-                  to milestone celebrations, our meticulous approach ensures every element aligns perfectly with your vision.
+                  From Mableton to the heart of Atlanta's influencer scene, Yasmine Bateman has built a community of over 300,000 
+                  followers across YouTube, Instagram, and TikTok. Her authentic approach to lifestyle content, fashion, beauty, 
+                  and wellness has made her one of Atlanta's most trusted voices in the digital space.
                 </p>
                 <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
-                  With over 15 years of experience, we blend creativity with precision, transforming venues into 
-                  unforgettable experiences that resonate with sophistication and style.
+                  Beyond creating engaging content, Yasmine curates unforgettable brand experiences and events throughout Atlanta. 
+                  Whether hosting intimate influencer gatherings at Ponce City Market or collaborating on major brand activations 
+                  at Atlanta's hottest venues, she brings authentic Southern hospitality and creative vision to every project.
                 </p>
                 <Link 
                   href="/about"
@@ -152,9 +158,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="relative"
+                className="relative perspective-container"
               >
-                <div className="relative h-[600px] luxury-card overflow-hidden border-2 border-[#c9a96e]/20">
+                <div className="relative h-[600px] hover-lift animated-border overflow-hidden ripple-effect">
                   <Image
                     src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069"
                     alt="Luxury event planning"
@@ -169,7 +175,7 @@ export default function Home() {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl"
+                    className="absolute bottom-8 left-8 right-8 frosted-glass-ultra p-6 shadow-2xl"
                   >
                     <div className="grid grid-cols-3 gap-4 text-center">
                       <div>
@@ -226,7 +232,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="luxury-card group relative h-[500px] overflow-hidden cursor-pointer border-2 border-gold/20 hover:border-gold/60"
+              className="hover-lift stacked-cards group relative h-[500px] overflow-hidden cursor-pointer border-2 border-gold/20 hover:border-gold/60 spotlight diagonal-split"
             >
               <Image
                 src={item.src}
@@ -290,13 +296,73 @@ export default function Home() {
         <TestimonialCarousel />
       </Section>
 
+      {/* Social Media Platforms Showcase */}
+      <Section background="white" padding="large">
+        <div className="bg-navy -mx-6 md:-mx-12 px-6 md:px-12 py-20">
+        <div className="text-center mb-16">
+          <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Connect Everywhere</span>
+          <h2 className="text-display text-4xl md:text-6xl font-bold text-white mb-6 text-shadow-elegant">
+            Multi-Platform <span className="holographic">Presence</span>
+          </h2>
+          <div className="ornamental-divider w-32 mx-auto mb-4"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[
+            { 
+              platform: 'YouTube', 
+              followers: '130K+', 
+              icon: 'yt',
+              color: 'from-red-500 to-red-700',
+              engagement: 'High Views'
+            },
+            { 
+              platform: 'Instagram', 
+              followers: '100K+', 
+              icon: 'ig',
+              color: 'from-pink-500 via-purple-500 to-orange-500',
+              engagement: '6.3% Engagement'
+            },
+            { 
+              platform: 'TikTok', 
+              followers: '93K+', 
+              icon: 'tt',
+              color: 'from-cyan-400 to-pink-500',
+              engagement: '7.5% Engagement'
+            }
+          ].map((social, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="perspective-container"
+            >
+              <div className="card-3d frosted-glass-ultra p-8 text-center hover-lift magnetic">
+                <div className={`w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${social.color} flex items-center justify-center text-white text-4xl font-bold shadow-2xl blob-morph`}>
+                  {social.icon === 'yt' && '▶'}
+                  {social.icon === 'ig' && '📷'}
+                  {social.icon === 'tt' && '♪'}
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2 text-gradient-flow">{social.platform}</h3>
+                <div className="text-4xl font-bold text-gold mb-2 neon-glow">{social.followers}</div>
+                <p className="text-white/70 text-sm">{social.engagement}</p>
+                <div className="h-1 w-16 gradient-gold mx-auto mt-4"></div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        </div>
+      </Section>
+
       {/* Call to Action - Redesigned */}
       <Section background="white" padding="large">
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden gradient-mesh">
           {/* Animated Background Pattern */}
           <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#c9a96e] rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#b76e79] rounded-full blur-3xl"></div>
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#c9a96e] rounded-full blur-3xl float-smooth"></div>
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#b76e79] rounded-full blur-3xl float-smooth" style={{animationDelay: '2s'}}></div>
           </div>
 
           <div className="max-w-6xl mx-auto text-center relative z-10">
@@ -306,11 +372,11 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block">Let's Collaborate</span>
+              <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block glitch-effect">Let's Collaborate</span>
               <h2 className="text-display text-5xl md:text-7xl lg:text-8xl font-bold text-navy mb-8 text-shadow-elegant leading-tight">
-                Your Vision.<br/>
-                <span className="text-[#c9a96e]">Our Expertise.</span><br/>
-                Unforgettable Results.
+                Your Brand.<br/>
+                <span className="holographic">My Influence.</span><br/>
+                <span className="text-gradient-flow">Explosive Growth.</span>
               </h2>
               <div className="ornamental-divider w-48 mx-auto mb-12"></div>
               <p className="text-elegant text-2xl md:text-3xl text-charcoal/80 leading-relaxed mb-16 font-light max-w-4xl mx-auto">
@@ -320,9 +386,9 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Link 
                   href="/contact"
-                  className="group inline-flex items-center gap-4 gradient-rose text-white px-16 py-7 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-2"
+                  className="group inline-flex items-center gap-4 gradient-rose text-white px-16 py-7 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-2 ripple-effect magnetic pulse-ring"
                 >
-                  <span>Begin Your Journey</span>
+                  <span>Partner With Me</span>
                   <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -330,7 +396,7 @@ export default function Home() {
                 
                 <Link 
                   href="/gallery"
-                  className="inline-flex items-center gap-4 bg-white border-2 border-[#c9a96e] text-[#c9a96e] px-12 py-7 font-sans text-sm tracking-widest uppercase hover:bg-[#c9a96e] hover:text-white transition-all duration-500 transform hover:-translate-y-2 shadow-lg"
+                  className="inline-flex items-center gap-4 bg-white border-2 border-[#c9a96e] text-[#c9a96e] px-12 py-7 font-sans text-sm tracking-widest uppercase hover:bg-[#c9a96e] hover:text-white transition-all duration-500 transform hover:-translate-y-2 shadow-lg magnetic hover-lift"
                 >
                   <span>View Portfolio</span>
                 </Link>
@@ -343,7 +409,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-sm text-charcoal/50 mt-12 tracking-wide"
               >
-                Serving discerning clients nationwide • Based in New York
+                Proudly serving Atlanta, Georgia • From Buckhead to Virginia-Highland
               </motion.p>
             </motion.div>
           </div>
