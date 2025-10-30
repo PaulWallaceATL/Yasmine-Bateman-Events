@@ -4,18 +4,107 @@ import ParallaxHero from '@/components/ParallaxHero';
 import Section from '@/components/Section';
 import Link from 'next/link';
 import Image from 'next/image';
+import AnimatedCounter from '@/components/AnimatedCounter';
+import ParticlesBackground from '@/components/ParticlesBackground';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
     <main>
-      {/* Hero Section with Parallax */}
-      <ParallaxHero
-        title="Crafting Unforgettable Moments"
-        subtitle="Luxury event planning and design for those who seek perfection in every detail"
-        imageSrc="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069"
-        imageAlt="Elegant celebration"
-        height="full"
-      />
+      {/* Hero Section with Parallax & Particles */}
+      <div className="relative">
+        <ParticlesBackground />
+        <ParallaxHero
+          title="Crafting Unforgettable Moments"
+          subtitle="Luxury event planning and design for those who seek perfection in every detail"
+          imageSrc="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop"
+          imageAlt="Elegant celebration"
+          height="full"
+        />
+      </div>
+
+      {/* Statistics Section */}
+      <Section background="white" padding="large">
+        <div className="relative overflow-hidden">
+          {/* Background glow effect */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-rose-gold/5"></div>
+          
+          <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-16 max-w-6xl mx-auto">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center group"
+            >
+              <div className="mb-4 inline-block">
+                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
+                  <AnimatedCounter end={500} suffix="+" />
+                </div>
+                <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              </div>
+              <p className="text-elegant text-lg md:text-xl text-charcoal/70">
+                Events Planned
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center group"
+            >
+              <div className="mb-4 inline-block">
+                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
+                  <AnimatedCounter end={15} suffix="+" />
+                </div>
+                <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              </div>
+              <p className="text-elegant text-lg md:text-xl text-charcoal/70">
+                Years Experience
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center group"
+            >
+              <div className="mb-4 inline-block">
+                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
+                  <AnimatedCounter end={98} suffix="%" />
+                </div>
+                <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              </div>
+              <p className="text-elegant text-lg md:text-xl text-charcoal/70">
+                Client Satisfaction
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-center group"
+            >
+              <div className="mb-4 inline-block">
+                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
+                  <AnimatedCounter end={50} suffix="+" />
+                </div>
+                <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+              </div>
+              <p className="text-elegant text-lg md:text-xl text-charcoal/70">
+                Industry Awards
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </Section>
 
       {/* Introduction Section */}
       <Section background="white" padding="large">
@@ -134,31 +223,56 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069', title: 'Garden Wedding' },
-            { src: 'https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=2070', title: 'Elegant Reception' },
-            { src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=2070', title: 'Floral Design' },
-            { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070', title: 'Evening Celebration' },
-            { src: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=2070', title: 'Intimate Ceremony' },
-            { src: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2062', title: 'Grand Ballroom' },
+            { src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80', title: 'Garden Wedding', category: 'Wedding' },
+            { src: 'https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&q=80', title: 'Elegant Reception', category: 'Wedding' },
+            { src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80', title: 'Floral Design', category: 'Design' },
+            { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80', title: 'Evening Celebration', category: 'Social' },
+            { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', title: 'Corporate Gala', category: 'Corporate' },
+            { src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80', title: 'Luxury Table Setting', category: 'Design' },
           ].map((item, index) => (
-            <div key={index} className="stagger-item luxury-card group relative h-[500px] overflow-hidden cursor-pointer border-glow">
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="luxury-card group relative h-[500px] overflow-hidden cursor-pointer border-2 border-gold/20 hover:border-gold/60"
+            >
               <Image
                 src={item.src}
                 alt={item.title}
                 fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-115"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                priority={index < 3}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 p-6">
-                <div className="h-1 w-16 gradient-gold mb-4 transform scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-                <span className="text-white text-display text-3xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="h-1 w-20 gradient-gold mb-6"
+                ></motion.div>
+                <h3 className="text-white text-display text-3xl mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   {item.title}
-                </span>
-                <div className="h-1 w-16 gradient-gold mt-4 transform scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                </h3>
+                <p className="text-gold/90 text-xs uppercase tracking-[0.3em] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+                  {item.category}
+                </p>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="h-1 w-20 gradient-gold mt-6"
+                ></motion.div>
               </div>
-            </div>
+              {/* Corner ornaments */}
+              <div className="absolute top-4 left-4 text-gold/0 group-hover:text-gold/70 transition-all duration-500 text-3xl">◆</div>
+              <div className="absolute bottom-4 right-4 text-gold/0 group-hover:text-gold/70 transition-all duration-500 text-3xl">◆</div>
+            </motion.div>
           ))}
         </div>
 
@@ -172,50 +286,20 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Testimonials */}
+      {/* Testimonials Carousel */}
       <Section background="champagne" padding="large">
         <div className="text-center mb-16 parallax-reveal">
           <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Testimonials</span>
           <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 text-shadow-elegant">
             Kind Words
           </h2>
-          <div className="ornamental-divider w-32 mx-auto"></div>
+          <div className="ornamental-divider w-32 mx-auto mb-4"></div>
+          <p className="text-elegant text-xl text-charcoal/70 max-w-2xl mx-auto">
+            Hear from our delighted clients about their extraordinary experiences
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="luxury-card bg-white p-12 shadow-xl stagger-item">
-            <div className="text-gold text-7xl mb-6 font-serif leading-none">"</div>
-            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8 italic">
-              Yasmine transformed our wedding into an absolute dream. Every detail was perfect, 
-              from the flowers to the lighting. She understood our vision completely and brought 
-              it to life in ways we couldn't have imagined.
-            </p>
-            <div className="h-[2px] bg-gradient-to-r from-gold/50 via-gold to-gold/50 mb-6"></div>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-gold flex items-center justify-center text-white text-xl font-serif">S</div>
-              <div>
-                <p className="text-display text-lg text-navy font-semibold">Sarah & Michael</p>
-                <p className="text-sm text-charcoal/60 tracking-wide">June 2024 Wedding</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="luxury-card bg-white p-12 shadow-xl stagger-item">
-            <div className="text-gold text-7xl mb-6 font-serif leading-none">"</div>
-            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8 italic">
-              Working with Yasmine Bateman Events was the best decision we made for our corporate gala. 
-              Professional, creative, and flawlessly executed. Our clients were thoroughly impressed.
-            </p>
-            <div className="h-[2px] bg-gradient-to-r from-gold/50 via-gold to-gold/50 mb-6"></div>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-gold flex items-center justify-center text-white text-xl font-serif">J</div>
-              <div>
-                <p className="text-display text-lg text-navy font-semibold">Jennifer Chen</p>
-                <p className="text-sm text-charcoal/60 tracking-wide">Corporate Event, September 2024</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <TestimonialCarousel />
       </Section>
 
       {/* Call to Action */}
