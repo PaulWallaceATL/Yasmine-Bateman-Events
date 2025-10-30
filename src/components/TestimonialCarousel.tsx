@@ -52,16 +52,13 @@ export default function TestimonialCarousel() {
 
   const slideVariants = {
     enter: {
-      opacity: 0,
-      scale: 0.98
+      opacity: 0
     },
     center: {
-      opacity: 1,
-      scale: 1
+      opacity: 1
     },
     exit: {
-      opacity: 0,
-      scale: 0.98
+      opacity: 0
     }
   };
 
@@ -77,7 +74,7 @@ export default function TestimonialCarousel() {
 
   return (
     <div className="relative max-w-4xl mx-auto">
-      <AnimatePresence initial={false} custom={direction}>
+      <AnimatePresence initial={false} mode="wait">
         <motion.div
           key={currentIndex}
           variants={slideVariants}
@@ -85,10 +82,10 @@ export default function TestimonialCarousel() {
           animate="center"
           exit="exit"
           transition={{
-            duration: 0.8,
-            ease: [0.22, 1, 0.36, 1]
+            duration: 0.5,
+            ease: "easeInOut"
           }}
-          className="luxury-card bg-white p-12 shadow-2xl"
+          className="bg-white p-12 shadow-xl rounded-lg"
         >
           <div className="text-[#c9a96e] text-7xl mb-6 font-serif leading-none">"</div>
           <p className="text-elegant text-xl md:text-2xl text-charcoal/80 leading-relaxed mb-8 italic">

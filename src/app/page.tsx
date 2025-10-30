@@ -16,8 +16,8 @@ export default function Home() {
       <div className="relative">
         <ParticlesBackground />
         <ParallaxHero
-          title="Atlanta's Lifestyle Influencer & Event Curator"
-          subtitle="Creating unforgettable experiences, authentic content, and meaningful connections throughout Atlanta"
+          title="Yasmine Bateman"
+          subtitle="Content Creator & Brand Partner • Atlanta, GA"
           imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop"
           imageAlt="Luxury event"
           height="full"
@@ -40,15 +40,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-center group perspective-container"
+              className="text-center group"
             >
-              <div className="mb-4 inline-block card-3d p-6 neumorphic magnetic">
-                <div className="text-5xl md:text-7xl font-bold text-gradient-flow mb-2">
+              <div className="mb-4 inline-block p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
                   <AnimatedCounter end={300} suffix="K+" />
                 </div>
                 <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
-              <p className="text-elegant text-lg md:text-xl text-charcoal/70 font-semibold">
+              <p className="text-lg md:text-xl text-charcoal/70 font-semibold">
                 Total Followers
               </p>
             </motion.div>
@@ -58,15 +58,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-center group perspective-container"
+              className="text-center group"
             >
-              <div className="mb-4 inline-block card-3d p-6 neumorphic magnetic">
-                <div className="text-5xl md:text-7xl font-bold text-gradient-flow mb-2">
+              <div className="mb-4 inline-block p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
                   <AnimatedCounter end={130} suffix="K+" />
                 </div>
                 <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
-              <p className="text-elegant text-lg md:text-xl text-charcoal/70 font-semibold">
+              <p className="text-lg md:text-xl text-charcoal/70 font-semibold">
                 YouTube Subscribers
               </p>
             </motion.div>
@@ -76,15 +76,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-center group perspective-container"
+              className="text-center group"
             >
-              <div className="mb-4 inline-block card-3d p-6 neumorphic magnetic">
-                <div className="text-5xl md:text-7xl font-bold text-gradient-flow mb-2">
+              <div className="mb-4 inline-block p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
                   <AnimatedCounter end={5} suffix="M+" />
                 </div>
                 <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
-              <p className="text-elegant text-lg md:text-xl text-charcoal/70 font-semibold">
+              <p className="text-lg md:text-xl text-charcoal/70 font-semibold">
                 Total Video Views
               </p>
             </motion.div>
@@ -94,15 +94,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-center group perspective-container"
+              className="text-center group"
             >
-              <div className="mb-4 inline-block card-3d p-6 neumorphic magnetic">
-                <div className="text-5xl md:text-7xl font-bold text-gradient-flow mb-2">
+              <div className="mb-4 inline-block p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
                   <AnimatedCounter end={7} suffix="%" />
                 </div>
                 <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
-              <p className="text-elegant text-lg md:text-xl text-charcoal/70 font-semibold">
+              <p className="text-lg md:text-xl text-charcoal/70 font-semibold">
                 Engagement Rate
               </p>
             </motion.div>
@@ -126,26 +126,24 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">About Yasmine</span>
-                <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 text-shadow-elegant leading-tight">
-                  Atlanta's <span className="text-gradient-flow">Influencer Icon</span>
+                <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">About Me</span>
+                <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
+                  Building Authentic Connections
                 </h2>
                 <div className="h-1 w-24 gradient-gold mb-8"></div>
-                <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
-                  From Mableton to the heart of Atlanta's influencer scene, Yasmine Bateman has built a community of over 300,000 
-                  followers across YouTube, Instagram, and TikTok. Her authentic approach to lifestyle content, fashion, beauty, 
-                  and wellness has made her one of Atlanta's most trusted voices in the digital space.
+                <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
+                  I'm Yasmine, a content creator from Atlanta with over 300,000 followers across YouTube, Instagram, and TikTok. 
+                  I create lifestyle content focused on fashion, beauty, and wellness that my community loves.
                 </p>
-                <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
-                  Beyond creating engaging content, Yasmine curates unforgettable brand experiences and events throughout Atlanta. 
-                  Whether hosting intimate influencer gatherings at Ponce City Market or collaborating on major brand activations 
-                  at Atlanta's hottest venues, she brings authentic Southern hospitality and creative vision to every project.
+                <p className="text-lg text-charcoal/80 leading-relaxed mb-8">
+                  I work with brands to create authentic content and host events that connect with real people. 
+                  From product launches to brand partnerships, I bring genuine engagement to every collaboration.
                 </p>
                 <Link 
                   href="/about"
                   className="inline-flex items-center gap-3 gradient-rose text-white px-12 py-5 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-1 group"
                 >
-                  <span>Discover Our Story</span>
+                  <span>Learn More</span>
                   <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -160,7 +158,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="relative perspective-container"
               >
-                <div className="relative h-[600px] hover-lift animated-border overflow-hidden ripple-effect">
+                <div className="relative h-[600px] rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
                   <Image
                     src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069"
                     alt="Luxury event planning"
@@ -175,20 +173,20 @@ export default function Home() {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="absolute bottom-8 left-8 right-8 frosted-glass-ultra p-6 shadow-2xl"
+                    className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl rounded-lg"
                   >
                     <div className="grid grid-cols-3 gap-4 text-center">
                       <div>
-                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">500+</div>
-                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Events</div>
+                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">300K+</div>
+                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Followers</div>
                       </div>
                       <div>
-                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">15+</div>
-                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Years</div>
+                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">5M+</div>
+                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Views</div>
                       </div>
                       <div>
-                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">98%</div>
-                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Satisfaction</div>
+                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">7%</div>
+                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Engagement</div>
                       </div>
                     </div>
                   </motion.div>
@@ -207,13 +205,13 @@ export default function Home() {
       {/* Featured Gallery */}
       <Section background="white" padding="large">
         <div className="text-center mb-20 parallax-reveal">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Portfolio</span>
-          <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-6 text-shadow-elegant">
-            Signature Events
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Recent Work</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
+            Content & Events
           </h2>
-          <div className="ornamental-divider w-40 mx-auto mb-6"></div>
-          <p className="text-elegant text-2xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
-            A curated selection of extraordinary moments we've crafted for discerning clients
+          <div className="h-1 w-24 gradient-gold mx-auto mb-6"></div>
+          <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
+            A look at some recent brand collaborations and events
           </p>
         </div>
 
@@ -232,7 +230,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="hover-lift stacked-cards group relative h-[500px] overflow-hidden cursor-pointer border-2 border-gold/20 hover:border-gold/60 spotlight diagonal-split"
+              className="group relative h-[500px] overflow-hidden cursor-pointer rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
               <Image
                 src={item.src}
@@ -273,9 +271,9 @@ export default function Home() {
         <div className="text-center mt-16">
           <Link 
             href="/gallery"
-            className="inline-block gradient-rose text-white px-14 py-6 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-1"
+            className="inline-block gradient-rose text-white px-12 py-4 rounded-lg font-sans text-sm tracking-widest uppercase shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
           >
-            View Full Gallery
+            View All Work
           </Link>
         </div>
       </Section>
@@ -283,13 +281,13 @@ export default function Home() {
       {/* Testimonials Carousel */}
       <Section background="champagne" padding="large">
         <div className="text-center mb-16 parallax-reveal">
-          <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Testimonials</span>
-          <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 text-shadow-elegant">
-            Kind Words
+          <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Reviews</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
+            What People Say
           </h2>
-          <div className="ornamental-divider w-32 mx-auto mb-4"></div>
-          <p className="text-elegant text-xl text-charcoal/70 max-w-2xl mx-auto">
-            Hear from our delighted clients about their extraordinary experiences
+          <div className="h-1 w-24 gradient-gold mx-auto mb-4"></div>
+          <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+            Feedback from brands and partners I've worked with
           </p>
         </div>
 
@@ -300,9 +298,9 @@ export default function Home() {
       <Section background="white" padding="large">
         <div className="bg-navy -mx-6 md:-mx-12 px-6 md:px-12 py-20">
         <div className="text-center mb-16">
-          <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Connect Everywhere</span>
-          <h2 className="text-display text-4xl md:text-6xl font-bold text-white mb-6 text-shadow-elegant">
-            Multi-Platform <span className="holographic">Presence</span>
+          <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Follow Me</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Social Media
           </h2>
           <div className="ornamental-divider w-32 mx-auto mb-4"></div>
         </div>
@@ -339,14 +337,14 @@ export default function Home() {
               viewport={{ once: true }}
               className="perspective-container"
             >
-              <div className="card-3d frosted-glass-ultra p-8 text-center hover-lift magnetic">
-                <div className={`w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${social.color} flex items-center justify-center text-white text-4xl font-bold shadow-2xl blob-morph`}>
+              <div className="bg-white/10 backdrop-blur-md p-8 text-center hover:-translate-y-2 transition-all duration-300 rounded-xl border border-white/20">
+                <div className={`w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${social.color} flex items-center justify-center text-white text-4xl font-bold shadow-2xl`}>
                   {social.icon === 'yt' && '▶'}
                   {social.icon === 'ig' && '📷'}
                   {social.icon === 'tt' && '♪'}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2 text-gradient-flow">{social.platform}</h3>
-                <div className="text-4xl font-bold text-gold mb-2 neon-glow">{social.followers}</div>
+                <h3 className="text-2xl font-bold text-white mb-2">{social.platform}</h3>
+                <div className="text-4xl font-bold text-gold mb-2">{social.followers}</div>
                 <p className="text-white/70 text-sm">{social.engagement}</p>
                 <div className="h-1 w-16 gradient-gold mx-auto mt-4"></div>
               </div>
@@ -372,33 +370,32 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block glitch-effect">Let's Collaborate</span>
-              <h2 className="text-display text-5xl md:text-7xl lg:text-8xl font-bold text-navy mb-8 text-shadow-elegant leading-tight">
-                Your Brand.<br/>
-                <span className="holographic">My Influence.</span><br/>
-                <span className="text-gradient-flow">Explosive Growth.</span>
+              <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block">Let's Work Together</span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-8 leading-tight">
+                Ready to Collaborate?
               </h2>
-              <div className="ornamental-divider w-48 mx-auto mb-12"></div>
-              <p className="text-elegant text-2xl md:text-3xl text-charcoal/80 leading-relaxed mb-16 font-light max-w-4xl mx-auto">
-                Transform your next event into an extraordinary experience that resonates with sophistication and leaves a lasting impression.
+              <div className="h-1 w-24 gradient-gold mx-auto mb-12"></div>
+              <p className="text-xl text-charcoal/80 leading-relaxed mb-16 max-w-3xl mx-auto">
+                Let's create something amazing together. Whether it's content creation, brand partnerships, or event hosting, 
+                I'm here to help your brand connect with my engaged community.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Link 
                   href="/contact"
-                  className="group inline-flex items-center gap-4 gradient-rose text-white px-16 py-7 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-2 ripple-effect magnetic pulse-ring"
+                  className="group inline-flex items-center gap-4 gradient-rose text-white px-12 py-4 rounded-lg font-sans text-sm tracking-widest uppercase shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
                 >
-                  <span>Partner With Me</span>
-                  <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span>Work With Me</span>
+                  <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
                 
                 <Link 
                   href="/gallery"
-                  className="inline-flex items-center gap-4 bg-white border-2 border-[#c9a96e] text-[#c9a96e] px-12 py-7 font-sans text-sm tracking-widest uppercase hover:bg-[#c9a96e] hover:text-white transition-all duration-500 transform hover:-translate-y-2 shadow-lg magnetic hover-lift"
+                  className="inline-flex items-center gap-4 bg-white border-2 border-[#c9a96e] text-[#c9a96e] px-12 py-4 rounded-lg font-sans text-sm tracking-widest uppercase hover:bg-[#c9a96e] hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
                 >
-                  <span>View Portfolio</span>
+                  <span>View Work</span>
                 </Link>
               </div>
 

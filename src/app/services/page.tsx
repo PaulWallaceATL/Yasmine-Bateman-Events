@@ -18,20 +18,17 @@ export default function Services() {
       {/* Services Introduction */}
       <Section background="white" padding="large">
         <div className="max-w-5xl mx-auto text-center">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">What I Offer</span>
-          <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-8 text-shadow-elegant">
-            Brand Collaborations
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Services</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-8">
+            How We Can Work Together
           </h2>
-          <div className="ornamental-divider w-40 mx-auto mb-10"></div>
-          <p className="text-elegant text-2xl text-charcoal/80 leading-relaxed mb-8">
-            With 300K+ engaged followers across YouTube, Instagram, and TikTok, I partner with brands to create 
-            authentic content that resonates. From beauty and fashion to wellness and lifestyle, I bring Atlanta's 
-            vibrant energy and Southern charm to every collaboration.
+          <div className="h-1 w-24 gradient-gold mx-auto mb-10"></div>
+          <p className="text-xl text-charcoal/80 leading-relaxed mb-8 max-w-3xl mx-auto">
+            I partner with brands to create authentic content for my 300K+ followers across YouTube, Instagram, and TikTok.
           </p>
-          <p className="text-elegant text-xl text-charcoal/70 leading-relaxed max-w-4xl mx-auto">
-            Whether you're looking for sponsored content, event hosting, brand ambassadorships, or influencer marketing 
-            campaigns, I deliver measurable results with genuine engagement and creative excellence that connects with 
-            the Atlanta community and beyond.
+          <p className="text-lg text-charcoal/70 leading-relaxed max-w-3xl mx-auto">
+            From sponsored videos to event hosting and long-term partnerships, I help brands connect with an engaged audience 
+            through genuine, relatable content.
           </p>
         </div>
       </Section>
@@ -41,19 +38,17 @@ export default function Services() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div className="order-2 lg:order-1">
             <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Content Creation</span>
-            <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
-              Sponsored Content & Brand Stories
+            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6 leading-tight">
+              Sponsored Content
             </h2>
             <div className="h-1 w-24 gradient-gold mb-8"></div>
-            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
-              Transform your brand message into authentic, engaging content that connects with my 300K+ followers. 
-              From dedicated YouTube videos and Instagram reels to TikTok trends and "Get Ready With Me" integrations, 
-              I create content that feels natural, relatable, and drives real engagement with your target audience.
+            <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
+              I create authentic sponsored content across YouTube, Instagram, and TikTok. From dedicated videos 
+              to "Get Ready With Me" integrations, I showcase products in a natural way that my followers trust.
             </p>
-            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
-              My content consistently achieves high engagement rates (7%+ across platforms), with videos reaching 
-              hundreds of thousands of views. I specialize in beauty, fashion, wellness, and lifestyle content that 
-              showcases products authentically while maintaining the trust I've built with my Atlanta community.
+            <p className="text-lg text-charcoal/80 leading-relaxed mb-8">
+              My content gets high engagement (7%+ average) with videos reaching hundreds of thousands of views. 
+              I focus on beauty, fashion, wellness, and lifestyle content that feels genuine and connects with my audience.
             </p>
             <ul className="space-y-4 mb-10">
               {[
@@ -123,19 +118,17 @@ export default function Services() {
 
           <div>
             <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Event Hosting</span>
-            <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
-              Brand Events & Activations
+            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6 leading-tight">
+              Brand Events
             </h2>
             <div className="h-1 w-24 gradient-gold mb-8"></div>
-            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
-              Elevate your brand presence with influencer-hosted events that drive engagement and create buzz throughout 
-              Atlanta. From product launches at Ponce City Market to exclusive brand experiences in Buckhead, I bring my 
-              engaged community to your activations and create memorable moments that extend far beyond the event.
+            <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
+              I host brand events and activations throughout Atlanta, from product launches to influencer meetups. 
+              I bring my community to your event and create buzz across all platforms.
             </p>
-            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
-              My event hosting ensures authentic promotion before, during, and after your activation. With cross-platform 
-              coverage and genuine excitement, I help brands connect with Atlanta's lifestyle-focused audience in meaningful, 
-              measurable ways that drive both attendance and online engagement.
+            <p className="text-lg text-charcoal/80 leading-relaxed mb-8">
+              Event hosting includes promotion before, during, and after your activation with content across 
+              YouTube, Instagram, and TikTok to maximize reach and engagement.
             </p>
             <ul className="space-y-4 mb-10">
               {[
@@ -172,20 +165,18 @@ export default function Services() {
       <Section background="pearl" padding="large">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div className="order-2 lg:order-1">
-            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Long-Term Partnerships</span>
-            <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
-              Brand Ambassadorships
+            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Long-Term</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6 leading-tight">
+              Brand Partnerships
             </h2>
             <div className="h-1 w-24 gradient-gold mb-8"></div>
-            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
-              Build lasting connections with my engaged community through ongoing brand ambassador partnerships. 
-              Perfect for brands looking for authentic, consistent representation across multiple campaigns and 
-              platforms. I become a genuine advocate for products and services I believe in.
+            <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
+              I work with brands on long-term ambassador partnerships, creating regular content and building 
+              authentic relationships with products I genuinely love and use.
             </p>
-            <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
-              Ambassador partnerships include regular content creation, event appearances, exclusive product launches, 
-              and authentic integration into my lifestyle content. Together, we build trust with my Atlanta audience 
-              while achieving your long-term marketing goals through genuine, measurable engagement.
+            <p className="text-lg text-charcoal/80 leading-relaxed mb-8">
+              Ambassador partnerships include ongoing content creation, event appearances, and integration into my 
+              daily lifestyle content for consistent brand presence with my audience.
             </p>
             <ul className="space-y-4 mb-10">
               {[

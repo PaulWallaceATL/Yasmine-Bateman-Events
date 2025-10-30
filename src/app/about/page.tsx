@@ -47,36 +47,29 @@ export default function About() {
           </div>
 
           <div className="slide-up">
-            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Atlanta Lifestyle Influencer & Event Curator</span>
-            <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
-              Meet Yasmine Bateman
+            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">About Me</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
+              Meet Yasmine
             </h2>
             <div className="h-1 w-24 gradient-gold mb-8"></div>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              Born and raised in Mableton, Georgia, Yasmine Bateman has become one of Atlanta's most influential voices 
-              in lifestyle, fashion, and beauty. With over 130,000 YouTube subscribers, 100,000+ Instagram followers, 
-              and 93,000 TikTok fans, she's built a devoted community that looks to her for inspiration, authenticity, 
-              and that perfect Atlanta vibe.
+              I'm Yasmine, a content creator from Atlanta, Georgia. I share lifestyle content including fashion, 
+              beauty, wellness, and everyday moments with over 300,000 followers across YouTube, Instagram, and TikTok.
             </p>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              What started as a passion for sharing "get ready with me" videos and workout routines has evolved into a 
-              full-fledged brand. Yasmine now curates exclusive events, collaborates with premium brands, and hosts 
-              unforgettable experiences throughout Atlanta. From intimate influencer meetups to large-scale brand activations, 
-              she brings her signature aesthetic and authentic Southern charm to every occasion.
+              What started as sharing "get ready with me" videos and workout routines has grown into working with 
+              amazing brands and hosting events. I love creating content that feels authentic and connecting with 
+              my community through genuine partnerships.
             </p>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-              What sets Yasmine apart is her genuine connection to Atlanta's culture and her ability to create content 
-              that resonates. Whether she's filming travel vlogs, hosting brand events at Atlanta's hottest venues like 
-              Ponce City Market, or collaborating with fellow influencers, her engaging personality and creative eye make 
-              every experience memorable. Her content has garnered millions of views, with her most popular video reaching 
-              over 400,000 views.
+              My content ranges from beauty tutorials to travel vlogs, and I've been lucky enough to reach millions 
+              of people. My most popular video has over 400,000 views, and I'm grateful for every person who watches 
+              and engages with my content.
             </p>
             <p className="text-lg text-charcoal/80 leading-relaxed">
-              Today, Yasmine works with brands across beauty, fashion, wellness, and lifestyle sectors, creating authentic 
-              content and hosting events that connect with her engaged community. From Buckhead brand launches to Midtown 
-              influencer gatherings, she brings Atlanta's vibrant energy and Southern hospitality to every collaboration. 
-              As both a content creator and event curator, she's redefining what it means to be a lifestyle influencer in 
-              the modern age.
+              I work with brands in beauty, fashion, wellness, and lifestyle to create content that resonates with 
+              my audience. Based in Atlanta, I'm always looking for new partnerships and opportunities to collaborate 
+              with brands I believe in.
             </p>
           </div>
         </div>
