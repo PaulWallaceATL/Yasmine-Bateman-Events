@@ -1,0 +1,17 @@
+{
+  "name": "Yasmine Bateman",
+  "short_name": "YB",
+  "description": "Atlanta-based lifestyle content creator with 300K+ followers",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f6f3",
+  "theme_color": "#c9a96e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+

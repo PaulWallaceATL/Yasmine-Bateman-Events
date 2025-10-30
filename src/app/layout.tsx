@@ -39,6 +39,37 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Yasmine Bateman | Content Creator & Influencer",
   description: "Atlanta-based lifestyle content creator with 300K+ followers. Fashion, beauty, wellness content and brand partnerships across YouTube, Instagram, and TikTok.",
+  keywords: ["Yasmine Bateman", "Atlanta influencer", "content creator", "lifestyle influencer", "fashion influencer", "beauty influencer", "brand partnerships", "YouTube creator", "Instagram influencer", "TikTok creator"],
+  authors: [{ name: "Yasmine Bateman" }],
+  creator: "Yasmine Bateman",
+  publisher: "Yasmine Bateman",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://yasminebateman.com",
+    title: "Yasmine Bateman | Content Creator & Influencer",
+    description: "Atlanta-based lifestyle content creator with 300K+ followers. Fashion, beauty, wellness content and brand partnerships.",
+    siteName: "Yasmine Bateman",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Yasmine Bateman - Content Creator & Influencer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yasmine Bateman | Content Creator & Influencer",
+    description: "Atlanta-based lifestyle content creator with 300K+ followers across YouTube, Instagram, and TikTok.",
+    images: ["/og-image.svg"],
+  },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
