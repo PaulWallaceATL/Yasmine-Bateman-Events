@@ -38,8 +38,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-sans text-sm tracking-wider uppercase text-navy mb-1">Email</div>
-                    <a href="mailto:hello@yasminebateman.com" className="text-charcoal/70 hover:text-sage transition-colors">
-                      hello@yasminebateman.com
+                    <a href="mailto:yasminebatemanpr@gmail.com" className="text-charcoal/70 hover:text-[#c9a96e] transition-colors">
+                      yasminebatemanpr@gmail.com
                     </a>
                   </div>
                 </div>

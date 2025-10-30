@@ -67,9 +67,9 @@ export default function Footer() {
             <h3 className="font-sans text-xs tracking-[0.3em] uppercase mb-6 text-[#c9a96e] font-semibold">Get In Touch</h3>
             <ul className="space-y-4 text-cream/80 text-sm">
               <li>
-                <a href="mailto:hello@yasminebateman.com" className="hover:text-[#c9a96e] transition-all duration-300 group inline-flex items-center gap-2">
+                <a href="mailto:yasminebatemanpr@gmail.com" className="hover:text-[#c9a96e] transition-all duration-300 group inline-flex items-center gap-2">
                   <span className="w-0 h-[2px] bg-[#c9a96e] group-hover:w-4 transition-all duration-300"></span>
-                  hello@yasminebateman.com
+                  yasminebatemanpr@gmail.com
                 </a>
               </li>
               <li>
@@ -87,7 +87,7 @@ export default function Footer() {
                    className="w-10 h-10 rounded-full border-2 border-[#c9a96e]/30 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all duration-300 group" aria-label="Facebook">
                   <Facebook size={18} className="group-hover:scale-110 transition-transform" />
                 </a>
-                <a href="mailto:hello@yasminebateman.com" 
+                <a href="mailto:yasminebatemanpr@gmail.com" 
                    className="w-10 h-10 rounded-full border-2 border-[#c9a96e]/30 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all duration-300 group" aria-label="Email">
                   <Mail size={18} className="group-hover:scale-110 transition-transform" />
                 </a>

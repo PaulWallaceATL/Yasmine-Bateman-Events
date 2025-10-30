@@ -201,7 +201,7 @@ img {
   letter-spacing: 0.02em;
 }
 
-/* Shimmer Effect for Luxury Elements */
+/* Shimmer Effect for Luxury Elements - Slowed down to prevent seizures */
 @keyframes shimmer {
   0% {
     background-position: -1000px 0;
@@ -212,11 +212,11 @@ img {
 }
 
 .shimmer {
-  animation: shimmer 3s infinite linear;
+  animation: shimmer 8s infinite linear;
   background: linear-gradient(
     to right,
     transparent 0%,
-    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.15) 50%,
     transparent 100%
   );
   background-size: 1000px 100%;
@@ -308,18 +308,18 @@ img {
 .stagger-item:nth-child(8) { animation-delay: 0.8s; }
 .stagger-item:nth-child(9) { animation-delay: 0.9s; }
 
-/* Elegant Float Animation */
+/* Elegant Float Animation - Removed to prevent motion sickness */
 @keyframes elegantFloat {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
 }
 
 .float-elegant {
-  animation: elegantFloat 3s ease-in-out infinite;
+  animation: elegantFloat 6s ease-in-out infinite;
 }
 
 /* Luxury Card Hover Effect */

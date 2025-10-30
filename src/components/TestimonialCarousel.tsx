@@ -45,25 +45,28 @@ export default function TestimonialCarousel() {
     const timer = setInterval(() => {
       setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 7000);
+    }, 10000); // Slower rotation - 10 seconds
 
     return () => clearInterval(timer);
   }, []);
 
   const slideVariants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0
+      x: direction > 0 ? 100 : -100,
+      opacity: 0,
+      scale: 0.95
     }),
     center: {
       zIndex: 1,
       x: 0,
-      opacity: 1
+      opacity: 1,
+      scale: 1
     },
     exit: (direction: number) => ({
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0
+      x: direction < 0 ? 100 : -100,
+      opacity: 0,
+      scale: 0.95
     })
   };
 
@@ -88,8 +91,9 @@ export default function TestimonialCarousel() {
           animate="center"
           exit="exit"
           transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 }
+            x: { type: "spring", stiffness: 100, damping: 20 },
+            opacity: { duration: 0.5 },
+            scale: { duration: 0.5 }
           }}
           className="luxury-card bg-white p-12 shadow-2xl"
         >
