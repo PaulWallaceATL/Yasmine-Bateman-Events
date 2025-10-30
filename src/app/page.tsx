@@ -16,10 +16,10 @@ export default function Home() {
       <div className="relative">
         <ParticlesBackground />
         <ParallaxHero
-          title="Crafting Unforgettable Moments"
-          subtitle="Luxury event planning and design for those who seek perfection in every detail"
-          imageSrc="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop"
-          imageAlt="Elegant celebration"
+          title="Elevate Every Occasion"
+          subtitle="Transforming visions into extraordinary experiences through masterful event design"
+          imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop"
+          imageAlt="Luxury event"
           height="full"
         />
       </div>
@@ -108,129 +108,117 @@ export default function Home() {
 
       {/* Introduction Section */}
       <Section background="white" padding="large">
-        <div className="max-w-4xl mx-auto text-center parallax-reveal">
-          <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 text-shadow-elegant">
-            Where Vision Meets Reality
-          </h2>
-          <div className="ornamental-divider w-32 mx-auto mb-8"></div>
-          <p className="text-elegant text-xl md:text-2xl text-charcoal/80 leading-relaxed mb-6 font-light">
-            Yasmine Bateman Events specializes in creating bespoke celebrations that reflect your unique story. 
-            With an unwavering commitment to excellence and an eye for the extraordinary, we transform your 
-            dreams into meticulously crafted experiences.
-          </p>
-          <p className="text-elegant text-xl md:text-2xl text-charcoal/80 leading-relaxed mb-10 font-light">
-            From intimate gatherings to grand celebrations, every detail is thoughtfully curated to ensure 
-            your event is nothing short of spectacular.
-          </p>
-          <Link 
-            href="/about"
-            className="inline-block gradient-rose text-white px-12 py-5 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-1"
-          >
-            Discover Our Story
-          </Link>
-        </div>
-      </Section>
+        <div className="relative">
+          {/* Decorative background elements */}
+          <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#c9a96e]/5 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#b76e79]/5 rounded-full blur-3xl"></div>
+          
+          <div className="max-w-6xl mx-auto relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              {/* Left: Text Content */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">About Us</span>
+                <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 text-shadow-elegant leading-tight">
+                  Redefining <span className="text-[#c9a96e]">Event Excellence</span>
+                </h2>
+                <div className="h-1 w-24 gradient-gold mb-8"></div>
+                <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-6">
+                  We specialize in orchestrating exceptional events that leave lasting impressions. From corporate galas 
+                  to milestone celebrations, our meticulous approach ensures every element aligns perfectly with your vision.
+                </p>
+                <p className="text-elegant text-xl text-charcoal/80 leading-relaxed mb-8">
+                  With over 15 years of experience, we blend creativity with precision, transforming venues into 
+                  unforgettable experiences that resonate with sophistication and style.
+                </p>
+                <Link 
+                  href="/about"
+                  className="inline-flex items-center gap-3 gradient-rose text-white px-12 py-5 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-1 group"
+                >
+                  <span>Discover Our Story</span>
+                  <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </motion.div>
 
-      {/* Services Preview */}
-      <Section background="pearl" padding="large">
-        <div className="text-center mb-16 parallax-reveal">
-          <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Services</span>
-          <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 text-shadow-elegant">
-            Our Expertise
-          </h2>
-          <div className="ornamental-divider w-32 mx-auto"></div>
-        </div>
+              {/* Right: Visual Element */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative h-[600px] luxury-card overflow-hidden border-2 border-[#c9a96e]/20">
+                  <Image
+                    src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069"
+                    alt="Luxury event planning"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent"></div>
+                  
+                  {/* Floating Stats */}
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl"
+                  >
+                    <div className="grid grid-cols-3 gap-4 text-center">
+                      <div>
+                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">500+</div>
+                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Events</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">15+</div>
+                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Years</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">98%</div>
+                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Satisfaction</div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {/* Wedding Planning */}
-          <div className="luxury-card stagger-item group text-center bg-white p-8 shadow-lg">
-            <div className="relative h-96 mb-8 overflow-hidden image-overlay-gold">
-              <Image
-                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069"
-                alt="Wedding planning"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Decorative corner elements */}
+                <div className="absolute -top-4 -right-4 w-24 h-24 border-2 border-[#c9a96e]/30 -z-10"></div>
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 border-2 border-[#c9a96e]/20 -z-10"></div>
+              </motion.div>
             </div>
-            <div className="h-1 w-16 gradient-gold mx-auto mb-6"></div>
-            <h3 className="text-display text-3xl font-bold text-navy mb-4 group-hover:text-gold transition-colors">Wedding Planning</h3>
-            <p className="text-elegant text-lg text-charcoal/70 leading-relaxed mb-6">
-              From intimate ceremonies to grand celebrations, we bring your wedding vision to life with 
-              impeccable attention to detail.
-            </p>
-            <Link href="/services" className="text-rose-gold font-sans text-sm tracking-wider uppercase hover:text-navy transition-colors inline-flex items-center gap-2">
-              Learn More <span className="group-hover:translate-x-2 transition-transform">→</span>
-            </Link>
-          </div>
-
-          {/* Corporate Events */}
-          <div className="luxury-card stagger-item group text-center bg-white p-8 shadow-lg">
-            <div className="relative h-96 mb-8 overflow-hidden image-overlay-gold">
-              <Image
-                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070"
-                alt="Corporate events"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </div>
-            <div className="h-1 w-16 gradient-gold mx-auto mb-6"></div>
-            <h3 className="text-display text-3xl font-bold text-navy mb-4 group-hover:text-gold transition-colors">Corporate Events</h3>
-            <p className="text-elegant text-lg text-charcoal/70 leading-relaxed mb-6">
-              Elevate your brand with sophisticated corporate events that leave lasting impressions on 
-              clients and colleagues alike.
-            </p>
-            <Link href="/services" className="text-rose-gold font-sans text-sm tracking-wider uppercase hover:text-navy transition-colors inline-flex items-center gap-2">
-              Learn More <span className="group-hover:translate-x-2 transition-transform">→</span>
-            </Link>
-          </div>
-
-          {/* Social Celebrations */}
-          <div className="luxury-card stagger-item group text-center bg-white p-8 shadow-lg">
-            <div className="relative h-96 mb-8 overflow-hidden image-overlay-gold">
-              <Image
-                src="https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=2070"
-                alt="Social celebrations"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </div>
-            <div className="h-1 w-16 gradient-gold mx-auto mb-6"></div>
-            <h3 className="text-display text-3xl font-bold text-navy mb-4 group-hover:text-gold transition-colors">Social Celebrations</h3>
-            <p className="text-elegant text-lg text-charcoal/70 leading-relaxed mb-6">
-              Mark life's milestones with elegantly designed celebrations that capture the joy and 
-              significance of your special moments.
-            </p>
-            <Link href="/services" className="text-rose-gold font-sans text-sm tracking-wider uppercase hover:text-navy transition-colors inline-flex items-center gap-2">
-              Learn More <span className="group-hover:translate-x-2 transition-transform">→</span>
-            </Link>
           </div>
         </div>
       </Section>
+
 
       {/* Featured Gallery */}
       <Section background="white" padding="large">
-        <div className="text-center mb-16 parallax-reveal">
-          <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Portfolio</span>
-          <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 text-shadow-elegant">
-            Recent Celebrations
+        <div className="text-center mb-20 parallax-reveal">
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Portfolio</span>
+          <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-6 text-shadow-elegant">
+            Signature Events
           </h2>
-          <div className="ornamental-divider w-32 mx-auto mb-4"></div>
-          <p className="text-elegant text-xl text-charcoal/70 max-w-2xl mx-auto">
-            A glimpse into the extraordinary events we've had the privilege to create
+          <div className="ornamental-divider w-40 mx-auto mb-6"></div>
+          <p className="text-elegant text-2xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
+            A curated selection of extraordinary moments we've crafted for discerning clients
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80', title: 'Garden Wedding', category: 'Wedding' },
-            { src: 'https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&q=80', title: 'Elegant Reception', category: 'Wedding' },
-            { src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80', title: 'Floral Design', category: 'Design' },
-            { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80', title: 'Evening Celebration', category: 'Social' },
             { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', title: 'Corporate Gala', category: 'Corporate' },
-            { src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80', title: 'Luxury Table Setting', category: 'Design' },
+            { src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80', title: 'Executive Summit', category: 'Corporate' },
+            { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80', title: 'Evening Soirée', category: 'Social' },
+            { src: 'https://images.unsplash.com/photo-1530023367847-a683933f4172?w=800&q=80', title: 'Milestone Celebration', category: 'Social' },
+            { src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80', title: 'Luxury Fundraiser', category: 'Gala' },
+            { src: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&q=80', title: 'Grand Ballroom Event', category: 'Gala' },
           ].map((item, index) => (
             <motion.div 
               key={index}
@@ -302,30 +290,62 @@ export default function Home() {
         <TestimonialCarousel />
       </Section>
 
-      {/* Call to Action */}
+      {/* Call to Action - Redesigned */}
       <Section background="white" padding="large">
-        <div className="max-w-4xl mx-auto text-center parallax-reveal relative">
-          {/* Decorative Background Elements */}
-          <div className="absolute -top-20 -left-20 w-64 h-64 bg-gold/5 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-rose-gold/5 rounded-full blur-3xl"></div>
-          
-          <div className="relative z-10">
-            <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Let's Connect</span>
-            <h2 className="text-display text-4xl md:text-6xl lg:text-7xl font-bold text-navy mb-8 text-shadow-elegant leading-tight">
-              Let's Create Something <span className="text-gold">Beautiful</span> Together
-            </h2>
-            <div className="ornamental-divider w-32 mx-auto mb-10"></div>
-            <p className="text-elegant text-xl md:text-2xl text-charcoal/80 leading-relaxed mb-12 font-light">
-              Ready to begin planning your unforgettable event? We'd love to hear about your vision 
-              and explore how we can bring it to life.
-            </p>
-            <Link 
-              href="/contact"
-              className="inline-block gradient-rose text-white px-16 py-7 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-2 border-glow"
+        <div className="relative overflow-hidden">
+          {/* Animated Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#c9a96e] rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#b76e79] rounded-full blur-3xl"></div>
+          </div>
+
+          <div className="max-w-6xl mx-auto text-center relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              Start Your Journey
-            </Link>
-            <p className="text-sm text-charcoal/60 mt-8 tracking-wide">Luxury event planning services available nationwide</p>
+              <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block">Let's Collaborate</span>
+              <h2 className="text-display text-5xl md:text-7xl lg:text-8xl font-bold text-navy mb-8 text-shadow-elegant leading-tight">
+                Your Vision.<br/>
+                <span className="text-[#c9a96e]">Our Expertise.</span><br/>
+                Unforgettable Results.
+              </h2>
+              <div className="ornamental-divider w-48 mx-auto mb-12"></div>
+              <p className="text-elegant text-2xl md:text-3xl text-charcoal/80 leading-relaxed mb-16 font-light max-w-4xl mx-auto">
+                Transform your next event into an extraordinary experience that resonates with sophistication and leaves a lasting impression.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <Link 
+                  href="/contact"
+                  className="group inline-flex items-center gap-4 gradient-rose text-white px-16 py-7 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-2"
+                >
+                  <span>Begin Your Journey</span>
+                  <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                
+                <Link 
+                  href="/gallery"
+                  className="inline-flex items-center gap-4 bg-white border-2 border-[#c9a96e] text-[#c9a96e] px-12 py-7 font-sans text-sm tracking-widest uppercase hover:bg-[#c9a96e] hover:text-white transition-all duration-500 transform hover:-translate-y-2 shadow-lg"
+                >
+                  <span>View Portfolio</span>
+                </Link>
+              </div>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                viewport={{ once: true }}
+                className="text-sm text-charcoal/50 mt-12 tracking-wide"
+              >
+                Serving discerning clients nationwide • Based in New York
+              </motion.p>
+            </motion.div>
           </div>
         </div>
       </Section>

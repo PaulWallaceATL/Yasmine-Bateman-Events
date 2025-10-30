@@ -5,7 +5,7 @@ import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import Image from 'next/image';
 
-type Category = 'all' | 'weddings' | 'corporate' | 'social';
+type Category = 'all' | 'corporate' | 'social' | 'gala';
 
 interface GalleryItem {
   src: string;
@@ -18,27 +18,27 @@ export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState<Category>('all');
 
   const galleryItems: GalleryItem[] = [
-    { src: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070', title: 'Elegant Wedding Reception', category: 'weddings', height: 'tall' },
-    { src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069', title: 'Garden Wedding Ceremony', category: 'weddings', height: 'medium' },
-    { src: 'https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=2070', title: 'Reception Details', category: 'weddings', height: 'short' },
-    { src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069', title: 'Corporate Gala', category: 'corporate', height: 'medium' },
-    { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070', title: 'Business Conference', category: 'corporate', height: 'tall' },
-    { src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=2070', title: 'Floral Centerpiece', category: 'weddings', height: 'medium' },
-    { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070', title: 'Evening Celebration', category: 'social', height: 'tall' },
-    { src: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=2070', title: 'Intimate Gathering', category: 'social', height: 'short' },
-    { src: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2062', title: 'Grand Ballroom', category: 'weddings', height: 'medium' },
-    { src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069', title: 'Romantic Table Setting', category: 'weddings', height: 'short' },
-    { src: 'https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=2070', title: 'Birthday Celebration', category: 'social', height: 'medium' },
+    { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070', title: 'Corporate Gala', category: 'corporate', height: 'tall' },
+    { src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069', title: 'Executive Summit', category: 'corporate', height: 'medium' },
+    { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070', title: 'Evening Soirée', category: 'gala', height: 'tall' },
+    { src: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2062', title: 'Grand Ballroom Event', category: 'gala', height: 'medium' },
+    { src: 'https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=2070', title: 'Milestone Celebration', category: 'social', height: 'short' },
+    { src: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=2070', title: 'Intimate Gathering', category: 'social', height: 'tall' },
+    { src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069', title: 'Luxury Fundraiser', category: 'gala', height: 'medium' },
     { src: 'https://images.unsplash.com/photo-1510076857177-7470076d4098?q=80&w=2072', title: 'Product Launch Event', category: 'corporate', height: 'tall' },
-    { src: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=2070', title: 'Wedding Arch', category: 'weddings', height: 'medium' },
-    { src: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=2070', title: 'Reception Hall', category: 'weddings', height: 'short' },
-    { src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=2070', title: 'Anniversary Party', category: 'social', height: 'tall' },
+    { src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=2070', title: 'Anniversary Gala', category: 'social', height: 'medium' },
+    { src: 'https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=2070', title: 'Elegant Reception', category: 'gala', height: 'short' },
+    { src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=2070', title: 'Floral Design', category: 'gala', height: 'medium' },
+    { src: 'https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=2070', title: 'Brand Activation', category: 'corporate', height: 'tall' },
+    { src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069', title: 'Luxury Dinner', category: 'social', height: 'short' },
+    { src: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=2070', title: 'Conference Hall', category: 'corporate', height: 'medium' },
+    { src: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070', title: 'Award Ceremony', category: 'gala', height: 'tall' },
   ];
 
   const categories: { value: Category; label: string }[] = [
     { value: 'all', label: 'All Events' },
-    { value: 'weddings', label: 'Weddings' },
     { value: 'corporate', label: 'Corporate' },
+    { value: 'gala', label: 'Galas' },
     { value: 'social', label: 'Social' },
   ];
 
@@ -68,12 +68,12 @@ export default function Gallery() {
 
       {/* Gallery Section */}
       <Section background="white" padding="large">
-        <div className="text-center mb-16 parallax-reveal">
-          <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Our Work</span>
-          <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 text-shadow-elegant">
-            Celebrations We've Created
+        <div className="text-center mb-20 parallax-reveal">
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Our Work</span>
+          <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-6 text-shadow-elegant">
+            Event Portfolio
           </h2>
-          <div className="ornamental-divider w-32 mx-auto mb-12"></div>
+          <div className="ornamental-divider w-40 mx-auto mb-12"></div>
           
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -131,14 +131,14 @@ export default function Gallery() {
 
       {/* Featured Events */}
       <Section background="pearl" padding="large">
-        <div className="text-center mb-16 parallax-reveal">
-          <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Spotlight</span>
-          <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 text-shadow-elegant">
-            Featured Events
+        <div className="text-center mb-20 parallax-reveal">
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Spotlight</span>
+          <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-6 text-shadow-elegant">
+            Featured Projects
           </h2>
-          <div className="ornamental-divider w-32 mx-auto mb-4"></div>
-          <p className="text-elegant text-xl text-charcoal/70 max-w-2xl mx-auto">
-            A closer look at some of our most memorable celebrations
+          <div className="ornamental-divider w-40 mx-auto mb-6"></div>
+          <p className="text-elegant text-2xl text-charcoal/70 max-w-3xl mx-auto">
+            Showcasing our most exceptional event experiences
           </p>
         </div>
 
@@ -148,40 +148,40 @@ export default function Gallery() {
             <div className="stagger-item">
               <div className="relative h-[600px] w-full overflow-hidden image-overlay-gold border-glow">
                 <Image
-                  src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070"
-                  alt="Luxury Garden Wedding"
+                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070"
+                  alt="Luxury Corporate Gala"
                   fill
                   className="object-cover"
                 />
               </div>
             </div>
             <div className="stagger-item">
-              <div className="text-gold text-xs tracking-[0.3em] uppercase mb-4">Wedding</div>
+              <div className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4">Corporate Gala</div>
               <h3 className="text-display text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
-                Luxury Garden Wedding
+                Annual Executive Summit
               </h3>
               <div className="h-1 w-24 gradient-gold mb-8"></div>
               <p className="text-elegant text-xl text-charcoal/70 leading-relaxed mb-8">
-                A stunning outdoor celebration featuring lush botanical arrangements, elegant table 
-                settings, and breathtaking views. This wedding perfectly captured the couple's love 
-                for nature and timeless elegance.
+                A prestigious corporate gathering featuring state-of-the-art presentations, networking lounges, 
+                and exquisite dining experiences. This event elevated the company's brand presence and fostered 
+                meaningful connections among industry leaders.
               </p>
               <div className="grid grid-cols-2 gap-6 text-sm">
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Location</div>
-                  <div className="text-charcoal/70">Private Estate</div>
+                  <div className="text-charcoal/70">Grand Hotel NYC</div>
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Guest Count</div>
-                  <div className="text-charcoal/70">150 Guests</div>
+                  <div className="text-charcoal/70">350 Attendees</div>
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Season</div>
-                  <div className="text-charcoal/70">Summer</div>
+                  <div className="text-charcoal/70">Fall 2024</div>
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Style</div>
-                  <div className="text-charcoal/70">Garden Elegance</div>
+                  <div className="text-charcoal/70">Modern Luxury</div>
                 </div>
               </div>
             </div>
@@ -190,40 +190,40 @@ export default function Gallery() {
           {/* Featured Event 2 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center luxury-card bg-white p-8 shadow-2xl">
             <div className="order-2 lg:order-1 stagger-item">
-              <div className="text-gold text-xs tracking-[0.3em] uppercase mb-4">Corporate</div>
+              <div className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4">Fundraiser Gala</div>
               <h3 className="text-display text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
-                Annual Corporate Gala
+                Charity Fundraiser Evening
               </h3>
               <div className="h-1 w-24 gradient-gold mb-8"></div>
               <p className="text-elegant text-xl text-charcoal/70 leading-relaxed mb-8">
-                A sophisticated evening celebrating company achievements with impeccable design, 
-                state-of-the-art technology, and exquisite catering that impressed executives and 
-                clients alike.
+                An elegant fundraising gala featuring live entertainment, silent auction displays, 
+                and sophisticated dining experiences. This event raised record contributions while 
+                providing guests with an unforgettable evening of purpose and luxury.
               </p>
               <div className="grid grid-cols-2 gap-6 text-sm">
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Location</div>
-                  <div className="text-charcoal/70">Downtown Hotel</div>
+                  <div className="text-charcoal/70">Museum Venue</div>
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Guest Count</div>
-                  <div className="text-charcoal/70">300 Guests</div>
+                  <div className="text-charcoal/70">400 Attendees</div>
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Season</div>
-                  <div className="text-charcoal/70">Fall</div>
+                  <div className="text-charcoal/70">Spring 2024</div>
                 </div>
                 <div className="bg-champagne p-4">
                   <div className="font-sans text-navy font-semibold mb-2 tracking-wide">Style</div>
-                  <div className="text-charcoal/70">Modern Luxury</div>
+                  <div className="text-charcoal/70">Classic Elegance</div>
                 </div>
               </div>
             </div>
             <div className="order-1 lg:order-2 stagger-item">
               <div className="relative h-[600px] w-full overflow-hidden image-overlay-gold border-glow">
                 <Image
-                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070"
-                  alt="Annual Corporate Gala"
+                  src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070"
+                  alt="Charity Fundraiser Gala"
                   fill
                   className="object-cover"
                 />
@@ -241,9 +241,9 @@ export default function Gallery() {
           <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-rose-gold/5 rounded-full blur-3xl"></div>
           
           <div className="relative z-10">
-            <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Let's Begin</span>
+            <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Let's Begin</span>
             <h2 className="text-display text-4xl md:text-6xl lg:text-7xl font-bold text-navy mb-8 text-shadow-elegant leading-tight">
-              Ready to Create Your Own <span className="text-gold">Unforgettable</span> Event?
+              Ready to Create Your Own <span className="text-[#c9a96e]">Unforgettable</span> Event?
             </h2>
             <div className="ornamental-divider w-32 mx-auto mb-10"></div>
             <p className="text-elegant text-xl md:text-2xl text-charcoal/80 leading-relaxed mb-12 font-light">

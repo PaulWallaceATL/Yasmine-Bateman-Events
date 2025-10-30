@@ -12,10 +12,10 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "Yasmine transformed our wedding into an absolute dream. Every detail was perfect, from the flowers to the lighting. She understood our vision completely and brought it to life in ways we couldn't have imagined.",
-    author: "Sarah & Michael",
-    role: "June 2024 Wedding",
-    initial: "S"
+    quote: "Yasmine orchestrated our company's annual gala with exceptional precision and creativity. Every detail was flawless, from the ambient lighting to the seamless flow. She exceeded our highest expectations.",
+    author: "Marcus Hamilton",
+    role: "CEO, Hamilton Industries",
+    initial: "M"
   },
   {
     quote: "Working with Yasmine Bateman Events was the best decision we made for our corporate gala. Professional, creative, and flawlessly executed. Our clients were thoroughly impressed.",
@@ -24,10 +24,10 @@ const testimonials: Testimonial[] = [
     initial: "J"
   },
   {
-    quote: "The attention to detail was extraordinary. Yasmine took our vague ideas and created a stunning celebration that exceeded all expectations. Our guests are still talking about it!",
-    author: "David & Emma Rodriguez",
-    role: "Anniversary Celebration, August 2024",
-    initial: "D"
+    quote: "The attention to detail was extraordinary. Yasmine took our vision for the product launch and created an immersive experience that perfectly captured our brand. Our stakeholders were thoroughly impressed.",
+    author: "Victoria Sterling",
+    role: "VP Marketing, Sterling Tech",
+    initial: "V"
   },
   {
     quote: "An absolute master of her craft. Yasmine's ability to balance elegance with warmth made our event feel both luxurious and intimate. Truly a once-in-a-lifetime experience.",
@@ -93,13 +93,13 @@ export default function TestimonialCarousel() {
           }}
           className="luxury-card bg-white p-12 shadow-2xl"
         >
-          <div className="text-gold text-7xl mb-6 font-serif leading-none">"</div>
+          <div className="text-[#c9a96e] text-7xl mb-6 font-serif leading-none">"</div>
           <p className="text-elegant text-xl md:text-2xl text-charcoal/80 leading-relaxed mb-8 italic">
             {testimonials[currentIndex].quote}
           </p>
-          <div className="h-[2px] bg-gradient-to-r from-gold/50 via-gold to-gold/50 mb-6"></div>
+          <div className="h-[2px] bg-gradient-to-r from-[#c9a96e]/50 via-[#c9a96e] to-[#c9a96e]/50 mb-6"></div>
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-gradient-gold flex items-center justify-center text-white text-2xl font-serif">
+            <div className="w-14 h-14 rounded-full bg-gradient-gold flex items-center justify-center text-white text-2xl font-serif shadow-lg">
               {testimonials[currentIndex].initial}
             </div>
             <div>
@@ -117,20 +117,20 @@ export default function TestimonialCarousel() {
       {/* Navigation Arrows */}
       <button
         onClick={() => paginate(-1)}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center hover:bg-gold hover:border-gold transition-all duration-300 group"
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 w-14 h-14 rounded-full border-2 border-[#c9a96e]/40 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all duration-300 group shadow-lg"
         aria-label="Previous testimonial"
       >
-        <svg className="w-6 h-6 text-gold group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-[#c9a96e] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
 
       <button
         onClick={() => paginate(1)}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 w-12 h-12 rounded-full border-2 border-gold/40 flex items-center justify-center hover:bg-gold hover:border-gold transition-all duration-300 group"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 w-14 h-14 rounded-full border-2 border-[#c9a96e]/40 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all duration-300 group shadow-lg"
         aria-label="Next testimonial"
       >
-        <svg className="w-6 h-6 text-gold group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-[#c9a96e] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
@@ -146,8 +146,8 @@ export default function TestimonialCarousel() {
             }}
             className={`transition-all duration-300 ${
               index === currentIndex
-                ? 'w-12 h-3 bg-gradient-gold rounded-full'
-                : 'w-3 h-3 bg-gold/30 rounded-full hover:bg-gold/50'
+                ? 'w-12 h-3 bg-gradient-gold rounded-full shadow-md'
+                : 'w-3 h-3 bg-[#c9a96e]/30 rounded-full hover:bg-[#c9a96e]/50'
             }`}
             aria-label={`Go to testimonial ${index + 1}`}
           />
