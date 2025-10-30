@@ -1,7 +1,7 @@
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import EnhancedContactForm from '@/components/EnhancedContactForm';
-import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -94,15 +94,15 @@ export default function Contact() {
               <div className="mt-8">
                 <h3 className="font-sans text-sm tracking-wider uppercase text-navy mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
-                     className="w-10 h-10 bg-sage/20 rounded-full flex items-center justify-center hover:bg-sage hover:text-white transition-colors"
+                  <a href="https://www.instagram.com/yasminebateman/" target="_blank" rel="noopener noreferrer" 
+                     className="w-12 h-12 rounded-full border-2 border-[#c9a96e]/30 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] hover:text-white transition-all duration-300 group"
                      aria-label="Instagram">
-                    <Instagram size={20} />
+                    <Instagram size={20} className="group-hover:scale-110 transition-transform" />
                   </a>
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
-                     className="w-10 h-10 bg-sage/20 rounded-full flex items-center justify-center hover:bg-sage hover:text-white transition-colors"
-                     aria-label="Facebook">
-                    <Facebook size={20} />
+                  <a href="mailto:yasminebatemanpr@gmail.com" 
+                     className="w-12 h-12 rounded-full border-2 border-[#c9a96e]/30 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] hover:text-white transition-all duration-300 group"
+                     aria-label="Email">
+                    <Mail size={20} className="group-hover:scale-110 transition-transform" />
                   </a>
                 </div>
               </div>

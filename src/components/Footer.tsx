@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -79,13 +79,9 @@ export default function Footer() {
                 </a>
               </li>
               <li className="pt-4 flex space-x-4">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
+                <a href="https://www.instagram.com/yasminebateman/" target="_blank" rel="noopener noreferrer" 
                    className="w-10 h-10 rounded-full border-2 border-[#c9a96e]/30 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all duration-300 group" aria-label="Instagram">
                   <Instagram size={18} className="group-hover:scale-110 transition-transform" />
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
-                   className="w-10 h-10 rounded-full border-2 border-[#c9a96e]/30 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all duration-300 group" aria-label="Facebook">
-                  <Facebook size={18} className="group-hover:scale-110 transition-transform" />
                 </a>
                 <a href="mailto:yasminebatemanpr@gmail.com" 
                    className="w-10 h-10 rounded-full border-2 border-[#c9a96e]/30 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all duration-300 group" aria-label="Email">
