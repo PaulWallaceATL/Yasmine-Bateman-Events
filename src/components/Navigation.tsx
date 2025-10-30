@@ -41,7 +41,7 @@ export default function Navigation() {
           <Link href="/" className="group">
             <h1 className={`text-display text-2xl lg:text-3xl font-bold tracking-tight transition-all duration-300 ${
               isScrolled ? 'text-navy' : 'text-white'
-            } group-hover:text-gold`}>
+            } group-hover:text-[#c9a96e]`}>
               Yasmine Bateman
               <span className="block text-xs lg:text-sm font-light tracking-[0.3em] uppercase font-sans">Events</span>
             </h1>
@@ -54,14 +54,16 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={`font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 relative group ${
-                  isScrolled ? 'text-charcoal' : 'text-white'
-                } hover:text-gold ${
-                  pathname === link.href ? 'text-gold' : ''
+                  pathname === link.href 
+                    ? 'text-[#c9a96e]' 
+                    : isScrolled 
+                      ? 'text-charcoal hover:text-[#c9a96e]' 
+                      : 'text-white hover:text-[#c9a96e]'
                 }`}
               >
                 {link.label}
-                <span className={`absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-gold to-rose-gold transition-all duration-300 group-hover:w-full ${
-                  pathname === link.href ? 'w-full' : ''
+                <span className={`absolute -bottom-1 left-0 h-[2px] bg-gradient-to-r from-[#c9a96e] to-[#b76e79] transition-all duration-300 ${
+                  pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'
                 }`}></span>
               </Link>
             ))}
@@ -101,8 +103,8 @@ export default function Navigation() {
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={`block py-3 font-sans text-sm tracking-wide uppercase transition-colors ${
-                        pathname === link.href ? 'text-sage' : 'text-charcoal'
-                      } hover:text-sage`}
+                        pathname === link.href ? 'text-[#c9a96e]' : 'text-charcoal'
+                      } hover:text-[#c9a96e]`}
                     >
                       {link.label}
                     </Link>
