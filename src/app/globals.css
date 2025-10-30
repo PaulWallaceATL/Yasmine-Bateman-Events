@@ -1,26 +1,406 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Luxury Color Palette - Enhanced Glamorous Edition */
+  --navy: #1a2332;
+  --sage: #a8b5a0;
+  --cream: #f8f6f3;
+  --beige: #e8e3dc;
+  --white: #ffffff;
+  --charcoal: #3a3a3a;
+  --gold: #c9a96e;
+  --rose-gold: #b76e79;
+  --champagne: #f7e7ce;
+  --pearl: #faf8f3;
+  --burgundy: #800020;
+  --bronze: #cd7f32;
+  --silver: #c0c0c0;
+  
+  --background: var(--white);
+  --foreground: var(--charcoal);
+  --accent: var(--sage);
 }
 
 @theme inline {
+  --color-navy: var(--navy);
+  --color-sage: var(--sage);
+  --color-cream: var(--cream);
+  --color-beige: var(--beige);
+  --color-charcoal: var(--charcoal);
+  --color-gold: var(--gold);
+  --color-rose-gold: var(--rose-gold);
+  --color-champagne: var(--champagne);
+  --color-pearl: var(--pearl);
+  --color-burgundy: var(--burgundy);
+  --color-bronze: var(--bronze);
+  --color-silver: var(--silver);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--accent);
+  
+  --font-serif: var(--font-playfair);
+  --font-display: var(--font-cinzel);
+  --font-elegant: var(--font-cormorant);
+  --font-sans: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Elegant transitions for page elements */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Animations */
+.animate-fade-up {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.animate-slide-left {
+  animation: slideLeft 1s ease-out forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-right {
+  animation: slideRight 1s ease-out forwards;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-scale-up {
+  animation: scaleUp 1s ease-out forwards;
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Smooth hover transitions for images */
+img {
+  transition: transform 0.7s ease, opacity 0.3s ease;
+}
+
+/* Line clamp utility for text truncation */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sage);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navy);
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--rose-gold);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--rose-gold);
+  color: white;
+}
+
+/* Glamorous Typography Utilities */
+.text-display {
+  font-family: var(--font-cinzel), var(--font-serif), serif;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.text-elegant {
+  font-family: var(--font-cormorant), var(--font-serif), serif;
+  letter-spacing: 0.02em;
+}
+
+/* Shimmer Effect for Luxury Elements */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 3s infinite linear;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Elegant Glow Effect */
+.glow-effect {
+  box-shadow: 0 0 20px rgba(200, 169, 110, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 30px rgba(200, 169, 110, 0.5);
+}
+
+/* Sophisticated Gradient Overlays */
+.gradient-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--bronze) 100%);
+}
+
+.gradient-rose {
+  background: linear-gradient(135deg, var(--rose-gold) 0%, var(--burgundy) 100%);
+}
+
+.gradient-elegant {
+  background: linear-gradient(135deg, var(--pearl) 0%, var(--champagne) 100%);
+}
+
+/* Ornamental Divider */
+.ornamental-divider {
+  position: relative;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--gold) 50%,
+    transparent 100%
+  );
+  margin: 2rem 0;
+}
+
+.ornamental-divider::before,
+.ornamental-divider::after {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-size: 0.75rem;
+}
+
+.ornamental-divider::before {
+  left: -1rem;
+}
+
+.ornamental-divider::after {
+  right: -1rem;
+}
+
+/* Parallax Reveal Animation */
+@keyframes parallaxReveal {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.parallax-reveal {
+  animation: parallaxReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger Animation for Lists */
+.stagger-item {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+.stagger-item:nth-child(7) { animation-delay: 0.7s; }
+.stagger-item:nth-child(8) { animation-delay: 0.8s; }
+.stagger-item:nth-child(9) { animation-delay: 0.9s; }
+
+/* Elegant Float Animation */
+@keyframes elegantFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-elegant {
+  animation: elegantFloat 3s ease-in-out infinite;
+}
+
+/* Luxury Card Hover Effect */
+.luxury-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.luxury-card:hover::before {
+  left: 100%;
+}
+
+.luxury-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Elegant Text Shadow */
+.text-shadow-elegant {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Metallic Text Effect */
+.text-gold {
+  background: linear-gradient(135deg, #c9a96e 0%, #f4e5c3 50%, #c9a96e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Sophisticated Border Animation */
+@keyframes borderGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(200, 169, 110, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(200, 169, 110, 0.8);
+  }
+}
+
+.border-glow {
+  animation: borderGlow 2s ease-in-out infinite;
+}
+
+/* Image Overlay Effects */
+.image-overlay-gold {
+  position: relative;
+}
+
+.image-overlay-gold::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(201, 169, 110, 0.3) 0%,
+    rgba(205, 127, 50, 0.3) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.image-overlay-gold:hover::after {
+  opacity: 1;
 }
