@@ -18,21 +18,25 @@ export default function About() {
       <Section background="white" padding="large">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="slide-up">
-            <div className="relative h-[600px] w-full">
+            <div className="relative h-[700px] w-full luxury-card overflow-hidden border-2 border-[#c9a96e]/30 shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976"
-                alt="Yasmine Bateman"
+                src="/yasmine-bateman.jpg"
+                alt="Yasmine Bateman - Event Planner"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
+                priority
               />
+              {/* Elegant frame effect */}
+              <div className="absolute inset-0 border-8 border-white/10 pointer-events-none"></div>
             </div>
           </div>
 
           <div className="slide-up">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-navy mb-6">
+            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Founder & Creative Director</span>
+            <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
               Meet Yasmine Bateman
             </h2>
-            <div className="w-24 h-0.5 bg-sage mb-8"></div>
+            <div className="h-1 w-24 gradient-gold mb-8"></div>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
               With over 15 years of experience in luxury event planning, Yasmine Bateman has built a 
               reputation for creating extraordinary celebrations that exceed expectations. Her journey 

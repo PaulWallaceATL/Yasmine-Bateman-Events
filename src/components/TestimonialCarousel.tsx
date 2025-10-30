@@ -51,23 +51,26 @@ export default function TestimonialCarousel() {
   }, []);
 
   const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 100 : -100,
+    enter: {
       opacity: 0,
-      scale: 0.95
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
-      scale: 1
+      scale: 0.98
     },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 100 : -100,
+    center: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    },
+    exit: {
       opacity: 0,
-      scale: 0.95
-    })
+      scale: 0.98,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
   };
 
   const paginate = (newDirection: number) => {
@@ -85,16 +88,10 @@ export default function TestimonialCarousel() {
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentIndex}
-          custom={direction}
           variants={slideVariants}
           initial="enter"
           animate="center"
           exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 100, damping: 20 },
-            opacity: { duration: 0.5 },
-            scale: { duration: 0.5 }
-          }}
           className="luxury-card bg-white p-12 shadow-2xl"
         >
           <div className="text-[#c9a96e] text-7xl mb-6 font-serif leading-none">"</div>
