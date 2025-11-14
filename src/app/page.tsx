@@ -16,7 +16,7 @@ const statHighlights: Array<{
   {
     label: 'Regional Productions',
     value: 52,
-    suffix: '+',
+    suffix: '',
     subtext: 'Corporate galas, summits, and civic showcases across Georgia since 2015',
     decimals: 0,
   },
@@ -30,7 +30,7 @@ const statHighlights: Array<{
   {
     label: 'Local Partners',
     value: 14,
-    suffix: '+',
+    suffix: '',
     subtext: 'Atlanta caterers, stylists, AV houses, and cultural collaborators on-call',
     decimals: 0,
   },
