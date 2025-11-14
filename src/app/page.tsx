@@ -12,31 +12,31 @@ import TestimonialCarousel from '@/components/TestimonialCarousel';
 const heroCollage = [
   {
     src: 'https://images.unsplash.com/photo-1464347744102-11db6282f854?auto=format&fit=crop&w=1200&q=80',
-    title: 'Garden Welcome Dinner',
-    location: 'Sea Island, GA',
-    badge: 'Wedding Weekend',
+    title: 'Midtown Skyline Gala',
+    location: 'Atlanta, GA',
+    badge: 'Corporate Gala',
     height: 'h-72',
     priority: true,
   },
   {
     src: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
-    title: 'Executive Retreat',
-    location: 'Napa Valley, CA',
-    badge: 'Corporate Immersion',
+    title: 'BeltLine Sunset Mixer',
+    location: 'Atlanta BeltLine',
+    badge: 'City Series',
     height: 'h-96',
   },
   {
     src: 'https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=1200&q=80',
-    title: 'Charity Gala',
-    location: 'Atlanta, GA',
-    badge: 'Signature Gala',
+    title: 'Buckhead Leadership Summit',
+    location: 'Buckhead, Atlanta',
+    badge: 'Executive Summit',
     height: 'h-64',
   },
   {
     src: 'https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?auto=format&fit=crop&w=1200&q=80',
-    title: 'Luxury Brand Dinner',
-    location: 'New York City, NY',
-    badge: 'Brand Experience',
+    title: 'Savannah Riverfront Showcase',
+    location: 'Savannah, GA',
+    badge: 'Statewide Tour',
     height: 'h-80',
   },
 ];
@@ -48,74 +48,60 @@ const statHighlights: Array<{
   subtext: string;
   decimals?: number;
 }> = [
-  { label: 'Events Curated', value: 520, suffix: '+', subtext: 'Weddings, galas, launches, and retreats since 2015', decimals: 0 },
-  { label: 'Cities Served', value: 18, suffix: '', subtext: 'Events produced across the U.S., Caribbean, and Europe', decimals: 0 },
-  { label: 'Vendor Partners', value: 140, suffix: '+', subtext: 'Florists, chefs, stylists, and production teams on-call', decimals: 0 },
+  { label: 'Regional Productions', value: 520, suffix: '+', subtext: 'Corporate galas, summits, and civic showcases across Georgia since 2015', decimals: 0 },
+  { label: 'Atlanta Footprint', value: 18, suffix: '', subtext: 'Neighborhoods activated from Downtown to Alpharetta + Savannah extensions', decimals: 0 },
+  { label: 'Local Partners', value: 140, suffix: '+', subtext: 'Atlanta caterers, stylists, AV houses, and cultural collaborators on-call', decimals: 0 },
 ];
 
 const serviceSuites = [
   {
-    title: 'Full-Service Planning & Design',
-    description: 'Concept, budgeting, vendor management, and production leadership for weddings and social celebrations.',
+    title: 'Full-Service Planning & Production',
+    description: 'Atlanta metro strategy, budgeting, vendor management, and run-of-show leadership for corporate experiences.',
     stat: 'End-to-end direction',
     image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80',
     tags: ['Budget stewardship', 'Creative direction'],
-  },
-  {
-    title: 'Weekend Celebrations',
-    description: 'Welcome parties, ceremonies, and farewell brunches choreographed into cohesive multi-day timelines.',
-    stat: 'Weekend timeline experts',
-    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Welcome party', 'Farewell brunch'],
-  },
-  {
-    title: 'Corporate & Brand Experiences',
-    description: 'Launch dinners, leadership summits, and client entertainment produced with immersive storytelling.',
-    stat: 'On-brand production',
-    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Stage & lighting', 'Run of show'],
   },
 ];
 
 const galleryShots = [
   {
-    title: 'Garden Welcome Party',
-    location: 'SoHo Loft',
-    category: 'Wedding Weekend',
+    title: 'Skyline Preview Party',
+    location: 'Ponce City Market',
+    category: 'Metro Launch',
     src: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-2',
   },
   {
     title: 'Executive Dinner',
-    location: 'Atlanta',
+    location: 'Midtown Atlanta',
     category: 'Corporate',
     src: 'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-1',
   },
   {
     title: 'Editorial Install',
-    location: 'Brooklyn Studio',
+    location: 'Old Fourth Ward',
     category: 'Design Lab',
     src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-2',
   },
   {
     title: 'Modern Tablescape',
-    location: 'Nashville',
-    category: 'Social Celebration',
+    location: 'Inman Park',
+    category: 'Social Experience',
     src: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-1',
   },
   {
     title: 'Studio Light Suite',
-    location: 'NYC',
+    location: 'Castleberry Hill',
     category: 'Content Capture',
     src: 'https://images.unsplash.com/photo-1513077202514-b33f6439a5ba?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-1',
   },
   {
     title: 'City Soirée',
-    location: 'Chicago',
+    location: 'Savannah Historic District',
     category: 'Client Appreciation',
     src: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-1',
@@ -124,7 +110,7 @@ const galleryShots = [
 
 const servicePillars = [
   {
-    title: 'Weddings & Social',
+    title: 'Regional Celebrations',
     highlight: 'Full planning, production, and guest experience management for milestone celebrations.',
     metric: '12-18 month roadmap',
     bullets: [
@@ -183,7 +169,7 @@ export default function Home() {
                 Immersive celebrations designed with editorial precision and production care.
               </h1>
               <p className="text-lg md:text-xl text-cream/80 max-w-2xl">
-                We plan multi-day weddings, executive summits, and brand dinners that feel effortless for guests and
+                We plan multi-day summits, civic programs, and brand dinners that feel effortless for guests and
                 measurable for hosts. Every touchpoint—from save-the-date to farewell brunch—is considered.
               </p>
 
@@ -320,7 +306,7 @@ export default function Home() {
           <div>
             <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-3">Recent environments</p>
             <h2 className="text-display text-4xl md:text-5xl leading-tight">
-              Wedding weekends, corporate retreats, and milestone galas in motion.
+              Atlanta metro galas, summits, and neighborhood showcases in motion.
             </h2>
           </div>
           <Link
