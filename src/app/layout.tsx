@@ -31,7 +31,8 @@ const syne = Syne({
 
 export const metadata: Metadata = {
   title: "Yasmine Bateman | Content Creator & Influencer",
-  description: "Atlanta-based lifestyle content creator with 300K+ followers. Fashion, beauty, wellness content and brand partnerships across YouTube, Instagram, and TikTok.",
+  description:
+    "Flawless events, better memories. Atlanta-based studio crafting editorial celebrations, content, and guest experiences.",
   keywords: ["Yasmine Bateman", "Atlanta influencer", "content creator", "lifestyle influencer", "fashion influencer", "beauty influencer", "brand partnerships", "YouTube creator", "Instagram influencer", "TikTok creator"],
   authors: [{ name: "Yasmine Bateman" }],
   creator: "Yasmine Bateman",
