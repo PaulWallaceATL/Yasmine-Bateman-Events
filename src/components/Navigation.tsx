@@ -36,6 +36,18 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
   const shellStyles = isScrolled
     ? 'bg-white/95 border-white/70 shadow-lg shadow-black/5'
     : 'bg-white/70 border-white/50 shadow-sm';
@@ -43,7 +55,7 @@ export default function Navigation() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50">
-        <div className="mx-auto max-w-[90vw] px-4 md:max-w-[85vw] lg:px-6">
+        <div className="mx-auto max-w-[95vw] px-3 sm:max-w-[92vw] md:max-w-[85vw] lg:px-6">
           <div
             className={`mt-4 flex items-center justify-between rounded-2xl border backdrop-blur-xl transition-all duration-300 ${shellStyles}`}
           >
