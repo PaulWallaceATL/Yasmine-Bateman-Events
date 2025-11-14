@@ -62,6 +62,7 @@ body {
 /* Prevent layout shift during loading */
 html {
   overflow-x: hidden;
+  background: var(--white);
 }
 
 /* Better tap targets on mobile */

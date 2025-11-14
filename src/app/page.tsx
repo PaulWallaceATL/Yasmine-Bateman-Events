@@ -49,7 +49,7 @@ const statHighlights: Array<{
   decimals?: number;
 }> = [
   { label: 'Events Curated', value: 520, suffix: '+', subtext: 'Weddings, galas, launches, and retreats since 2015', decimals: 0 },
-  { label: 'Cities Served', value: 18, suffix: '', subtext: 'Destination coverage across the U.S., Caribbean, and Europe', decimals: 0 },
+  { label: 'Cities Served', value: 18, suffix: '', subtext: 'Events produced across the U.S., Caribbean, and Europe', decimals: 0 },
   { label: 'Vendor Partners', value: 140, suffix: '+', subtext: 'Florists, chefs, stylists, and production teams on-call', decimals: 0 },
 ];
 
@@ -62,18 +62,18 @@ const serviceSuites = [
     tags: ['Budget stewardship', 'Creative direction'],
   },
   {
-    title: 'Destination Weekends',
-    description: 'Travel logistics, guest hospitality, and multi-day itineraries for experiences that stretch beyond the event day.',
-    stat: 'Travel & logistics experts',
+    title: 'Weekend Celebrations',
+    description: 'Welcome parties, ceremonies, and farewell brunches choreographed into cohesive multi-day timelines.',
+    stat: 'Weekend timeline experts',
     image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Guest concierge', 'Venue sourcing'],
+    tags: ['Welcome party', 'Farewell brunch'],
   },
   {
-    title: 'Brand & Corporate Experiences',
-    description: 'Executive retreats, launch dinners, and summits produced with immersive storytelling and measurable impact.',
+    title: 'Corporate & Brand Experiences',
+    description: 'Launch dinners, leadership summits, and client entertainment produced with immersive storytelling.',
     stat: 'On-brand production',
     image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Stage & lighting', 'Sponsorship alignment'],
+    tags: ['Stage & lighting', 'Run of show'],
   },
 ];
 
@@ -125,10 +125,10 @@ const galleryShots = [
 const servicePillars = [
   {
     title: 'Weddings & Social',
-    highlight: 'Full planning, production, and hospitality so families can stay present.',
+    highlight: 'Full planning, production, and guest experience management for milestone celebrations.',
     metric: '12-18 month roadmap',
     bullets: [
-      'Guest concierge & travel desk',
+      'RSVP + guest comms portal',
       'Design studies + floral labs',
       'Weekend timeline management',
     ],
@@ -136,7 +136,7 @@ const servicePillars = [
   },
   {
     title: 'Corporate & Brand',
-    highlight: 'Executive retreats, launch dinners, and culture moments built with measurable rigor.',
+    highlight: 'Executive summits, client entertainment, and showcases produced with measurable rigor.',
     metric: 'Run-of-show ownership',
     bullets: [
       'Stage, lighting, & AV direction',
@@ -146,23 +146,23 @@ const servicePillars = [
     color: 'from-rose-gold/15 via-transparent to-gold/10',
   },
   {
-    title: 'Destination Programs',
-    highlight: 'Immersive itineraries across the U.S., Caribbean, and Europe with seamless logistics.',
-    metric: '24/7 concierge line',
+    title: 'Production & Technical',
+    highlight: 'On-site stage management, cue-to-cue scripting, and vendor strike coordination.',
+    metric: 'Dedicated production crew',
     bullets: [
-      'Venue scouting abroad',
-      'Customs & transport guidance',
-      'Cultural excursions & gifting',
+      'Stage calling & show flow',
+      'Cue sheets & runbooks',
+      'Strike + load-out oversight',
     ],
     color: 'from-gold/10 via-transparent to-rose-gold/5',
   },
 ];
 
-const partnerLogos = ['Four Seasons', 'Ritz-Carlton', 'Swan House', 'Moët Hennessy', 'Porsche', 'Chanel Beauté', 'Delta'];
+const partnerLogos = ['Four Seasons', 'Ritz-Carlton', 'Swan House', 'Moët Hennessy', 'Porsche', 'Chanel Beauté', 'Cartier'];
 
 export default function Home() {
   return (
-    <main className="bg-pearl text-charcoal">
+    <main className="bg-white text-charcoal">
       <section className="relative overflow-hidden bg-navy text-cream pt-32 pb-24">
         <div className="absolute inset-0">
           <ParticlesBackground />
@@ -180,10 +180,10 @@ export default function Home() {
                 Luxury Event Studio • Atlanta
               </p>
               <h1 className="text-display text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
-                Immersive celebrations designed with editorial precision and concierge care.
+                Immersive celebrations designed with editorial precision and production care.
               </h1>
               <p className="text-lg md:text-xl text-cream/80 max-w-2xl">
-                We plan multi-day weddings, executive retreats, and brand dinners that feel effortless for guests and
+                We plan multi-day weddings, executive summits, and brand dinners that feel effortless for guests and
                 measurable for hosts. Every touchpoint—from save-the-date to farewell brunch—is considered.
               </p>
 
@@ -364,7 +364,7 @@ export default function Home() {
         <div className="text-center max-w-3xl mx-auto mb-14">
           <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-4">Service blueprints</p>
           <h2 className="text-display text-4xl md:text-5xl mb-4">
-            Each celebration is anchored by planning, design, and destination care.
+            Each celebration is anchored by planning, design, and production care.
           </h2>
           <p className="text-charcoal/70">
             These pillars keep logistics calm, aesthetics cohesive, and guests cared for—whether it’s 50 guests or 500.
