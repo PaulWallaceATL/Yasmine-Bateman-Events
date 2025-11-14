@@ -43,7 +43,7 @@ export default function Navigation() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50">
-        <div className="mx-auto max-w-[85vw] px-4 lg:px-6">
+        <div className="mx-auto max-w-[90vw] px-4 md:max-w-[85vw] lg:px-6">
           <div
             className={`mt-4 flex items-center justify-between rounded-2xl border backdrop-blur-xl transition-all duration-300 ${shellStyles}`}
           >
