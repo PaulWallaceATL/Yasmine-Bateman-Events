@@ -1,17 +1,20 @@
 import { ReactNode } from 'react';
+import { cn } from '@/lib/utils';
 
 interface SectionProps {
   children: ReactNode;
   className?: string;
   background?: 'white' | 'cream' | 'beige' | 'pearl' | 'champagne';
   padding?: 'small' | 'medium' | 'large';
+  fullWidth?: boolean;
 }
 
 export default function Section({ 
   children, 
   className = '', 
   background = 'white',
-  padding = 'large'
+  padding = 'large',
+  fullWidth = false,
 }: SectionProps) {
   const bgClasses = {
     white: 'bg-white',
@@ -28,8 +31,13 @@ export default function Section({
   };
 
   return (
-    <section className={`${bgClasses[background]} ${paddingClasses[padding]} ${className}`}>
-      <div className="container mx-auto px-6 lg:px-12">
+    <section className={cn('relative isolate', bgClasses[background], paddingClasses[padding], className)}>
+      <div
+        className={cn(
+          'w-full px-6 lg:px-10',
+          fullWidth ? 'mx-auto max-w-none' : 'mx-auto max-w-6xl'
+        )}
+      >
         {children}
       </div>
     </section>

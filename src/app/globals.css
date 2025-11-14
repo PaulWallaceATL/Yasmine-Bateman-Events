@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  /* Editorial Color Palette */
-  --navy: #050816;
-  --sage: #bcd8c1;
-  --cream: #fef9f3;
-  --beige: #f0e7dd;
+  /* Modern Editorial Palette */
+  --navy: #0d1321;
+  --sage: #a4b7a7;
+  --cream: #f7f4ee;
+  --beige: #ece1d5;
   --white: #ffffff;
-  --charcoal: #1d1c27;
-  --gold: #f4c689;
-  --rose-gold: #f2a7b4;
-  --champagne: #f6e6d4;
-  --pearl: #fdfbf7;
-  --burgundy: #8c2f4f;
-  --bronze: #d59a6f;
-  --silver: #d7d1c9;
+  --charcoal: #111526;
+  --gold: #d4b07c;
+  --rose-gold: #d88f7c;
+  --champagne: #f2e5d9;
+  --pearl: #fbf7f1;
+  --burgundy: #763e45;
+  --bronze: #c48a67;
+  --silver: #d6d1ca;
   
-  --background: var(--white);
+  --background: var(--pearl);
   --foreground: var(--charcoal);
-  --accent: var(--sage);
+  --accent: #d3806a;
 }
 
 @theme inline {
@@ -49,7 +49,10 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 10% 20%, rgba(212, 176, 124, 0.18), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(184, 148, 132, 0.16), transparent 40%),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   overflow-x: hidden;
@@ -57,6 +60,7 @@ body {
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 /* Prevent layout shift during loading */
@@ -340,49 +344,6 @@ img {
 }
 
 /* Luxury Card Hover Effect */
-.luxury-card {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.luxury-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(201, 169, 110, 0.15),
-    transparent
-  );
-  transition: left 0.7s;
-}
-
-.luxury-card:hover::before {
-  left: 100%;
-}
-
-.luxury-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 2px solid transparent;
-  transition: border-color 0.5s ease;
-}
-
-.luxury-card:hover::after {
-  border-color: rgba(201, 169, 110, 0.3);
-}
-
-.luxury-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(201, 169, 110, 0.1);
-}
-
 /* Elegant Text Shadow */
 .text-shadow-elegant {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);

@@ -60,6 +60,8 @@ export default function ParallaxHero({
       {/* Parallax Background Image */}
       <div 
         ref={imageRef}
+        role="img"
+        aria-label={imageAlt}
         className="absolute inset-0 w-full h-[120%] -top-[10%]"
         style={{ 
           backgroundImage: `url(${imageSrc})`,
@@ -75,12 +77,12 @@ export default function ParallaxHero({
       </div>
 
       {/* Decorative Luxury Elements - Removed seizure-inducing floating animation */}
-      <div className="absolute top-16 left-8 w-40 h-40 border-2 border-[#c9a96e]/20 rotate-45 opacity-40"></div>
-      <div className="absolute bottom-24 right-12 w-32 h-32 border border-[#c9a96e]/30 rotate-12 opacity-50"></div>
+      <div className="absolute top-16 left-8 w-40 h-40 border-2 border-rose-gold/20 rotate-45 opacity-40"></div>
+      <div className="absolute bottom-24 right-12 w-32 h-32 border border-rose-gold/30 rotate-12 opacity-50"></div>
       
       {/* Elegant corner ornaments */}
-      <div className="absolute top-8 right-8 text-[#c9a96e]/40 text-6xl">✦</div>
-      <div className="absolute bottom-8 left-8 text-[#c9a96e]/40 text-6xl">✦</div>
+      <div className="absolute top-8 right-8 text-rose-gold/40 text-6xl">✦</div>
+      <div className="absolute bottom-8 left-8 text-rose-gold/40 text-6xl">✦</div>
 
       {/* Content */}
       <div className="relative h-full flex items-center justify-center text-center px-6 z-10">
@@ -92,7 +94,7 @@ export default function ParallaxHero({
             transition={{ duration: 1.8, delay: 0.5, ease: "easeOut" }}
             className="h-[2px] bg-gradient-to-r from-transparent via-[#c9a96e] to-transparent mx-auto mb-10 relative"
           >
-            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[#c9a96e] text-sm">◆</span>
+            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-rose-gold text-sm">◆</span>
           </motion.div>
 
           <motion.h1 
@@ -123,7 +125,7 @@ export default function ParallaxHero({
             transition={{ duration: 1.8, delay: 2, ease: "easeOut" }}
             className="h-[2px] bg-gradient-to-r from-transparent via-[#c9a96e] to-transparent mx-auto mt-10 relative"
           >
-            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[#c9a96e] text-sm">◆</span>
+            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-rose-gold text-sm">◆</span>
           </motion.div>
         </div>
       </div>
@@ -141,11 +143,11 @@ export default function ParallaxHero({
           className="flex flex-col items-center"
         >
           <span className="text-white/90 text-xs tracking-[0.3em] uppercase mb-3 font-sans">Scroll</span>
-          <div className="w-6 h-10 border-2 border-[#c9a96e]/60 rounded-full flex justify-center pt-2">
+          <div className="w-6 h-10 border-2 border-rose-gold/60 rounded-full flex justify-center pt-2">
             <motion.div
               animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="w-1.5 h-1.5 bg-[#c9a96e] rounded-full"
+              className="w-1.5 h-1.5 bg-rose-gold rounded-full"
             ></motion.div>
           </div>
         </motion.div>

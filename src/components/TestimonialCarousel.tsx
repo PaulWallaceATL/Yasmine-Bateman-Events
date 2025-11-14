@@ -39,11 +39,9 @@ const testimonials: Testimonial[] = [
 
 export default function TestimonialCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 10000); // Slower rotation - 10 seconds
 
@@ -63,7 +61,6 @@ export default function TestimonialCarousel() {
   };
 
   const paginate = (newDirection: number) => {
-    setDirection(newDirection);
     setCurrentIndex((prev) => {
       let next = prev + newDirection;
       if (next < 0) next = testimonials.length - 1;
@@ -73,7 +70,7 @@ export default function TestimonialCarousel() {
   };
 
   return (
-    <div className="relative max-w-4xl mx-auto">
+    <div className="relative mx-auto max-w-4xl">
       <AnimatePresence initial={false} mode="wait">
         <motion.div
           key={currentIndex}
@@ -85,68 +82,60 @@ export default function TestimonialCarousel() {
             duration: 0.5,
             ease: "easeInOut"
           }}
-          className="bg-white p-12 shadow-xl rounded-lg"
+          className="rounded-3xl border border-gold/15 bg-white/90 p-10 shadow-xl"
         >
-          <div className="text-[#c9a96e] text-7xl mb-6 font-serif leading-none">"</div>
-          <p className="text-elegant text-xl md:text-2xl text-charcoal/80 leading-relaxed mb-8 italic">
+          <div className="text-6xl text-gold/60">“</div>
+          <p className="mt-4 text-xl text-charcoal/80 md:text-2xl">
             {testimonials[currentIndex].quote}
           </p>
-          <div className="h-[2px] bg-gradient-to-r from-[#c9a96e]/50 via-[#c9a96e] to-[#c9a96e]/50 mb-6"></div>
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-gradient-gold flex items-center justify-center text-white text-2xl font-serif shadow-lg">
+          <div className="mt-8 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+          <div className="mt-6 flex items-center gap-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 text-lg font-semibold text-gold">
               {testimonials[currentIndex].initial}
             </div>
             <div>
-              <p className="text-display text-xl text-navy font-semibold">
-                {testimonials[currentIndex].author}
-              </p>
-              <p className="text-sm text-charcoal/60 tracking-wide">
-                {testimonials[currentIndex].role}
-              </p>
+              <p className="text-lg font-semibold text-navy">{testimonials[currentIndex].author}</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-charcoal/60">{testimonials[currentIndex].role}</p>
             </div>
           </div>
         </motion.div>
       </AnimatePresence>
 
-      {/* Navigation Arrows */}
-      <button
-        onClick={() => paginate(-1)}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 w-14 h-14 rounded-full border-2 border-[#c9a96e]/40 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all duration-300 group shadow-lg"
-        aria-label="Previous testimonial"
-      >
-        <svg className="w-6 h-6 text-[#c9a96e] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
+      <div className="mt-6 flex items-center justify-between">
+        <button
+          onClick={() => paginate(-1)}
+          className="rounded-full border border-gold/30 p-3 text-gold transition hover:bg-gold/10"
+          aria-label="Previous testimonial"
+        >
+          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
 
-      <button
-        onClick={() => paginate(1)}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 w-14 h-14 rounded-full border-2 border-[#c9a96e]/40 flex items-center justify-center hover:bg-[#c9a96e] hover:border-[#c9a96e] transition-all duration-300 group shadow-lg"
-        aria-label="Next testimonial"
-      >
-        <svg className="w-6 h-6 text-[#c9a96e] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
+        <div className="flex items-center gap-3">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+            onClick={() => setCurrentIndex(index)}
+              className={`h-2.5 rounded-full transition-all ${
+                index === currentIndex ? 'w-8 bg-gold' : 'w-2.5 bg-gold/30 hover:bg-gold/60'
+              }`}
+              aria-label={`Go to testimonial ${index + 1}`}
+            />
+          ))}
+        </div>
 
-      {/* Dots Indicator */}
-      <div className="flex justify-center gap-3 mt-8">
-        {testimonials.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => {
-              setDirection(index > currentIndex ? 1 : -1);
-              setCurrentIndex(index);
-            }}
-            className={`transition-all duration-300 ${
-              index === currentIndex
-                ? 'w-12 h-3 bg-gradient-gold rounded-full shadow-md'
-                : 'w-3 h-3 bg-[#c9a96e]/30 rounded-full hover:bg-[#c9a96e]/50'
-            }`}
-            aria-label={`Go to testimonial ${index + 1}`}
-          />
-        ))}
+        <button
+          onClick={() => paginate(1)}
+          className="rounded-full border border-gold/30 p-3 text-gold transition hover:bg-gold/10"
+          aria-label="Next testimonial"
+        >
+          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
+
     </div>
   );
 }

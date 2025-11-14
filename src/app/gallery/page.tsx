@@ -60,7 +60,7 @@ export default function Gallery() {
       {/* Hero Section */}
       <Hero
         title="Atlanta Event Portfolio"
-        subtitle="A collection of our most memorable celebrations across Atlanta's premier venues"
+        subtitle="A collection of our most memorable celebrations across Atlanta’s premier venues"
         imageSrc="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=2070"
         imageAlt="Gallery"
         height="large"
@@ -69,7 +69,7 @@ export default function Gallery() {
       {/* Gallery Section */}
       <Section background="white" padding="large">
         <div className="text-center mb-20 parallax-reveal">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Our Work</span>
+          <span className="text-rose-gold text-sm tracking-[0.3em] uppercase mb-4 block">Our Work</span>
           <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-6 text-shadow-elegant">
             Event Portfolio
           </h2>
@@ -134,7 +134,7 @@ export default function Gallery() {
       {/* Featured Events */}
       <Section background="pearl" padding="large">
         <div className="text-center mb-20 parallax-reveal">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Spotlight</span>
+          <span className="text-rose-gold text-sm tracking-[0.3em] uppercase mb-4 block">Spotlight</span>
           <h2 className="text-display text-5xl md:text-7xl font-bold text-navy mb-6 text-shadow-elegant">
             Featured Projects
           </h2>
@@ -158,15 +158,15 @@ export default function Gallery() {
               </div>
             </div>
             <div className="stagger-item">
-              <div className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4">Corporate Gala</div>
+              <div className="text-rose-gold text-xs tracking-[0.3em] uppercase mb-4">Corporate Gala</div>
               <h3 className="text-display text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
                 Tech Fortune 500 Summit
               </h3>
               <div className="h-1 w-24 gradient-gold mb-8"></div>
               <p className="text-elegant text-xl text-charcoal/70 leading-relaxed mb-8">
-                A prestigious corporate gathering at Atlanta's premier event venue featuring state-of-the-art 
+                A prestigious corporate gathering at Atlanta’s premier event venue featuring state-of-the-art 
                 presentations, sophisticated networking lounges, and exquisite Southern-inspired dining experiences. 
-                This event elevated the company's brand presence and fostered meaningful connections among tech leaders.
+                This event elevated the company’s brand presence and fostered meaningful connections among tech leaders.
               </p>
               <div className="grid grid-cols-2 gap-6 text-sm">
                 <div className="bg-champagne p-4">
@@ -192,13 +192,13 @@ export default function Gallery() {
           {/* Featured Event 2 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center bg-white p-6 md:p-8 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
             <div className="order-2 lg:order-1 stagger-item">
-              <div className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4">Fundraiser Gala</div>
+              <div className="text-rose-gold text-xs tracking-[0.3em] uppercase mb-4">Fundraiser Gala</div>
               <h3 className="text-display text-4xl md:text-5xl font-bold text-navy mb-6 leading-tight">
                 Swan House Charity Gala
               </h3>
               <div className="h-1 w-24 gradient-gold mb-8"></div>
               <p className="text-elegant text-xl text-charcoal/70 leading-relaxed mb-8">
-                An elegant fundraising gala at Atlanta's historic Swan House featuring live jazz entertainment, 
+                An elegant fundraising gala at Atlanta’s historic Swan House featuring live jazz entertainment, 
                 silent auction displays, and sophisticated Southern-inspired dining. This landmark event raised 
                 record contributions while providing guests with an unforgettable evening combining Atlanta history 
                 with modern luxury.
@@ -244,13 +244,13 @@ export default function Gallery() {
           <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-rose-gold/5 rounded-full blur-3xl"></div>
           
           <div className="relative z-10">
-            <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Let's Begin</span>
+            <span className="text-rose-gold text-sm tracking-[0.3em] uppercase mb-4 block">Let’s Begin</span>
             <h2 className="text-display text-4xl md:text-6xl lg:text-7xl font-bold text-navy mb-8 text-shadow-elegant leading-tight">
-              Ready to Create Your Own <span className="text-[#c9a96e]">Unforgettable</span> Event?
+              Ready to Create Your Own <span className="text-rose-gold">Unforgettable</span> Event?
             </h2>
             <div className="ornamental-divider w-32 mx-auto mb-10"></div>
             <p className="text-elegant text-xl md:text-2xl text-charcoal/80 leading-relaxed mb-12 font-light">
-              Let's bring your vision to life with the same attention to detail and creative excellence.
+              Let’s bring your vision to life with the same attention to detail and creative excellence.
             </p>
             <a 
               href="/contact"

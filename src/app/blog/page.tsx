@@ -193,7 +193,7 @@ export default function Blog() {
                   <span>•</span>
                   <span>{post.readTime}</span>
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-3 group-hover:text-[#c9a96e] transition-colors leading-tight">
+                <h3 className="text-xl font-bold text-navy mb-3 group-hover:text-rose-gold transition-colors leading-tight">
                   {post.title}
                 </h3>
                 <p className="text-charcoal/70 leading-relaxed mb-4 line-clamp-3">
@@ -240,7 +240,7 @@ export default function Blog() {
                 href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
                 className="bg-beige p-4 md:p-6 text-center rounded-lg hover:bg-gold/10 transition-all duration-300 group hover:-translate-y-1 hover:shadow-lg"
               >
-                <h3 className="text-sm md:text-lg font-bold text-navy mb-2 group-hover:text-[#c9a96e] transition-colors">
+                <h3 className="text-sm md:text-lg font-bold text-navy mb-2 group-hover:text-rose-gold transition-colors">
                   {category.name}
                 </h3>
                 <p className="text-sm text-charcoal/60">{category.count}</p>

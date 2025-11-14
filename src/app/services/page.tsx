@@ -18,7 +18,7 @@ export default function Services() {
       {/* Services Introduction */}
       <Section background="white" padding="large">
         <div className="max-w-5xl mx-auto text-center">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Services</span>
+          <span className="text-rose-gold text-sm tracking-[0.3em] uppercase mb-4 block">Services</span>
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-8">
             How We Can Work Together
           </h2>
@@ -37,14 +37,14 @@ export default function Services() {
       <Section background="pearl" padding="large">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div className="order-2 lg:order-1">
-            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Content Creation</span>
+            <span className="text-rose-gold text-xs tracking-[0.3em] uppercase mb-4 block">Content Creation</span>
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6 leading-tight">
               Sponsored Content
             </h2>
             <div className="h-1 w-24 gradient-gold mb-8"></div>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
               I create authentic sponsored content across YouTube, Instagram, and TikTok. From dedicated videos 
-              to "Get Ready With Me" integrations, I showcase products in a natural way that my followers trust.
+              to “Get Ready With Me” integrations, I showcase products in a natural way that my followers trust.
             </p>
             <p className="text-lg text-charcoal/80 leading-relaxed mb-8">
               My content gets high engagement (7%+ average) with videos reaching hundreds of thousands of views. 
@@ -56,12 +56,12 @@ export default function Services() {
                 'Instagram posts, reels & stories',
                 'TikTok content & trending videos',
                 'Product reviews & unboxing videos',
-                '"Get Ready With Me" brand integrations',
+                '“Get Ready With Me” brand integrations',
                 'Tutorial & how-to content featuring products',
                 'Multi-platform campaign coordination'
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <svg className="w-6 h-6 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-rose-gold mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M5 13l4 4L19 7"></path>
                   </svg>
                   <span className="text-charcoal/70 text-lg">{item}</span>
@@ -80,7 +80,7 @@ export default function Services() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="relative h-[700px] w-full luxury-card overflow-hidden border-2 border-[#c9a96e]/20">
+            <div className="relative h-[700px] w-full overflow-hidden rounded-[32px] border border-gold/20 bg-white shadow-xl">
               <Image
                 src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070"
                 alt="Luxury gala planning"
@@ -88,7 +88,7 @@ export default function Services() {
                 className="object-cover"
               />
               <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl max-w-xs">
-                <div className="text-[#c9a96e] text-sm tracking-wider uppercase mb-2">Popular Content</div>
+                <div className="text-rose-gold text-sm tracking-wider uppercase mb-2">Popular Content</div>
                 <div className="text-2xl font-bold text-navy mb-1">400K+</div>
                 <div className="text-sm text-charcoal/70">Views on top video</div>
               </div>
@@ -101,7 +101,7 @@ export default function Services() {
       <Section background="white" padding="large">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div>
-            <div className="relative h-[700px] w-full luxury-card overflow-hidden border-2 border-[#c9a96e]/20">
+            <div className="relative h-[700px] w-full overflow-hidden rounded-[32px] border border-gold/20 bg-white shadow-xl">
               <Image
                 src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069"
                 alt="Corporate events"
@@ -109,7 +109,7 @@ export default function Services() {
                 className="object-cover"
               />
               <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl">
-                <div className="text-[#c9a96e] text-sm tracking-wider uppercase mb-2">Recent Success</div>
+                <div className="text-rose-gold text-sm tracking-wider uppercase mb-2">Recent Success</div>
                 <div className="text-2xl font-bold text-navy mb-1">Fortune 500</div>
                 <div className="text-sm text-charcoal/70">Client portfolio includes top-tier companies</div>
               </div>
@@ -117,7 +117,7 @@ export default function Services() {
           </div>
 
           <div>
-            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Event Hosting</span>
+            <span className="text-rose-gold text-xs tracking-[0.3em] uppercase mb-4 block">Event Hosting</span>
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6 leading-tight">
               Brand Events
             </h2>
@@ -141,7 +141,7 @@ export default function Services() {
                 'Launch party hosting & MC services'
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <svg className="w-6 h-6 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-rose-gold mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M5 13l4 4L19 7"></path>
                   </svg>
                   <span className="text-charcoal/70 text-lg">{item}</span>
@@ -165,7 +165,7 @@ export default function Services() {
       <Section background="pearl" padding="large">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div className="order-2 lg:order-1">
-            <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase mb-4 block">Long-Term</span>
+            <span className="text-rose-gold text-xs tracking-[0.3em] uppercase mb-4 block">Long-Term</span>
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6 leading-tight">
               Brand Partnerships
             </h2>
@@ -189,7 +189,7 @@ export default function Services() {
                 'Affiliate & discount code programs'
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <svg className="w-6 h-6 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-rose-gold mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M5 13l4 4L19 7"></path>
                   </svg>
                   <span className="text-charcoal/70 text-lg">{item}</span>
@@ -208,7 +208,7 @@ export default function Services() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="relative h-[700px] w-full luxury-card overflow-hidden border-2 border-[#c9a96e]/20">
+            <div className="relative h-[700px] w-full overflow-hidden rounded-[32px] border border-gold/20 bg-white shadow-xl">
               <Image
                 src="https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=2070"
                 alt="Private celebrations"
@@ -216,7 +216,7 @@ export default function Services() {
                 className="object-cover"
               />
               <div className="absolute top-8 left-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl max-w-xs">
-                <div className="text-[#c9a96e] text-sm tracking-wider uppercase mb-2">Engagement</div>
+                <div className="text-rose-gold text-sm tracking-wider uppercase mb-2">Engagement</div>
                 <div className="text-2xl font-bold text-navy mb-1">7.5%</div>
                 <div className="text-sm text-charcoal/70">Average engagement rate</div>
               </div>
@@ -228,7 +228,7 @@ export default function Services() {
       {/* Additional Services */}
       <Section background="white" padding="large">
         <div className="text-center mb-20">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Additional Services</span>
+          <span className="text-rose-gold text-sm tracking-[0.3em] uppercase mb-4 block">Additional Services</span>
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
             What I Offer
           </h2>
@@ -271,12 +271,12 @@ export default function Services() {
               icon: '🍽️'
             }
           ].map((service, index) => (
-            <div key={index} className="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-[#c9a96e]/10">
+            <div key={index} className="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-rose-gold/10">
               <div className="text-5xl mb-6">{service.icon}</div>
               <h3 className="text-2xl font-bold text-navy mb-4 transition-colors">
                 {service.title}
               </h3>
-              <div className="h-1 w-16 bg-[#c9a96e] mb-4"></div>
+              <div className="h-1 w-16 bg-rose-gold mb-4"></div>
               <p className="text-lg text-charcoal/70 leading-relaxed">
                 {service.description}
               </p>
@@ -288,7 +288,7 @@ export default function Services() {
       {/* Planning Packages */}
       <Section background="champagne" padding="large">
         <div className="text-center mb-16">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Atlanta Metro</span>
+          <span className="text-rose-gold text-sm tracking-[0.3em] uppercase mb-4 block">Atlanta Metro</span>
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
             Full-Service Planning & Production
           </h2>
@@ -299,9 +299,9 @@ export default function Services() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white p-12 rounded-lg border-2 border-[#c9a96e] shadow-2xl">
+          <div className="bg-white p-12 rounded-lg border-2 border-rose-gold shadow-2xl">
             <h3 className="text-3xl font-bold text-navy mb-4">Full-Service Planning</h3>
-            <div className="h-1 w-20 bg-[#c9a96e] mb-6"></div>
+            <div className="h-1 w-20 bg-rose-gold mb-6"></div>
             <p className="text-lg text-charcoal/70 mb-8 leading-relaxed">
               Comprehensive, white-glove support from first concept to final strike, including budget stewardship, vendor procurement,
               creative direction, RSVP management, and on-site production leadership.
@@ -318,7 +318,7 @@ export default function Services() {
                 'Post-event vendor management & recap reporting'
               ].map((feature) => (
                 <li key={feature} className="flex items-start text-charcoal/70">
-                  <svg className="w-5 h-5 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-rose-gold mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M5 13l4 4L19 7"></path>
                   </svg>
                   <span>{feature}</span>
@@ -345,7 +345,7 @@ export default function Services() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#c9a96e]/5 via-transparent to-[#b76e79]/5 blur-3xl"></div>
           
           <div className="relative z-10">
-            <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block">Atlanta Metro Events</span>
+            <span className="text-rose-gold text-sm tracking-[0.3em] uppercase mb-6 block">Atlanta Metro Events</span>
             <h2 className="text-4xl md:text-5xl font-bold text-navy mb-8 leading-tight">
               Ready to Plan Your Next Experience?
             </h2>

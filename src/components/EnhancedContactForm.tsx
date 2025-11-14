@@ -51,7 +51,7 @@ export default function EnhancedContactForm() {
           <div>
             <p className="font-sans text-sm font-semibold mb-1">Message Sent!</p>
             <p className="font-sans text-sm">
-              Thank you for reaching out! I'll get back to you within 24 hours.
+              Thank you for reaching out! I’ll get back to you within 24 hours.
             </p>
           </div>
         </motion.div>
