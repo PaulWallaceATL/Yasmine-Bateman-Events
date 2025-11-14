@@ -287,98 +287,54 @@ export default function Services() {
 
       {/* Planning Packages */}
       <Section background="champagne" padding="large">
-        <div className="text-center mb-20">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Pricing</span>
+        <div className="text-center mb-16">
+          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Atlanta Metro</span>
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-            Collaboration Packages
+            Full-Service Planning & Production
           </h2>
           <div className="h-1 w-24 gradient-gold mx-auto mb-6"></div>
           <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
-            Flexible options for different types of brand collaborations
+            One comprehensive service designed for corporate summits, galas, and civic celebrations across the Atlanta area.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[
-            {
-              name: 'Day-Of Coordination',
-              description: 'Perfect for those who have planned most details but need professional coordination to ensure flawless execution on the event day.',
-              features: [
-                'Final vendor confirmations (2 weeks prior)',
-                'Detailed timeline creation & management',
-                '10-12 hours of day-of coordination',
-                'Setup & breakdown supervision',
-                'Real-time problem resolution',
-                'Guest assistance & direction',
-                'Emergency kit & backup planning'
-              ]
-            },
-            {
-              name: 'Partial Planning',
-              description: 'Ideal for those who want professional guidance and support for key aspects of planning while maintaining some involvement.',
-              features: [
-                'Everything in Day-Of package',
-                'Curated vendor recommendations & coordination',
-                'Comprehensive design consultation',
-                'Budget development & management',
-                'Monthly planning meetings (6-8 sessions)',
-                'Contract review & negotiation assistance',
-                'RSVP tracking & guest management'
-              ],
-              featured: true
-            },
-            {
-              name: 'Full-Service Planning',
-              description: 'Comprehensive, white-glove support from initial concept to final execution for a completely stress-free, luxury experience.',
-              features: [
-                'Everything in Partial package',
-                'Unlimited consultations & meetings',
-                'Complete vendor sourcing & management',
-                'Full design, styling & conceptualization',
-                'Comprehensive guest management & hospitality',
-                'Rehearsal coordination & family prep',
-                'Custom welcome packages & signage',
-                'Post-event vendor management & thank-you coordination'
-              ]
-            }
-          ].map((pkg, index) => (
-            <div 
-              key={index} 
-              className={`bg-white p-10 rounded-lg ${pkg.featured ? 'border-2 border-[#c9a96e] shadow-2xl' : 'border border-[#c9a96e]/20 shadow-lg'} hover:shadow-xl transition-all duration-300`}
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white p-12 rounded-lg border-2 border-[#c9a96e] shadow-2xl">
+            <h3 className="text-3xl font-bold text-navy mb-4">Full-Service Planning</h3>
+            <div className="h-1 w-20 bg-[#c9a96e] mb-6"></div>
+            <p className="text-lg text-charcoal/70 mb-8 leading-relaxed">
+              Comprehensive, white-glove support from first concept to final strike, including budget stewardship, vendor procurement,
+              creative direction, RSVP management, and on-site production leadership.
+            </p>
+            <ul className="grid md:grid-cols-2 gap-4 mb-10">
+              {[
+                'Unlimited consultations & production meetings',
+                'Complete vendor sourcing & contracting',
+                'Design, styling, and rendering presentations',
+                'Timeline, logistics, and permitting management',
+                'Guest communications, RSVP tracking, and hospitality',
+                'Stage calling, show flow, and rehearsal oversight',
+                'Custom branding, signage, and gifting programs',
+                'Post-event vendor management & recap reporting'
+              ].map((feature) => (
+                <li key={feature} className="flex items-start text-charcoal/70">
+                  <svg className="w-5 h-5 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <Link 
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 w-full py-4 rounded-lg font-sans text-sm tracking-widest uppercase transition-all duration-300 transform hover:-translate-y-1 gradient-rose text-white shadow-lg hover:shadow-xl"
             >
-              {pkg.featured && (
-                <div className="gradient-gold text-white text-xs tracking-widest uppercase px-6 py-3 inline-block mb-6 shadow-md">
-                  Most Popular
-                </div>
-              )}
-              <h3 className="text-3xl font-bold text-navy mb-4">{pkg.name}</h3>
-              <div className="h-1 w-20 bg-[#c9a96e] mb-6"></div>
-              <p className="text-lg text-charcoal/70 mb-8 leading-relaxed">{pkg.description}</p>
-              <ul className="space-y-4 mb-10">
-                {pkg.features.map((feature, i) => (
-                  <li key={i} className="flex items-start">
-                    <svg className="w-5 h-5 text-[#c9a96e] mr-3 flex-shrink-0 mt-0.5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                      <path d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span className="text-charcoal/70">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link 
-                href="/contact"
-                className={`inline-flex items-center justify-center gap-2 w-full py-4 rounded-lg font-sans text-sm tracking-widest uppercase transition-all duration-300 transform hover:-translate-y-1 ${
-                  pkg.featured 
-                    ? 'gradient-rose text-white shadow-lg hover:shadow-xl' 
-                    : 'border-2 border-[#c9a96e] text-[#c9a96e] hover:bg-[#c9a96e] hover:text-white'
-                }`}
-              >
-                <span>Get Started</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
-          ))}
+              <span>Request Proposal</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </Section>
 
@@ -389,13 +345,13 @@ export default function Services() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#c9a96e]/5 via-transparent to-[#b76e79]/5 blur-3xl"></div>
           
           <div className="relative z-10">
-            <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block">Get Started</span>
+            <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block">Atlanta Metro Events</span>
             <h2 className="text-4xl md:text-5xl font-bold text-navy mb-8 leading-tight">
-              Ready to Collaborate?
+              Ready to Plan Your Next Experience?
             </h2>
             <div className="h-1 w-24 gradient-gold mx-auto mb-12"></div>
             <p className="text-xl text-charcoal/80 leading-relaxed mb-16 max-w-3xl mx-auto">
-              Let's discuss how we can work together to create authentic content that connects with my audience.
+              Share your date, guest count, and goals—we will craft a full-service planning roadmap tailored to the Atlanta metro area.
             </p>
             <Link 
               href="/contact"
