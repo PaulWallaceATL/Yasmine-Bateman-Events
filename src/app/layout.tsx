@@ -30,10 +30,18 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Yasmine Bateman | Content Creator & Influencer",
+  title: "YB Studio | Flawless Events, Better Memories",
   description:
-    "Flawless events, better memories. Atlanta-based studio crafting editorial celebrations, content, and guest experiences.",
-  keywords: ["Yasmine Bateman", "Atlanta influencer", "content creator", "lifestyle influencer", "fashion influencer", "beauty influencer", "brand partnerships", "YouTube creator", "Instagram influencer", "TikTok creator"],
+    "Flawless events, better memories. Atlanta-based studio crafting editorial celebrations, signature content, and guest experiences.",
+  keywords: [
+    "Yasmine Bateman",
+    "Atlanta events",
+    "event designer",
+    "luxury celebrations",
+    "editorial events",
+    "brand experiences",
+    "content studio",
+  ],
   authors: [{ name: "Yasmine Bateman" }],
   creator: "Yasmine Bateman",
   publisher: "Yasmine Bateman",
@@ -48,23 +56,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://yasminebateman.com",
-    title: "Yasmine Bateman | Content Creator & Influencer",
-    description: "Atlanta-based lifestyle content creator with 300K+ followers. Fashion, beauty, wellness content and brand partnerships.",
-    siteName: "Yasmine Bateman",
+    title: "YB Studio | Flawless Events, Better Memories",
+    description:
+      "Atlanta studio dedicated to flawless events and better memories—harmonizing editorial design, production, and storytelling.",
+    siteName: "YB Studio",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.svg?v=flawless",
         width: 1200,
         height: 630,
-        alt: "Yasmine Bateman - Content Creator & Influencer",
+        alt: "YB Studio monogram with tagline Flawless Events Better Memories",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yasmine Bateman | Content Creator & Influencer",
-    description: "Atlanta-based lifestyle content creator with 300K+ followers across YouTube, Instagram, and TikTok.",
-    images: ["/og-image.svg"],
+    title: "YB Studio | Flawless Events, Better Memories",
+    description:
+      "Editorial events, intentional content, and guest-first experiences from Atlanta-based YB Studio.",
+    images: ["/og-image.svg?v=flawless"],
   },
   icons: {
     icon: "/favicon.svg",
