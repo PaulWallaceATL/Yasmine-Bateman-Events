@@ -11,136 +11,148 @@ import TestimonialCarousel from '@/components/TestimonialCarousel';
 
 const heroCollage = [
   {
-    src: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1100&q=80',
-    title: 'Editorial Set, 7AM',
-    location: 'Los Angeles',
-    badge: 'Campaign BTS',
+    src: 'https://images.unsplash.com/photo-1464347744102-11db6282f854?auto=format&fit=crop&w=1200&q=80',
+    title: 'Garden Welcome Dinner',
+    location: 'Sea Island, GA',
+    badge: 'Wedding Weekend',
     height: 'h-72',
     priority: true,
   },
   {
-    src: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1100&q=80',
-    title: 'Analog Diaries',
-    location: 'Paris',
-    badge: 'Film Story',
+    src: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+    title: 'Executive Retreat',
+    location: 'Napa Valley, CA',
+    badge: 'Corporate Immersion',
     height: 'h-96',
   },
   {
-    src: 'https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=1100&q=80',
-    title: 'Live Event Recap',
-    location: 'Atlanta',
-    badge: 'City Light',
+    src: 'https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=1200&q=80',
+    title: 'Charity Gala',
+    location: 'Atlanta, GA',
+    badge: 'Signature Gala',
     height: 'h-64',
   },
   {
-    src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1100&q=80',
-    title: 'Product Spotlight',
-    location: 'Brooklyn',
-    badge: 'Content Drop',
+    src: 'https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?auto=format&fit=crop&w=1200&q=80',
+    title: 'Luxury Brand Dinner',
+    location: 'New York City, NY',
+    badge: 'Brand Experience',
     height: 'h-80',
   },
 ];
 
 const statHighlights = [
-  { label: 'Community', value: 320, suffix: 'K+', subtext: 'Followers across YouTube, Instagram & TikTok' },
-  { label: 'Campaign Reach', value: 48, suffix: 'M+', subtext: 'Organic impressions delivered in 2024' },
-  { label: 'Avg Watch Time', value: 6.4, suffix: ' min', subtext: 'Per long-form video', decimals: 1 },
+  { label: 'Events Curated', value: 520, suffix: '+', subtext: 'Weddings, galas, launches, and retreats since 2015' },
+  { label: 'Cities Served', value: 18, suffix: '', subtext: 'Destination coverage across the U.S., Caribbean, and Europe' },
+  { label: 'Vendor Partners', value: 140, suffix: '+', subtext: 'Florists, chefs, stylists, and production teams on-call' },
 ];
 
-const signatureFormats = [
+const serviceSuites = [
   {
-    title: 'Editorial Diaries',
-    description: 'Weekly docu-style stories blending fashion, beauty & culture with tactile film textures.',
-    stat: '72% completion rate',
-    image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Analog film', 'Narrative voice'],
+    title: 'Full-Service Planning & Design',
+    description: 'Concept, budgeting, vendor management, and production leadership for weddings and social celebrations.',
+    stat: 'End-to-end direction',
+    image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80',
+    tags: ['Budget stewardship', 'Creative direction'],
   },
   {
-    title: 'City Immersions',
-    description: 'On-location shoots that pair local gems with branded experiences in Atlanta, NYC & LA.',
-    stat: '4.8M organic views',
-    image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Travel', 'Lifestyle'],
+    title: 'Destination Weekends',
+    description: 'Travel logistics, guest hospitality, and multi-day itineraries for experiences that stretch beyond the event day.',
+    stat: 'Travel & logistics experts',
+    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80',
+    tags: ['Guest concierge', 'Venue sourcing'],
   },
   {
-    title: 'Live Event Capsules',
-    description: 'Same-day reels + mini docs that bring launches, dinners, and summits to life.',
-    stat: '92% save rate',
-    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Experiential', 'IRL to URL'],
+    title: 'Brand & Corporate Experiences',
+    description: 'Executive retreats, launch dinners, and summits produced with immersive storytelling and measurable impact.',
+    stat: 'On-brand production',
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80',
+    tags: ['Stage & lighting', 'Sponsorship alignment'],
   },
 ];
 
 const galleryShots = [
   {
-    title: 'Backstage Bloom',
-    location: 'SoHo Studio',
-    category: 'Beauty Drop',
+    title: 'Garden Welcome Party',
+    location: 'SoHo Loft',
+    category: 'Wedding Weekend',
     src: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-2',
   },
   {
-    title: 'Golden Hour Panel',
+    title: 'Executive Dinner',
     location: 'Atlanta',
-    category: 'Event Recap',
+    category: 'Corporate',
     src: 'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-1',
   },
   {
-    title: 'Editorial Lines',
-    location: 'Brooklyn Loft',
-    category: 'Campaign',
+    title: 'Editorial Install',
+    location: 'Brooklyn Studio',
+    category: 'Design Lab',
     src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-2',
   },
   {
     title: 'Modern Tablescape',
     location: 'Nashville',
-    category: 'Hosting',
+    category: 'Social Celebration',
     src: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-1',
   },
   {
-    title: 'Studio Light',
+    title: 'Studio Light Suite',
     location: 'NYC',
-    category: 'Product Story',
+    category: 'Content Capture',
     src: 'https://images.unsplash.com/photo-1513077202514-b33f6439a5ba?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-1',
   },
   {
     title: 'City Soirée',
     location: 'Chicago',
-    category: 'Partnership',
+    category: 'Client Appreciation',
     src: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=80',
     span: 'row-span-1',
   },
 ];
 
-const platformBreakdown = [
+const servicePillars = [
   {
-    platform: 'YouTube',
-    followers: '130K',
-    format: '8–12 min narrative films',
-    highlights: ['72% completion', 'Average 6.4 min watch time'],
-    color: 'from-rose-gold/15 via-transparent to-gold/10',
-  },
-  {
-    platform: 'Instagram',
-    followers: '110K',
-    format: 'Editorial carousels & reels',
-    highlights: ['6.8% engagement', 'Saves are 3× industry avg'],
+    title: 'Weddings & Social',
+    highlight: 'Full planning, production, and hospitality so families can stay present.',
+    metric: '12-18 month roadmap',
+    bullets: [
+      'Guest concierge & travel desk',
+      'Design studies + floral labs',
+      'Weekend timeline management',
+    ],
     color: 'from-gold/15 via-transparent to-rose-gold/10',
   },
   {
-    platform: 'TikTok',
-    followers: '93K',
-    format: 'Fast-cut POV & voiceovers',
-    highlights: ['7.5% engagement', 'Trending audio lab'],
-    color: 'from-rose-gold/10 via-transparent to-gold/5',
+    title: 'Corporate & Brand',
+    highlight: 'Executive retreats, launch dinners, and culture moments built with measurable rigor.',
+    metric: 'Run-of-show ownership',
+    bullets: [
+      'Stage, lighting, & AV direction',
+      'Sponsorship + partner sourcing',
+      'VIP hosting teams',
+    ],
+    color: 'from-rose-gold/15 via-transparent to-gold/10',
+  },
+  {
+    title: 'Destination Programs',
+    highlight: 'Immersive itineraries across the U.S., Caribbean, and Europe with seamless logistics.',
+    metric: '24/7 concierge line',
+    bullets: [
+      'Venue scouting abroad',
+      'Customs & transport guidance',
+      'Cultural excursions & gifting',
+    ],
+    color: 'from-gold/10 via-transparent to-rose-gold/5',
   },
 ];
 
-const partnerLogos = ['Sephora', 'SKIMS', 'Madewell', 'Glossier', 'Nike', 'Away', 'Glow Recipe'];
+const partnerLogos = ['Four Seasons', 'Ritz-Carlton', 'Swan House', 'Moët Hennessy', 'Porsche', 'Chanel Beauté', 'Delta'];
 
 export default function Home() {
   return (
@@ -159,15 +171,14 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <p className="text-xs uppercase tracking-[0.5em] text-cream/70 mb-6">
-                Content Director • Atlanta
+                Luxury Event Studio • Atlanta
               </p>
               <h1 className="text-display text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
-                Cinematic content that feels like a journal entry and performs like a campaign.
+                Immersive celebrations designed with editorial precision and concierge care.
               </h1>
               <p className="text-lg md:text-xl text-cream/80 max-w-2xl">
-                I build immersive visual worlds for lifestyle, beauty, and fashion brands—pairing thoughtful
-                storytelling with measurable performance. Every brief becomes a lived-in narrative across video,
-                stills, and live experiences.
+                We plan multi-day weddings, executive retreats, and brand dinners that feel effortless for guests and
+                measurable for hosts. Every touchpoint—from save-the-date to farewell brunch—is considered.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 mt-10">
@@ -175,14 +186,14 @@ export default function Home() {
                   href="/contact"
                   className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-white text-navy font-sans text-xs tracking-[0.3em] uppercase shadow-xl hover:-translate-y-1 transition"
                 >
-                  Start a brief
+                  Plan your event
                   <span aria-hidden="true">↗</span>
                 </Link>
                 <Link
-                  href="/gallery"
+                  href="/services"
                   className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/40 text-white font-sans text-xs tracking-[0.3em] uppercase hover:bg-white/10 transition"
                 >
-                  Watch the reel
+                  Explore services
                 </Link>
               </div>
 
@@ -249,18 +260,17 @@ export default function Home() {
 
       <Section background="pearl" padding="large">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-4">Signature Formats</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-4">Signature Services</p>
           <h2 className="text-display text-4xl md:text-5xl mb-4">
-            Content systems that travel from social feeds to live experiences.
+            From first inquiry to last toast, every service tier is bespoke.
           </h2>
           <p className="text-lg text-charcoal/70">
-            Each format is modular, meaning we capture long-form hero assets, cutdowns, stills, and interactive
-            moments in one shoot day.
+            Planning, production, and storytelling live under one roof so you can stay focused on the guests.
           </p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-3">
-          {signatureFormats.map((format, index) => (
+          {serviceSuites.map((format, index) => (
             <motion.div
               key={format.title}
               initial={{ opacity: 0, y: 30 }}
@@ -302,9 +312,9 @@ export default function Home() {
       <Section background="beige" padding="large">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12 gap-6">
           <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-3">Visual journal</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-3">Recent environments</p>
             <h2 className="text-display text-4xl md:text-5xl leading-tight">
-              Scene-stealing imagery built for scroll-stopping carousels.
+              Wedding weekends, corporate retreats, and milestone galas in motion.
             </h2>
           </div>
           <Link
@@ -346,19 +356,19 @@ export default function Home() {
 
       <Section background="white" padding="large">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-4">Platform deep dive</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-4">Service blueprints</p>
           <h2 className="text-display text-4xl md:text-5xl mb-4">
-            One brief, tailored executions for every channel.
+            Each celebration is anchored by planning, design, and destination care.
           </h2>
           <p className="text-charcoal/70">
-            From long-form storytelling to short-form loops, we build narratives that respect each platform’s native rhythm.
+            These pillars keep logistics calm, aesthetics cohesive, and guests cared for—whether it’s 50 guests or 500.
           </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {platformBreakdown.map((card, index) => (
+          {servicePillars.map((card, index) => (
             <motion.div
-              key={card.platform}
+              key={card.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -367,14 +377,11 @@ export default function Home() {
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${card.color} opacity-60 pointer-events-none`} />
               <div className="relative z-10">
-                <p className="text-xs uppercase tracking-[0.4em] text-charcoal/60 mb-3">{card.platform}</p>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-semibold">{card.followers}</span>
-                  <span className="text-sm uppercase tracking-[0.4em]">Followers</span>
-                </div>
-                <p className="mt-4 text-charcoal/70">{card.format}</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-charcoal/60 mb-3">{card.metric}</p>
+                <h3 className="text-2xl font-semibold mb-3">{card.title}</h3>
+                <p className="text-charcoal/70">{card.highlight}</p>
                 <ul className="mt-6 space-y-2 text-sm text-charcoal/80">
-                  {card.highlights.map((item) => (
+                  {card.bullets.map((item) => (
                     <li key={item} className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-charcoal/70" />
                       {item}
@@ -394,10 +401,10 @@ export default function Home() {
         </div>
         <div className="relative z-10">
           <div className="text-center mb-12">
-            <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-4">Proof of impact</p>
-            <h2 className="text-display text-4xl md:text-5xl mb-4">Brands come back because the work converts.</h2>
+            <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-4">Proof of experience</p>
+            <h2 className="text-display text-4xl md:text-5xl mb-4">Hosts trust us with their most meaningful gatherings.</h2>
             <p className="text-charcoal/70 max-w-2xl mx-auto">
-              From national retailers to boutique launches, collaborations include detailed reporting and creative iteration.
+              From black-tie galas to board retreats, we stay until every last candle is out and every recap is delivered.
             </p>
           </div>
           <TestimonialCarousel />
@@ -407,20 +414,20 @@ export default function Home() {
       <Section background="white" padding="large">
         <div className="relative overflow-hidden rounded-[40px] border border-charcoal/10 bg-gradient-to-br from-rose-gold/20 via-pearl to-gold/15 p-12 md:p-16">
           <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.4em] text-charcoal/60 mb-4">Next launch</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-charcoal/60 mb-4">Next steps</p>
             <h2 className="text-display text-4xl md:text-5xl mb-6">
-              Let’s design a content ecosystem your audience wants to live in.
+              Let’s plan an event experience your guests will never forget.
             </h2>
             <p className="text-lg text-charcoal/70 mb-10">
-              Strategy, production, and performance insights under one roof. Share the creative brief or invite me into the
-              ideation room—we’ll map stories that feel human and deliver metrics your team can celebrate.
+              Share your date, guest count, and wish list—we’ll build a planning roadmap, introduce key partners, and stay
+              beside you through the final farewell.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-navy text-white text-xs tracking-[0.3em] uppercase shadow-2xl hover:-translate-y-1 transition"
               >
-                Plan a campaign
+                Plan your event
                 <span aria-hidden="true">↗</span>
               </Link>
               <Link
