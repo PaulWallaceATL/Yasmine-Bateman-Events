@@ -1,7 +1,12 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Elegant YB monogram -->
-  <rect width="64" height="64" rx="12" fill="#1a2332"/>
-  <text x="32" y="45" font-family="serif" font-size="36" font-weight="bold" fill="#c9a96e" text-anchor="middle">YB</text>
-  <circle cx="32" cy="12" r="2" fill="#c9a96e"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="markGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a35bff"/>
+      <stop offset="70%" stop-color="#ff60d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="32" fill="url(#markGradient)"/>
+  <path d="M42 28L60 60L42 92" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  <path d="M65 30C85 30 93 43 93 58C93 74 82 88 65 88M65 88L85 88" stroke="#efe2ff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
