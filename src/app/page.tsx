@@ -41,10 +41,16 @@ const heroCollage = [
   },
 ];
 
-const statHighlights = [
-  { label: 'Events Curated', value: 520, suffix: '+', subtext: 'Weddings, galas, launches, and retreats since 2015' },
-  { label: 'Cities Served', value: 18, suffix: '', subtext: 'Destination coverage across the U.S., Caribbean, and Europe' },
-  { label: 'Vendor Partners', value: 140, suffix: '+', subtext: 'Florists, chefs, stylists, and production teams on-call' },
+const statHighlights: Array<{
+  label: string;
+  value: number;
+  suffix: string;
+  subtext: string;
+  decimals?: number;
+}> = [
+  { label: 'Events Curated', value: 520, suffix: '+', subtext: 'Weddings, galas, launches, and retreats since 2015', decimals: 0 },
+  { label: 'Cities Served', value: 18, suffix: '', subtext: 'Destination coverage across the U.S., Caribbean, and Europe', decimals: 0 },
+  { label: 'Vendor Partners', value: 140, suffix: '+', subtext: 'Florists, chefs, stylists, and production teams on-call', decimals: 0 },
 ];
 
 const serviceSuites = [
