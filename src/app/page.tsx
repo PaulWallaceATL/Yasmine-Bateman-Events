@@ -135,6 +135,51 @@ const servicePillars = [
   },
 ];
 
+const hostPromises = [
+  {
+    title: '24-hour replies',
+    description: 'Every inquiry receives a tailored response, timeline outline, and curated inspiration deck.',
+    meta: 'Fast, human communication',
+  },
+  {
+    title: 'Mobile-friendly planning',
+    description: 'Review timelines, renderings, and run-of-show documents directly from your phone.',
+    meta: 'Built for busy hosts',
+  },
+  {
+    title: 'On-site calm',
+    description: 'Our team owns vendor calls, cue-to-cue, and guest flow so you can actually enjoy the event.',
+    meta: 'White-glove execution',
+  },
+];
+
+const journeyMoments = [
+  {
+    label: '01',
+    title: 'Listen & align',
+    detail: 'Share your date, guest count, and non-negotiables. Receive a planning roadmap within 48 hours.',
+    deliverable: 'Discovery session + vision deck',
+  },
+  {
+    label: '02',
+    title: 'Design & source',
+    detail: 'We translate mood boards into renders, budgets, and partner lists designed for your venue and audience.',
+    deliverable: 'Design treatments + partner shortlist',
+  },
+  {
+    label: '03',
+    title: 'Produce & communicate',
+    detail: 'Weekly updates, mobile hub for approvals, and vendor direction so you only sign off when it feels right.',
+    deliverable: 'Host portal + vendor coordination',
+  },
+  {
+    label: '04',
+    title: 'Celebrate & recap',
+    detail: 'Day-of run-of-show, guest hospitality, and post-event recap capturing metrics and gallery selects.',
+    deliverable: 'On-site lead + recap dossier',
+  },
+];
+
 const partnerLogos = [
   'Four Seasons',
   'Ritz-Carlton',
@@ -148,47 +193,44 @@ const partnerLogos = [
 export default function Home() {
   return (
     <main className="bg-pearl text-charcoal">
-      <section className="relative overflow-hidden bg-navy text-cream pt-32 pb-24">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-[#0c0f1b] to-[#1c1a29]" />
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(212,176,124,0.25),transparent_45%),radial-gradient(circle_at_80%_0%,rgba(216,143,124,0.2),transparent_40%)]" />
+      <section className="relative overflow-hidden bg-navy text-cream pt-28 pb-24">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050816] via-[#0f1422] to-[#050816]" />
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(212,176,124,0.3),transparent_45%),radial-gradient(circle_at_80%_0%,rgba(216,143,124,0.25),transparent_40%)]" />
         </div>
 
         <div className="relative mx-auto max-w-6xl px-6">
-          <div className="grid gap-12 lg:grid-cols-[1.15fr,0.85fr]">
-            <div>
+          <div className="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] items-start">
+            <div className="max-w-2xl">
               <p className="text-xs uppercase tracking-[0.5em] text-cream/70">Luxury Event Studio • Atlanta</p>
-              <h1 className="mt-6 text-4xl font-semibold leading-tight text-white md:text-6xl">
+              <h1 className="mt-6 text-4xl font-semibold leading-tight text-white md:text-5xl">
                 Immersive celebrations designed with editorial precision and production care.
               </h1>
-              <p className="mt-6 text-lg text-cream/80">
+              <p className="mt-4 text-base text-cream/80 md:text-lg">
                 We plan multi-day summits, civic programs, and brand dinners that feel effortless for guests and
                 measurable for hosts. Every touchpoint—from save-the-date to farewell brunch—is considered.
               </p>
 
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 rounded-full bg-white px-10 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-navy shadow-xl transition hover:-translate-y-1"
+                  className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-10 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-navy shadow-xl transition hover:-translate-y-1 sm:w-auto"
                 >
                   Plan your event
                   <span aria-hidden>↗</span>
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-3 rounded-full border border-white/40 px-8 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-white/10"
+                  className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/40 px-8 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-white/10 sm:w-auto"
                 >
                   Explore services
                 </Link>
               </div>
 
-              <div className="mt-12 grid gap-4 md:grid-cols-3">
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {statHighlights.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="rounded-3xl border border-white/15 bg-white/5 p-6 backdrop-blur-md"
-                  >
-                    <p className="text-4xl font-semibold text-gold">
+                  <div key={stat.label} className="rounded-3xl border border-white/15 bg-white/5 p-6 backdrop-blur-md">
+                    <p className="text-3xl font-semibold text-gold md:text-4xl">
                       <AnimatedCounter end={stat.value} suffix={stat.suffix} decimals={stat.decimals} />
                     </p>
                     <p className="mt-2 text-[11px] uppercase tracking-[0.35em] text-cream/70">{stat.label}</p>
@@ -234,6 +276,25 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Section background="pearl" padding="large">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold">Tailored host support</p>
+          <h2 className="mt-4 text-3xl font-semibold text-navy md:text-4xl">What you can expect from us</h2>
+          <p className="mt-4 text-charcoal/70">
+            Designed for founders, CMOs, and private hosts who need clarity fast—on desktop and on the go.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {hostPromises.map((promise) => (
+            <div key={promise.title} className="rounded-3xl border border-charcoal/10 bg-white/90 p-6 shadow-sm">
+              <p className="text-[11px] uppercase tracking-[0.4em] text-rose-gold/80">{promise.meta}</p>
+              <h3 className="mt-3 text-xl font-semibold text-navy">{promise.title}</h3>
+              <p className="mt-3 text-sm text-charcoal/70">{promise.description}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
 
       <Section background="pearl" padding="large">
         <div className="mx-auto max-w-3xl text-center">
@@ -314,6 +375,30 @@ export default function Home() {
                 <p className="text-[11px] uppercase tracking-[0.35em] text-white/60">{shot.category}</p>
                 <h3 className="text-xl font-semibold">{shot.title}</h3>
                 <p className="text-sm text-white/70">{shot.location}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section background="white" padding="large">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold">Client journey</p>
+          <h2 className="mt-4 text-3xl font-semibold text-navy md:text-4xl">How we move from idea to celebration</h2>
+        </div>
+        <div className="mx-auto mt-12 grid max-w-5xl gap-6">
+          {journeyMoments.map((moment) => (
+            <div
+              key={moment.label}
+              className="flex flex-col gap-4 rounded-3xl border border-charcoal/10 bg-white/80 p-6 shadow-sm md:flex-row md:items-center"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 text-sm font-semibold text-navy">
+                {moment.label}
+              </div>
+              <div className="flex-1">
+                <p className="text-xs uppercase tracking-[0.35em] text-charcoal/50">{moment.deliverable}</p>
+                <h3 className="mt-2 text-xl font-semibold text-navy">{moment.title}</h3>
+                <p className="mt-2 text-sm text-charcoal/70">{moment.detail}</p>
               </div>
             </div>
           ))}

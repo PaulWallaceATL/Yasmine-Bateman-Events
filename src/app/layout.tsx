@@ -36,6 +36,13 @@ export const metadata: Metadata = {
   authors: [{ name: "Yasmine Bateman" }],
   creator: "Yasmine Bateman",
   publisher: "Yasmine Bateman",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#a35bff" },
+    { media: "(prefers-color-scheme: dark)", color: "#7b34d5" },
+  ],
+  appleWebApp: {
+    statusBarStyle: "black-translucent",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

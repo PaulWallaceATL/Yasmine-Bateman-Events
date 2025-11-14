@@ -3,17 +3,17 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const loadingStatements = [
+  'Storyboard in progress',
+  'Securing creative partners',
+  'Dialing in guest flow',
+  'Styling the final details',
+];
+
 export default function LoadingAnimation() {
   const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
+  const [progress, setProgress] = useState(0);
+  const [statementIndex, setStatementIndex] = useState(0);
   const [sparkles] = useState(() =>
     Array.from({ length: 6 }, () => ({
       top: Math.random() * 100,
@@ -21,211 +21,96 @@ export default function LoadingAnimation() {
     }))
   );
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2600);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading) return undefined;
+    const progressTimer = setInterval(() => {
+      setProgress((prev) => Math.min(prev + 4, 100));
+    }, 120);
+    return () => clearInterval(progressTimer);
+  }, [isLoading]);
+
+  useEffect(() => {
+    if (!isLoading) return undefined;
+    const statementTimer = setInterval(() => {
+      setStatementIndex((prev) => (prev + 1) % loadingStatements.length);
+    }, 700);
+    return () => clearInterval(statementTimer);
+  }, [isLoading]);
+
   return (
     <AnimatePresence>
       {isLoading && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: 'easeInOut' }}
-          className="fixed inset-0 z-[100] bg-gradient-to-br from-[#ffc0cb] via-[#ffb6c1] to-[#ff69b4] flex items-center justify-center"
+          exit={{ opacity: 0, transition: { duration: 0.4 } }}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-gradient-to-br from-navy via-[#060918] to-navy"
         >
-          {/* Bow SVG Animation */}
-          <div className="relative">
-            <svg 
-              width="200" 
-              height="200" 
-              viewBox="0 0 200 200" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-              className="drop-shadow-2xl"
-            >
-              {/* Gift Box */}
-              <motion.rect
-                x="60"
-                y="90"
-                width="80"
-                height="80"
-                fill="#1a2332"
-                rx="4"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              />
-              
-              {/* Vertical Ribbon */}
-              <motion.rect
-                x="95"
-                y="90"
-                width="10"
-                height="80"
-                fill="#000000"
-                initial={{ scaleY: 0 }}
-                animate={{ scaleY: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                style={{ transformOrigin: 'center' }}
-              />
-              
-              {/* Horizontal Ribbon */}
-              <motion.rect
-                x="60"
-                y="125"
-                width="80"
-                height="10"
-                fill="#000000"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                style={{ transformOrigin: 'center' }}
-              />
-
-              {/* Left Bow Loop - Unties outward */}
-              <motion.path
-                d="M 95 90 Q 60 60, 50 90 Q 60 100, 95 90"
-                fill="#000000"
-                stroke="#000000"
-                strokeWidth="2"
-                initial={{ pathLength: 0, opacity: 0, x: 0 }}
-                animate={{ 
-                  pathLength: 1, 
-                  opacity: [0, 1, 1, 0],
-                  x: [0, 0, 0, -30],
-                  y: [0, 0, 0, -20]
-                }}
-                transition={{ 
-                  pathLength: { duration: 0.8, delay: 0.8 },
-                  opacity: { duration: 1.5, delay: 0.8, times: [0, 0.3, 0.8, 1] },
-                  x: { duration: 1, delay: 1.8 },
-                  y: { duration: 1, delay: 1.8 }
-                }}
-              />
-
-              {/* Right Bow Loop - Unties outward */}
-              <motion.path
-                d="M 105 90 Q 140 60, 150 90 Q 140 100, 105 90"
-                fill="#000000"
-                stroke="#000000"
-                strokeWidth="2"
-                initial={{ pathLength: 0, opacity: 0, x: 0 }}
-                animate={{ 
-                  pathLength: 1, 
-                  opacity: [0, 1, 1, 0],
-                  x: [0, 0, 0, 30],
-                  y: [0, 0, 0, -20]
-                }}
-                transition={{ 
-                  pathLength: { duration: 0.8, delay: 0.8 },
-                  opacity: { duration: 1.5, delay: 0.8, times: [0, 0.3, 0.8, 1] },
-                  x: { duration: 1, delay: 1.8 },
-                  y: { duration: 1, delay: 1.8 }
-                }}
-              />
-
-              {/* Left Ribbon Tail - Falls down */}
-              <motion.path
-                d="M 90 90 L 70 110 L 75 115"
-                fill="#000000"
-                stroke="#000000"
-                strokeWidth="2"
-                strokeLinecap="round"
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ 
-                  pathLength: 1, 
-                  opacity: [0, 1, 1, 0],
-                  y: [0, 0, 0, 30],
-                  rotate: [0, 0, 0, -15]
-                }}
-                transition={{ 
-                  pathLength: { duration: 0.8, delay: 0.9 },
-                  opacity: { duration: 1.5, delay: 0.9, times: [0, 0.3, 0.8, 1] },
-                  y: { duration: 1, delay: 1.8 },
-                  rotate: { duration: 1, delay: 1.8 }
-                }}
-                style={{ transformOrigin: '80px 100px' }}
-              />
-
-              {/* Right Ribbon Tail - Falls down */}
-              <motion.path
-                d="M 110 90 L 130 110 L 125 115"
-                fill="#000000"
-                stroke="#000000"
-                strokeWidth="2"
-                strokeLinecap="round"
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ 
-                  pathLength: 1, 
-                  opacity: [0, 1, 1, 0],
-                  y: [0, 0, 0, 30],
-                  rotate: [0, 0, 0, 15]
-                }}
-                transition={{ 
-                  pathLength: { duration: 0.8, delay: 0.9 },
-                  opacity: { duration: 1.5, delay: 0.9, times: [0, 0.3, 0.8, 1] },
-                  y: { duration: 1, delay: 1.8 },
-                  rotate: { duration: 1, delay: 1.8 }
-                }}
-                style={{ transformOrigin: '120px 100px' }}
-              />
-
-              {/* Center Bow Knot */}
-              <motion.circle
-                cx="100"
-                cy="90"
-                r="8"
-                fill="#000000"
-                initial={{ scale: 0 }}
-                animate={{ 
-                  scale: [0, 1, 1, 0],
-                  opacity: [0, 1, 1, 0]
-                }}
-                transition={{ 
-                  scale: { duration: 1.5, delay: 1.2, times: [0, 0.3, 0.8, 1] },
-                  opacity: { duration: 1.5, delay: 1.2, times: [0, 0.3, 0.8, 1] }
-                }}
-              />
-            </svg>
-
-            {/* Sparkle Effects */}
-            {sparkles.map(({ top, left }, i) => (
+          <div className="relative flex flex-col items-center gap-10 px-6 text-center text-white">
+            <div className="relative h-40 w-40">
               <motion.div
-                key={i}
-                className="absolute w-2 h-2 bg-white rounded-full"
-                style={{
-                  top: `${top}%`,
-                  left: `${left}%`,
-                }}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{
-                  opacity: [0, 1, 0],
-                  scale: [0, 1, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  delay: 1 + i * 0.2,
-                  repeat: 0,
-                }}
+                className="absolute inset-0 rounded-full bg-gradient-to-tr from-rose-gold/50 to-gold/40 blur-3xl"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 10, ease: 'linear', repeat: Infinity }}
               />
-            ))}
+              <motion.div
+                className="absolute inset-3 rounded-[36px] border border-white/15 bg-white/5 backdrop-blur"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+              />
+              <motion.div
+                className="absolute inset-6 rounded-[28px] border border-white/30"
+                animate={{ rotate: [0, 6, -4, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              />
+              <motion.div
+                className="absolute inset-0 flex items-center justify-center text-2xl font-semibold tracking-[0.6em]"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                YB
+              </motion.div>
+              {sparkles.map(({ top, left }, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute h-2 w-2 rounded-full bg-white/70"
+                  style={{
+                    top: `${top}%`,
+                    left: `${left}%`,
+                  }}
+                  animate={{ opacity: [0, 1, 0], scale: [0, 1, 0] }}
+                  transition={{ duration: 1.2, delay: i * 0.15, repeat: Infinity }}
+                />
+              ))}
+            </div>
+
+            <div className="space-y-4 max-w-sm">
+              <motion.p
+                key={statementIndex}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="text-sm uppercase tracking-[0.4em] text-cream/70"
+              >
+                {loadingStatements[statementIndex]}
+              </motion.p>
+              <div className="h-1 w-60 overflow-hidden rounded-full bg-white/10">
+                <motion.span
+                  className="block h-full bg-gradient-to-r from-rose-gold to-gold"
+                  animate={{ width: `${progress}%` }}
+                />
+              </div>
+            </div>
           </div>
-          
-          {/* Loading text */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center"
-          >
-            <p className="font-display text-lg tracking-[0.3em] uppercase text-[#1a2332] mb-2">
-              Opening Your Experience
-            </p>
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 2, delay: 0.8 }}
-              className="h-1 w-48 bg-gradient-to-r from-transparent via-[#1a2332] to-transparent"
-              style={{ transformOrigin: 'center' }}
-            />
-          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>

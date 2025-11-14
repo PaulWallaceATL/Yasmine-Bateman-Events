@@ -4,8 +4,8 @@
   "description": "Atlanta-based lifestyle content creator with 300K+ followers",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f8f6f3",
-  "theme_color": "#c9a96e",
+  "background_color": "#efe2ff",
+  "theme_color": "#a35bff",
   "icons": [
     {
       "src": "/favicon.svg",
