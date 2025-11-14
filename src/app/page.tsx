@@ -1,416 +1,435 @@
 'use client';
 
-import ParallaxHero from '@/components/ParallaxHero';
-import Section from '@/components/Section';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+import Section from '@/components/Section';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import ParticlesBackground from '@/components/ParticlesBackground';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
-import { motion } from 'framer-motion';
+
+const heroCollage = [
+  {
+    src: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1100&q=80',
+    title: 'Editorial Set, 7AM',
+    location: 'Los Angeles',
+    badge: 'Campaign BTS',
+    height: 'h-72',
+    priority: true,
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1100&q=80',
+    title: 'Analog Diaries',
+    location: 'Paris',
+    badge: 'Film Story',
+    height: 'h-96',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=1100&q=80',
+    title: 'Live Event Recap',
+    location: 'Atlanta',
+    badge: 'City Light',
+    height: 'h-64',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1100&q=80',
+    title: 'Product Spotlight',
+    location: 'Brooklyn',
+    badge: 'Content Drop',
+    height: 'h-80',
+  },
+];
+
+const statHighlights = [
+  { label: 'Community', value: 320, suffix: 'K+', subtext: 'Followers across YouTube, Instagram & TikTok' },
+  { label: 'Campaign Reach', value: 48, suffix: 'M+', subtext: 'Organic impressions delivered in 2024' },
+  { label: 'Avg Watch Time', value: 6.4, suffix: ' min', subtext: 'Per long-form video', decimals: 1 },
+];
+
+const signatureFormats = [
+  {
+    title: 'Editorial Diaries',
+    description: 'Weekly docu-style stories blending fashion, beauty & culture with tactile film textures.',
+    stat: '72% completion rate',
+    image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1200&q=80',
+    tags: ['Analog film', 'Narrative voice'],
+  },
+  {
+    title: 'City Immersions',
+    description: 'On-location shoots that pair local gems with branded experiences in Atlanta, NYC & LA.',
+    stat: '4.8M organic views',
+    image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80',
+    tags: ['Travel', 'Lifestyle'],
+  },
+  {
+    title: 'Live Event Capsules',
+    description: 'Same-day reels + mini docs that bring launches, dinners, and summits to life.',
+    stat: '92% save rate',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80',
+    tags: ['Experiential', 'IRL to URL'],
+  },
+];
+
+const galleryShots = [
+  {
+    title: 'Backstage Bloom',
+    location: 'SoHo Studio',
+    category: 'Beauty Drop',
+    src: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1400&q=80',
+    span: 'row-span-2',
+  },
+  {
+    title: 'Golden Hour Panel',
+    location: 'Atlanta',
+    category: 'Event Recap',
+    src: 'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=80',
+    span: 'row-span-1',
+  },
+  {
+    title: 'Editorial Lines',
+    location: 'Brooklyn Loft',
+    category: 'Campaign',
+    src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1400&q=80',
+    span: 'row-span-2',
+  },
+  {
+    title: 'Modern Tablescape',
+    location: 'Nashville',
+    category: 'Hosting',
+    src: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1400&q=80',
+    span: 'row-span-1',
+  },
+  {
+    title: 'Studio Light',
+    location: 'NYC',
+    category: 'Product Story',
+    src: 'https://images.unsplash.com/photo-1513077202514-b33f6439a5ba?auto=format&fit=crop&w=1400&q=80',
+    span: 'row-span-1',
+  },
+  {
+    title: 'City Soirée',
+    location: 'Chicago',
+    category: 'Partnership',
+    src: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=80',
+    span: 'row-span-1',
+  },
+];
+
+const platformBreakdown = [
+  {
+    platform: 'YouTube',
+    followers: '130K',
+    format: '8–12 min narrative films',
+    highlights: ['72% completion', 'Average 6.4 min watch time'],
+    color: 'from-rose-gold/15 via-transparent to-gold/10',
+  },
+  {
+    platform: 'Instagram',
+    followers: '110K',
+    format: 'Editorial carousels & reels',
+    highlights: ['6.8% engagement', 'Saves are 3× industry avg'],
+    color: 'from-gold/15 via-transparent to-rose-gold/10',
+  },
+  {
+    platform: 'TikTok',
+    followers: '93K',
+    format: 'Fast-cut POV & voiceovers',
+    highlights: ['7.5% engagement', 'Trending audio lab'],
+    color: 'from-rose-gold/10 via-transparent to-gold/5',
+  },
+];
+
+const partnerLogos = ['Sephora', 'SKIMS', 'Madewell', 'Glossier', 'Nike', 'Away', 'Glow Recipe'];
 
 export default function Home() {
   return (
-    <main>
-      {/* Hero Section with Parallax & Particles */}
-      <div className="relative">
-        <ParticlesBackground />
-        <ParallaxHero
-          title="Yasmine Bateman"
-          subtitle="Content Creator & Brand Partner • Atlanta, GA"
-          imageSrc="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop"
-          imageAlt="Luxury event"
-          height="full"
-        />
-      </div>
-
-      {/* Statistics Section */}
-      <Section background="white" padding="large">
-        <div className="relative overflow-hidden">
-          {/* Background glow effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-rose-gold/5"></div>
-          
-          {/* Floating decorative elements */}
-          <div className="absolute top-10 left-10 w-32 h-32 bg-gold/10 rounded-full blur-3xl float-smooth"></div>
-          <div className="absolute bottom-10 right-10 w-40 h-40 bg-rose-gold/10 rounded-full blur-3xl float-smooth" style={{animationDelay: '3s'}}></div>
-          
-          <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-center group"
-            >
-              <div className="mb-4 inline-block p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
-                  <AnimatedCounter end={300} suffix="K+" />
-                </div>
-                <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </div>
-              <p className="text-lg md:text-xl text-charcoal/70 font-semibold">
-                Total Followers
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center group"
-            >
-              <div className="mb-4 inline-block p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
-                  <AnimatedCounter end={130} suffix="K+" />
-                </div>
-                <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </div>
-              <p className="text-lg md:text-xl text-charcoal/70 font-semibold">
-                YouTube Subscribers
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center group"
-            >
-              <div className="mb-4 inline-block p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
-                  <AnimatedCounter end={5} suffix="M+" />
-                </div>
-                <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </div>
-              <p className="text-lg md:text-xl text-charcoal/70 font-semibold">
-                Total Video Views
-              </p>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center group"
-            >
-              <div className="mb-4 inline-block p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div className="text-5xl md:text-7xl font-bold text-gold mb-2">
-                  <AnimatedCounter end={7} suffix="%" />
-                </div>
-                <div className="h-1 w-20 gradient-gold mx-auto transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </div>
-              <p className="text-lg md:text-xl text-charcoal/70 font-semibold">
-                Engagement Rate
-              </p>
-            </motion.div>
-          </div>
+    <main className="bg-pearl text-charcoal">
+      <section className="relative overflow-hidden bg-navy text-cream pt-32 pb-24">
+        <div className="absolute inset-0">
+          <ParticlesBackground />
+          <div className="absolute inset-0 bg-gradient-to-br from-navy/60 via-transparent to-rose-gold/25 mix-blend-screen" />
         </div>
-      </Section>
 
-      {/* Introduction Section */}
-      <Section background="white" padding="large">
-        <div className="relative">
-          {/* Decorative background elements */}
-          <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#c9a96e]/5 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#b76e79]/5 rounded-full blur-3xl"></div>
-          
-          <div className="max-w-6xl mx-auto relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              {/* Left: Text Content */}
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">About Me</span>
-                <h2 className="text-display text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight">
-                  Building Authentic Connections
-                </h2>
-                <div className="h-1 w-24 gradient-gold mb-8"></div>
-                <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-                  I'm Yasmine, a content creator from Atlanta with over 300,000 followers across YouTube, Instagram, and TikTok. 
-                  I create lifestyle content focused on fashion, beauty, and wellness that my community loves.
-                </p>
-                <p className="text-lg text-charcoal/80 leading-relaxed mb-8">
-                  I work with brands to create authentic content and host events that connect with real people. 
-                  From product launches to brand partnerships, I bring genuine engagement to every collaboration.
-                </p>
-                <Link 
-                  href="/about"
-                  className="inline-flex items-center gap-3 gradient-rose text-white px-12 py-5 font-sans text-sm tracking-widest uppercase hover:shadow-2xl glow-effect transition-all duration-500 transform hover:-translate-y-1 group"
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
+          <div className="grid gap-14 lg:grid-cols-[1.05fr,0.95fr] items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <p className="text-xs uppercase tracking-[0.5em] text-cream/70 mb-6">
+                Content Director • Atlanta
+              </p>
+              <h1 className="text-display text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
+                Cinematic content that feels like a journal entry and performs like a campaign.
+              </h1>
+              <p className="text-lg md:text-xl text-cream/80 max-w-2xl">
+                I build immersive visual worlds for lifestyle, beauty, and fashion brands—pairing thoughtful
+                storytelling with measurable performance. Every brief becomes a lived-in narrative across video,
+                stills, and live experiences.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4 mt-10">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-white text-navy font-sans text-xs tracking-[0.3em] uppercase shadow-xl hover:-translate-y-1 transition"
                 >
-                  <span>Learn More</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                  Start a brief
+                  <span aria-hidden="true">↗</span>
                 </Link>
-              </motion.div>
+                <Link
+                  href="/gallery"
+                  className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/40 text-white font-sans text-xs tracking-[0.3em] uppercase hover:bg-white/10 transition"
+                >
+                  Watch the reel
+                </Link>
+              </div>
 
-              {/* Right: Visual Element */}
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="relative perspective-container"
-              >
-                <div className="relative h-[600px] rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
-                  <Image
-                    src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069"
-                    alt="Luxury event planning"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent"></div>
-                  
-                  {/* Floating Stats */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                {statHighlights.map((stat, index) => (
                   <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm p-6 shadow-2xl rounded-lg"
+                    key={stat.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                    className="rounded-3xl border border-white/15 bg-white/5 p-6 backdrop-blur-md"
                   >
-                    <div className="grid grid-cols-3 gap-4 text-center">
-                      <div>
-                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">300K+</div>
-                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Followers</div>
-                      </div>
-                      <div>
-                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">5M+</div>
-                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Views</div>
-                      </div>
-                      <div>
-                        <div className="text-3xl font-bold text-[#c9a96e] mb-1">7%</div>
-                        <div className="text-xs uppercase tracking-wider text-charcoal/70">Engagement</div>
-                      </div>
+                    <div className="text-4xl md:text-5xl font-bold text-gold mb-2">
+                      <AnimatedCounter end={stat.value} suffix={stat.suffix} decimals={stat.decimals} />
                     </div>
+                    <p className="text-sm uppercase tracking-[0.3em] text-cream/80">{stat.label}</p>
+                    <p className="text-sm text-cream/65 mt-2 leading-relaxed">{stat.subtext}</p>
                   </motion.div>
-                </div>
+                ))}
+              </div>
+            </motion.div>
 
-                {/* Decorative corner elements */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 border-2 border-[#c9a96e]/30 -z-10"></div>
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 border-2 border-[#c9a96e]/20 -z-10"></div>
-              </motion.div>
+            <div className="grid grid-cols-2 gap-4 lg:gap-6">
+              {heroCollage.map((frame, index) => (
+                <motion.div
+                  key={frame.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                  className={`relative overflow-hidden rounded-[28px] border border-white/15 bg-white/5 backdrop-blur-md ${frame.height}`}
+                >
+                  <Image
+                    src={frame.src}
+                    alt={frame.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
+                    priority={frame.priority}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
+                  <div className="absolute inset-0 flex flex-col justify-between p-5">
+                    <span className="text-[10px] uppercase tracking-[0.5em] text-white/70">
+                      {frame.badge}
+                    </span>
+                    <div>
+                      <p className="text-sm text-white/70">{frame.location}</p>
+                      <p className="text-lg font-semibold">{frame.title}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
-      </Section>
 
-
-      {/* Featured Gallery */}
-      <Section background="white" padding="large">
-        <div className="text-center mb-20 parallax-reveal">
-          <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-4 block">Recent Work</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-            Content & Events
-          </h2>
-          <div className="h-1 w-24 gradient-gold mx-auto mb-6"></div>
-          <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
-            A look at some recent brand collaborations and events
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {[
-            { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', title: 'Corporate Gala', category: 'Corporate' },
-            { src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80', title: 'Executive Summit', category: 'Corporate' },
-            { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80', title: 'Evening Soirée', category: 'Social' },
-            { src: 'https://images.unsplash.com/photo-1530023367847-a683933f4172?w=800&q=80', title: 'Milestone Celebration', category: 'Social' },
-            { src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80', title: 'Luxury Fundraiser', category: 'Gala' },
-            { src: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&q=80', title: 'Grand Ballroom Event', category: 'Gala' },
-          ].map((item, index) => (
-            <motion.div 
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group relative h-[500px] overflow-hidden cursor-pointer rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-cream"
-            >
-              <Image
-                src={item.src}
-                alt={item.title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                priority={index < 3}
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 p-6">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="h-1 w-20 gradient-gold mb-6"
-                ></motion.div>
-                <h3 className="text-white text-display text-3xl mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  {item.title}
-                </h3>
-                <p className="text-gold/90 text-xs uppercase tracking-[0.3em] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
-                  {item.category}
-                </p>
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="h-1 w-20 gradient-gold mt-6"
-                ></motion.div>
-              </div>
-              {/* Corner ornaments */}
-              <div className="absolute top-4 left-4 text-gold/0 group-hover:text-gold/70 transition-all duration-500 text-3xl">◆</div>
-              <div className="absolute bottom-4 right-4 text-gold/0 group-hover:text-gold/70 transition-all duration-500 text-3xl">◆</div>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="text-center mt-16">
-          <Link 
-            href="/gallery"
-            className="inline-block gradient-rose text-white px-12 py-4 rounded-lg font-sans text-sm tracking-widest uppercase shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-          >
-            View All Work
-          </Link>
-        </div>
-      </Section>
-
-      {/* Testimonials Carousel */}
-      <Section background="champagne" padding="large">
-        <div className="text-center mb-16 parallax-reveal">
-          <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Reviews</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-            What People Say
-          </h2>
-          <div className="h-1 w-24 gradient-gold mx-auto mb-4"></div>
-          <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
-            Feedback from brands and partners I've worked with
-          </p>
-        </div>
-
-        <TestimonialCarousel />
-      </Section>
-
-      {/* Social Media Platforms Showcase */}
-      <Section background="white" padding="large">
-        <div className="bg-navy -mx-6 md:-mx-12 px-6 md:px-12 py-20">
-        <div className="text-center mb-16">
-          <span className="text-gold text-sm tracking-[0.3em] uppercase mb-4 block">Follow Me</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Social Media
-          </h2>
-          <div className="ornamental-divider w-32 mx-auto mb-4"></div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-          {[
-            { 
-              platform: 'YouTube', 
-              followers: '130K+', 
-              icon: 'yt',
-              color: 'from-red-500 to-red-700',
-              engagement: 'High Views'
-            },
-            { 
-              platform: 'Instagram', 
-              followers: '100K+', 
-              icon: 'ig',
-              color: 'from-pink-500 via-purple-500 to-orange-500',
-              engagement: '6.3% Engagement'
-            },
-            { 
-              platform: 'TikTok', 
-              followers: '93K+', 
-              icon: 'tt',
-              color: 'from-cyan-400 to-pink-500',
-              engagement: '7.5% Engagement'
-            }
-          ].map((social, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="perspective-container"
-            >
-              <div className="bg-white/10 backdrop-blur-md p-8 text-center hover:-translate-y-2 transition-all duration-300 rounded-xl border border-white/20">
-                <div className={`w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${social.color} flex items-center justify-center text-white text-4xl font-bold shadow-2xl`}>
-                  {social.icon === 'yt' && '▶'}
-                  {social.icon === 'ig' && '📷'}
-                  {social.icon === 'tt' && '♪'}
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{social.platform}</h3>
-                <div className="text-4xl font-bold text-gold mb-2">{social.followers}</div>
-                <p className="text-white/70 text-sm">{social.engagement}</p>
-                <div className="h-1 w-16 gradient-gold mx-auto mt-4"></div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        </div>
-      </Section>
-
-      {/* Call to Action - Redesigned */}
-      <Section background="white" padding="large">
-        <div className="relative overflow-hidden gradient-mesh">
-          {/* Animated Background Pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#c9a96e] rounded-full blur-3xl float-smooth"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#b76e79] rounded-full blur-3xl float-smooth" style={{animationDelay: '2s'}}></div>
+          <div className="flex flex-wrap items-center gap-3 mt-12 text-[11px] uppercase tracking-[0.5em] text-white/60">
+            {partnerLogos.map((partner) => (
+              <span key={partner} className="px-4 py-2 border border-white/25 rounded-full">
+                {partner}
+              </span>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="max-w-6xl mx-auto text-center relative z-10">
+      <Section background="pearl" padding="large">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-4">Signature Formats</p>
+          <h2 className="text-display text-4xl md:text-5xl mb-4">
+            Content systems that travel from social feeds to live experiences.
+          </h2>
+          <p className="text-lg text-charcoal/70">
+            Each format is modular, meaning we capture long-form hero assets, cutdowns, stills, and interactive
+            moments in one shoot day.
+          </p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-3">
+          {signatureFormats.map((format, index) => (
             <motion.div
+              key={format.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="relative overflow-hidden rounded-[32px] border border-gold/15 bg-white shadow-2xl"
             >
-              <span className="text-[#c9a96e] text-sm tracking-[0.3em] uppercase mb-6 block">Let's Work Together</span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-8 leading-tight">
-                Ready to Collaborate?
-              </h2>
-              <div className="h-1 w-24 gradient-gold mx-auto mb-12"></div>
-              <p className="text-xl text-charcoal/80 leading-relaxed mb-16 max-w-3xl mx-auto">
-                Let's create something amazing together. Whether it's content creation, brand partnerships, or event hosting, 
-                I'm here to help your brand connect with my engaged community.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Link 
-                  href="/contact"
-                  className="group inline-flex items-center gap-4 gradient-rose text-white px-12 py-4 rounded-lg font-sans text-sm tracking-widest uppercase shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <span>Work With Me</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-                
-                <Link 
-                  href="/gallery"
-                  className="inline-flex items-center gap-4 bg-white border-2 border-[#c9a96e] text-[#c9a96e] px-12 py-4 rounded-lg font-sans text-sm tracking-widest uppercase hover:bg-[#c9a96e] hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
-                >
-                  <span>View Work</span>
-                </Link>
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src={format.image}
+                  alt={format.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />
+                <div className="absolute bottom-6 left-6 text-white uppercase tracking-[0.4em] text-xs">
+                  {format.stat}
+                </div>
               </div>
 
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.6 }}
-                viewport={{ once: true }}
-                className="text-sm text-charcoal/50 mt-12 tracking-wide"
-              >
-                Proudly serving Atlanta, Georgia • From Buckhead to Virginia-Highland
-              </motion.p>
+              <div className="p-8 flex flex-col gap-4">
+                <h3 className="text-2xl font-semibold">{format.title}</h3>
+                <p className="text-charcoal/70 leading-relaxed">{format.description}</p>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  {format.tags.map((tag) => (
+                    <span key={tag} className="px-4 py-1.5 rounded-full bg-pearl text-xs tracking-[0.3em] uppercase text-charcoal/70">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      <Section background="beige" padding="large">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12 gap-6">
+          <div>
+            <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-3">Visual journal</p>
+            <h2 className="text-display text-4xl md:text-5xl leading-tight">
+              Scene-stealing imagery built for scroll-stopping carousels.
+            </h2>
+          </div>
+          <Link
+            href="/gallery"
+            className="inline-flex items-center gap-3 px-8 py-3 rounded-full border border-charcoal/15 text-xs tracking-[0.3em] uppercase hover:-translate-y-1 transition"
+          >
+            View full archive
+            <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-[260px]">
+          {galleryShots.map((shot, index) => (
+            <motion.div
+              key={shot.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
+              className={`relative overflow-hidden rounded-[32px] border border-charcoal/10 bg-white ${shot.span}`}
+            >
+              <Image
+                src={shot.src}
+                alt={shot.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
+              <div className="absolute inset-x-6 bottom-6 text-white">
+                <p className="text-xs uppercase tracking-[0.4em] text-white/70">{shot.category}</p>
+                <h3 className="text-2xl font-semibold">{shot.title}</h3>
+                <p className="text-sm text-white/70">{shot.location}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      <Section background="white" padding="large">
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-4">Platform deep dive</p>
+          <h2 className="text-display text-4xl md:text-5xl mb-4">
+            One brief, tailored executions for every channel.
+          </h2>
+          <p className="text-charcoal/70">
+            From long-form storytelling to short-form loops, we build narratives that respect each platform’s native rhythm.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {platformBreakdown.map((card, index) => (
+            <motion.div
+              key={card.platform}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="relative rounded-[28px] border border-charcoal/10 bg-white shadow-lg p-8 overflow-hidden"
+            >
+              <div className={`absolute inset-0 bg-gradient-to-br ${card.color} opacity-60 pointer-events-none`} />
+              <div className="relative z-10">
+                <p className="text-xs uppercase tracking-[0.4em] text-charcoal/60 mb-3">{card.platform}</p>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-4xl font-semibold">{card.followers}</span>
+                  <span className="text-sm uppercase tracking-[0.4em]">Followers</span>
+                </div>
+                <p className="mt-4 text-charcoal/70">{card.format}</p>
+                <ul className="mt-6 space-y-2 text-sm text-charcoal/80">
+                  {card.highlights.map((item) => (
+                    <li key={item} className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-charcoal/70" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      <Section background="champagne" padding="large" className="relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none opacity-40">
+          <div className="absolute -top-20 right-0 w-72 h-72 bg-rose-gold/30 blur-3xl" />
+          <div className="absolute bottom-0 left-10 w-64 h-64 bg-gold/30 blur-3xl" />
+        </div>
+        <div className="relative z-10">
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-[0.4em] text-rose-gold mb-4">Proof of impact</p>
+            <h2 className="text-display text-4xl md:text-5xl mb-4">Brands come back because the work converts.</h2>
+            <p className="text-charcoal/70 max-w-2xl mx-auto">
+              From national retailers to boutique launches, collaborations include detailed reporting and creative iteration.
+            </p>
+          </div>
+          <TestimonialCarousel />
+        </div>
+      </Section>
+
+      <Section background="white" padding="large">
+        <div className="relative overflow-hidden rounded-[40px] border border-charcoal/10 bg-gradient-to-br from-rose-gold/20 via-pearl to-gold/15 p-12 md:p-16">
+          <div className="max-w-3xl">
+            <p className="text-xs uppercase tracking-[0.4em] text-charcoal/60 mb-4">Next launch</p>
+            <h2 className="text-display text-4xl md:text-5xl mb-6">
+              Let’s design a content ecosystem your audience wants to live in.
+            </h2>
+            <p className="text-lg text-charcoal/70 mb-10">
+              Strategy, production, and performance insights under one roof. Share the creative brief or invite me into the
+              ideation room—we’ll map stories that feel human and deliver metrics your team can celebrate.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-navy text-white text-xs tracking-[0.3em] uppercase shadow-2xl hover:-translate-y-1 transition"
+              >
+                Plan a campaign
+                <span aria-hidden="true">↗</span>
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-navy/30 text-xs tracking-[0.3em] uppercase hover:-translate-y-1 transition"
+              >
+                Meet the team
+              </Link>
+            </div>
           </div>
         </div>
       </Section>

@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  /* Luxury Color Palette - Enhanced Glamorous Edition */
-  --navy: #1a2332;
-  --sage: #a8b5a0;
-  --cream: #f8f6f3;
-  --beige: #e8e3dc;
+  /* Editorial Color Palette */
+  --navy: #050816;
+  --sage: #bcd8c1;
+  --cream: #fef9f3;
+  --beige: #f0e7dd;
   --white: #ffffff;
-  --charcoal: #3a3a3a;
-  --gold: #c9a96e;
-  --rose-gold: #b76e79;
-  --champagne: #f7e7ce;
-  --pearl: #faf8f3;
-  --burgundy: #800020;
-  --bronze: #cd7f32;
-  --silver: #c0c0c0;
+  --charcoal: #1d1c27;
+  --gold: #f4c689;
+  --rose-gold: #f2a7b4;
+  --champagne: #f6e6d4;
+  --pearl: #fdfbf7;
+  --burgundy: #8c2f4f;
+  --bronze: #d59a6f;
+  --silver: #d7d1c9;
   
   --background: var(--white);
   --foreground: var(--charcoal);
@@ -38,10 +38,10 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   
-  --font-serif: var(--font-playfair);
-  --font-display: var(--font-cinzel);
-  --font-elegant: var(--font-cormorant);
-  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-fraunces);
+  --font-display: var(--font-syne);
+  --font-elegant: var(--font-fraunces);
+  --font-sans: var(--font-space-grotesk);
 }
 
 * {
@@ -206,14 +206,14 @@ img {
 
 /* Glamorous Typography Utilities */
 .text-display {
-  font-family: var(--font-cinzel), var(--font-serif), serif;
-  letter-spacing: 0.05em;
+  font-family: var(--font-display), var(--font-serif), serif;
+  letter-spacing: 0.04em;
   font-weight: 600;
 }
 
 .text-elegant {
-  font-family: var(--font-cormorant), var(--font-serif), serif;
-  letter-spacing: 0.02em;
+  font-family: var(--font-elegant), var(--font-serif), serif;
+  letter-spacing: 0.015em;
 }
 
 /* Shimmer Effect for Luxury Elements - Slowed down to prevent seizures */

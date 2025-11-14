@@ -8,13 +8,15 @@ interface AnimatedCounterProps {
   duration?: number;
   suffix?: string;
   prefix?: string;
+  decimals?: number;
 }
 
 export default function AnimatedCounter({ 
   end, 
   duration = 2, 
   suffix = '', 
-  prefix = '' 
+  prefix = '',
+  decimals = 0
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -30,7 +32,8 @@ export default function AnimatedCounter({
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
 
-      setCount(Math.floor(progress * end));
+      const nextValue = progress >= 1 ? end : progress * end;
+      setCount(nextValue);
 
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
@@ -42,6 +45,11 @@ export default function AnimatedCounter({
     return () => cancelAnimationFrame(animationFrame);
   }, [isInView, end, duration]);
 
+  const formattedValue =
+    decimals > 0
+      ? count.toFixed(decimals)
+      : Math.floor(count).toLocaleString();
+
   return (
     <motion.span
       ref={ref}
@@ -50,7 +58,7 @@ export default function AnimatedCounter({
       transition={{ duration: 0.5 }}
       className="text-display"
     >
-      {prefix}{count}{suffix}
+      {prefix}{formattedValue}{suffix}
     </motion.span>
   );
 }
