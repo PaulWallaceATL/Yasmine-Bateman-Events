@@ -8,10 +8,10 @@ import TestimonialCarousel from '@/components/TestimonialCarousel';
 
 const heroCollage = [
   {
-    src: 'https://images.unsplash.com/photo-1464347744102-11db6282f854?auto=format&fit=crop&w=1200&q=80',
-    title: 'Midtown Skyline Gala',
-    location: 'Atlanta, GA',
-    badge: 'Corporate Gala',
+    src: '/yasmine-bateman.jpg',
+    title: 'Yasmine Bateman',
+    location: 'Atlanta Studio',
+    badge: 'Creative Director',
     priority: true,
   },
   {
