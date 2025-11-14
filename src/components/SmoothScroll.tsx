@@ -9,7 +9,6 @@ export default function SmoothScroll() {
       duration: 1.5,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -12 * t)),
       smoothWheel: true,
-      smoothTouch: true,
       wheelMultiplier: 0.65,
       touchMultiplier: 0.9,
     });
