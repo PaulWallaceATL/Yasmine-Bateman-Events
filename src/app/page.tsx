@@ -165,279 +165,461 @@ const partnerLogos = [
 export default function Home() {
   return (
     <main className="bg-pearl text-charcoal">
-      <section className="relative overflow-hidden bg-navy text-cream pt-28 pb-24">
+      {/* Hero Section - World Class Immersive */}
+      <section className="relative overflow-hidden bg-navy text-cream pt-32 pb-28 lg:pt-40 lg:pb-36">
+        {/* Cinematic Gradient Mesh Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#050816] via-[#0f1422] to-[#050816]" />
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(212,176,124,0.3),transparent_45%),radial-gradient(circle_at_80%_0%,rgba(216,143,124,0.25),transparent_40%)]" />
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(212,176,124,0.4),transparent_50%),radial-gradient(circle_at_85%_10%,rgba(216,143,124,0.3),transparent_45%),radial-gradient(circle_at_50%_90%,rgba(183,110,121,0.2),transparent_40%)]" />
         </div>
+        
+        {/* Animated Accent Lines */}
+        <div className="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-rose-gold/40 to-transparent" />
 
-        <div className="relative mx-auto max-w-6xl px-6">
-          <div className="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] items-start">
-            <div className="max-w-2xl">
-              <p className="text-xs uppercase tracking-[0.5em] text-cream/70">Luxury Event Studio • Atlanta</p>
-              <h1 className="mt-6 text-4xl font-semibold leading-tight text-white md:text-5xl">
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
+          {/* Desktop: Side-by-side layout | Mobile: Stack portrait under text */}
+          <div className="grid gap-12 lg:grid-cols-[1.2fr,0.8fr] lg:gap-16 items-center">
+            {/* Left Column: Hero Copy + CTAs + Stats */}
+            <div className="space-y-10">
+              {/* Eyebrow with subtle glow */}
+              <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 backdrop-blur-md">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-gold" />
+                <p className="text-[10px] uppercase tracking-[0.5em] text-cream/90 font-medium">
+                  Luxury Event Studio • Atlanta
+                </p>
+              </div>
+
+              {/* Hero Headline */}
+              <h1 className="text-5xl font-bold leading-[1.1] text-white md:text-6xl lg:text-7xl tracking-tight">
                 Immersive celebrations designed with editorial precision and production care.
               </h1>
-              <p className="mt-4 text-base text-cream/80 md:text-lg">
+
+              {/* Subheadline */}
+              <p className="text-lg text-cream/90 md:text-xl leading-relaxed max-w-2xl">
                 We plan multi-day summits, civic programs, and brand dinners that feel effortless for guests and
                 measurable for hosts. Every touchpoint—from save-the-date to farewell brunch—is considered.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              {/* CTA Buttons - Enhanced */}
+              <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
                 <Link
                   href="/contact"
-                  className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-10 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-navy shadow-xl transition hover:-translate-y-1 sm:w-auto"
+                  className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-10 py-5 text-xs font-bold uppercase tracking-[0.3em] text-navy shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(255,255,255,0.3)] sm:w-auto relative overflow-hidden"
                 >
-                  Plan your event
-                  <span aria-hidden>↗</span>
+                  <span className="relative z-10">Plan your event</span>
+                  <span aria-hidden className="relative z-10 transition-transform group-hover:translate-x-1">
+                    →
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/20 to-gold/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/40 px-8 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-white/10 sm:w-auto"
+                  className="group inline-flex w-full items-center justify-center gap-3 rounded-full border-2 border-white/40 bg-white/5 px-8 py-5 text-xs font-bold uppercase tracking-[0.3em] text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/60 hover:bg-white/10 sm:w-auto"
                 >
                   Explore services
+                  <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
                 </Link>
               </div>
 
-              <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {statHighlights.map((stat) => (
-                  <div key={stat.label} className="rounded-3xl border border-white/15 bg-white/5 p-6 backdrop-blur-md">
-                    <p className="text-3xl font-semibold text-gold md:text-4xl">
+              {/* Stats Cards - Elevated Glass Design */}
+              <div className="grid gap-5 sm:grid-cols-3">
+                {statHighlights.map((stat, index) => (
+                  <div
+                    key={stat.label}
+                    className="group relative overflow-hidden rounded-[28px] border border-white/20 bg-gradient-to-br from-white/10 to-white/5 p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-gold/40 hover:shadow-[0_20px_60px_rgba(212,176,124,0.3)]"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    {/* Shimmer effect on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                    
+                    <p className="relative text-4xl font-bold text-gold drop-shadow-lg md:text-5xl">
                       <AnimatedCounter end={stat.value} suffix={stat.suffix} decimals={stat.decimals} />
                     </p>
-                    <p className="mt-2 text-[11px] uppercase tracking-[0.35em] text-cream/70">{stat.label}</p>
-                    <p className="mt-3 text-sm text-cream/70">{stat.subtext}</p>
+                    <p className="relative mt-3 text-[10px] uppercase tracking-[0.4em] text-cream/80 font-semibold">
+                      {stat.label}
+                    </p>
+                    <p className="relative mt-3 text-sm leading-relaxed text-cream/70">{stat.subtext}</p>
+                    
+                    {/* Corner accent */}
+                    <div className="absolute top-0 right-0 h-16 w-16 bg-gradient-to-bl from-gold/20 to-transparent rounded-bl-3xl" />
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="relative h-[520px] w-full overflow-hidden rounded-[36px] border border-white/15 bg-white/5">
+            {/* Right Column: Yasmine Portrait - Desktop visible, Mobile hidden then shown below */}
+            <div className="relative h-[580px] w-full overflow-hidden rounded-[40px] border-2 border-white/20 bg-white/5 shadow-2xl backdrop-blur-sm lg:sticky lg:top-32 group">
               <Image
                 src="/yasmine-bateman.jpg"
                 alt="Portrait of Yasmine Bateman"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 40vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70" />
-              <div className="absolute inset-x-6 bottom-6 space-y-2 text-white">
-                <p className="text-[11px] uppercase tracking-[0.5em] text-white/70">Creative director</p>
-                <p className="text-2xl font-semibold">Yasmine Bateman</p>
-                <p className="text-sm text-white/70">Atlanta-based host of flawless events + better memories</p>
+              {/* Sophisticated overlay */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
+              
+              {/* Name badge with glass morphism */}
+              <div className="absolute inset-x-7 bottom-7 space-y-3 text-white">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 backdrop-blur-md">
+                  <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
+                  <p className="text-[10px] uppercase tracking-[0.5em] text-white/90 font-medium">Creative director</p>
+                </div>
+                <p className="text-3xl font-bold tracking-tight drop-shadow-lg">Yasmine Bateman</p>
+                <p className="text-base text-white/80 leading-relaxed">
+                  Atlanta-based host of flawless events + better memories
+                </p>
               </div>
+              
+              {/* Accent corner glow */}
+              <div className="absolute top-0 right-0 h-32 w-32 bg-gradient-to-bl from-gold/30 via-rose-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-3 text-[11px] uppercase tracking-[0.5em] text-white/60">
-            {partnerLogos.map((partner) => (
-              <span key={partner} className="rounded-full border border-white/20 px-4 py-2">
-                {partner}
-              </span>
-            ))}
+          {/* Partner Logos Marquee */}
+          <div className="mt-16 overflow-hidden">
+            <div className="flex gap-6 text-[11px] uppercase tracking-[0.5em] text-white/50 animate-marquee">
+              {[...partnerLogos, ...partnerLogos].map((partner, idx) => (
+                <span
+                  key={`${partner}-${idx}`}
+                  className="inline-flex items-center gap-3 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-6 py-3 backdrop-blur-sm transition-all hover:border-white/30 hover:bg-white/10 hover:text-white/70"
+                >
+                  {partner}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Host Promises Section - Atelier Card System */}
       <Section background="pearl" padding="large">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold">Tailored host support</p>
-          <h2 className="mt-4 text-3xl font-semibold text-navy md:text-4xl">What you can expect from us</h2>
-          <p className="mt-4 text-charcoal/70">
+        <div className="mx-auto max-w-4xl text-center space-y-5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-rose-gold/30 bg-rose-gold/5 px-5 py-2 backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-rose-gold animate-pulse" />
+            <p className="text-[10px] uppercase tracking-[0.5em] text-rose-gold font-semibold">Tailored host support</p>
+          </div>
+          <h2 className="text-4xl font-bold text-navy md:text-5xl lg:text-6xl tracking-tight leading-tight">
+            What you can expect from us
+          </h2>
+          <p className="text-lg text-charcoal/70 leading-relaxed max-w-2xl mx-auto">
             Designed for founders, CMOs, and private hosts who need clarity fast—on desktop and on the go.
           </p>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {hostPromises.map((promise) => (
-            <div key={promise.title} className="rounded-3xl border border-charcoal/10 bg-white/90 p-6 shadow-sm">
-              <p className="text-[11px] uppercase tracking-[0.4em] text-rose-gold/80">{promise.meta}</p>
-              <h3 className="mt-3 text-xl font-semibold text-navy">{promise.title}</h3>
-              <p className="mt-3 text-sm text-charcoal/70">{promise.description}</p>
+        <div className="mt-16 grid gap-8 md:grid-cols-3">
+          {hostPromises.map((promise, index) => (
+            <div
+              key={promise.title}
+              className="group relative overflow-hidden rounded-[32px] border-2 border-charcoal/10 bg-white p-8 shadow-xl transition-all duration-500 hover:-translate-y-3 hover:border-rose-gold/30 hover:shadow-[0_30px_70px_rgba(0,0,0,0.15)]"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 h-20 w-20 bg-gradient-to-bl from-rose-gold/20 to-transparent rounded-bl-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              {/* Shimmer on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-rose-gold/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              
+              <div className="relative space-y-4">
+                <div className="inline-flex items-center gap-2 rounded-full border border-rose-gold/20 bg-rose-gold/5 px-4 py-1.5">
+                  <p className="text-[10px] uppercase tracking-[0.45em] text-rose-gold/90 font-bold">{promise.meta}</p>
+                </div>
+                <h3 className="text-2xl font-bold text-navy leading-tight">{promise.title}</h3>
+                <p className="text-base text-charcoal/70 leading-relaxed">{promise.description}</p>
+              </div>
+              
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-rose-gold to-gold group-hover:w-full transition-all duration-700" />
             </div>
           ))}
         </div>
       </Section>
 
-      <Section background="pearl" padding="large">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold">Signature Services</p>
-          <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
+      {/* Signature Services Section */}
+      <Section background="white" padding="large">
+        <div className="mx-auto max-w-4xl text-center space-y-5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-rose-gold/30 bg-rose-gold/5 px-5 py-2 backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-rose-gold animate-pulse" />
+            <p className="text-[10px] uppercase tracking-[0.5em] text-rose-gold font-semibold">Signature Services</p>
+          </div>
+          <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl tracking-tight leading-tight">
             From first inquiry to last toast, every service tier is bespoke.
           </h2>
-          <p className="mt-4 text-lg text-charcoal/70">
+          <p className="text-xl text-charcoal/70 leading-relaxed max-w-3xl mx-auto">
             Planning, production, and storytelling live under one roof so you can stay focused on the guests.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-2">
+        <div className="mt-16 grid gap-10 lg:grid-cols-2">
           {serviceSuites.map((format) => (
-            <div key={format.title} className="overflow-hidden rounded-3xl border border-gold/15 bg-white shadow-xl">
-              <div className="relative h-64 overflow-hidden">
+            <div
+              key={format.title}
+              className="group relative overflow-hidden rounded-[40px] border-2 border-gold/20 bg-white shadow-2xl transition-all duration-700 hover:-translate-y-4 hover:border-gold/50 hover:shadow-[0_40px_90px_rgba(0,0,0,0.2)]"
+            >
+              <div className="relative h-80 overflow-hidden">
                 <Image
                   src={format.image}
                   alt={format.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80" />
-                <p className="absolute bottom-5 left-6 text-[11px] uppercase tracking-[0.4em] text-white">
-                  {format.stat}
-                </p>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90" />
+                
+                {/* Stat badge with glass morphism */}
+                <div className="absolute bottom-6 left-6">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/20 px-5 py-2.5 backdrop-blur-lg">
+                    <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
+                    <p className="text-[11px] uppercase tracking-[0.45em] text-white font-bold">{format.stat}</p>
+                  </div>
+                </div>
+                
+                {/* Spotlight effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-gold/0 via-gold/20 to-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               </div>
 
-              <div className="space-y-4 p-8">
-                <h3 className="text-2xl font-semibold">{format.title}</h3>
-                <p className="text-charcoal/70">{format.description}</p>
-                <div className="flex flex-wrap gap-3">
+              <div className="relative space-y-5 p-10">
+                <h3 className="text-3xl font-bold text-navy leading-tight">{format.title}</h3>
+                <p className="text-lg text-charcoal/70 leading-relaxed">{format.description}</p>
+                <div className="flex flex-wrap gap-3 pt-2">
                   {format.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-gold/20 px-4 py-1 text-xs uppercase tracking-[0.3em]"
+                      className="inline-flex items-center rounded-full border-2 border-gold/30 bg-gold/5 px-5 py-2 text-xs uppercase tracking-[0.35em] font-semibold text-navy transition-all hover:border-gold/60 hover:bg-gold/10"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
+                
+                {/* Bottom gradient accent */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gold via-rose-gold to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               </div>
             </div>
           ))}
         </div>
       </Section>
 
-      <Section background="white" padding="large">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-rose-gold">Recent environments</p>
-            <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
+      {/* Gallery Section - Spotlight Effect */}
+      <Section background="pearl" padding="large">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-2 rounded-full border border-rose-gold/30 bg-rose-gold/5 px-5 py-2 backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-rose-gold animate-pulse" />
+              <p className="text-[10px] uppercase tracking-[0.5em] text-rose-gold font-semibold">Recent environments</p>
+            </div>
+            <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl tracking-tight leading-tight max-w-3xl">
               Atlanta metro galas, summits, and neighborhood showcases in motion.
             </h2>
           </div>
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 rounded-full border border-charcoal/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] transition hover:-translate-y-1"
+            className="group inline-flex items-center gap-3 rounded-full border-2 border-navy/30 bg-navy/5 px-8 py-4 text-xs font-bold uppercase tracking-[0.35em] text-navy backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-navy/60 hover:bg-navy/10 hover:shadow-xl"
           >
             View full archive
-            <span aria-hidden>↗</span>
+            <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
           </Link>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {galleryShots.map((shot) => (
-            <div key={shot.title} className="relative h-72 overflow-hidden rounded-3xl border border-charcoal/10">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {galleryShots.map((shot, index) => (
+            <div
+              key={shot.title}
+              className="group relative h-96 overflow-hidden rounded-[32px] border-2 border-charcoal/10 shadow-xl transition-all duration-700 hover:-translate-y-3 hover:border-gold/40 hover:shadow-[0_30px_70px_rgba(0,0,0,0.2)]"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               <Image
                 src={shot.src}
                 alt={shot.title}
                 fill
-                className="object-cover transition duration-700 hover:scale-105"
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
-              <div className="absolute inset-x-5 bottom-5 text-white">
-                <p className="text-[11px] uppercase tracking-[0.35em] text-white/60">{shot.category}</p>
-                <h3 className="text-xl font-semibold">{shot.title}</h3>
-                <p className="text-sm text-white/70">{shot.location}</p>
+              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/90" />
+              
+              {/* Spotlight overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-radial from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              
+              <div className="absolute inset-x-6 bottom-6 space-y-2 text-white">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 backdrop-blur-md">
+                  <p className="text-[10px] uppercase tracking-[0.4em] text-white/90 font-bold">{shot.category}</p>
+                </div>
+                <h3 className="text-2xl font-bold leading-tight drop-shadow-lg">{shot.title}</h3>
+                <p className="text-sm text-white/80 font-medium">{shot.location}</p>
               </div>
+              
+              {/* Animated border accent */}
+              <div className="absolute inset-0 rounded-[32px] border-2 border-gold/0 group-hover:border-gold/50 transition-all duration-700" />
             </div>
           ))}
         </div>
       </Section>
 
+      {/* Client Journey Section */}
       <Section background="white" padding="large">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold">Client journey</p>
-          <h2 className="mt-4 text-3xl font-semibold text-navy md:text-4xl">How we move from idea to celebration</h2>
+        <div className="mx-auto max-w-4xl text-center space-y-5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-rose-gold/30 bg-rose-gold/5 px-5 py-2 backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-rose-gold animate-pulse" />
+            <p className="text-[10px] uppercase tracking-[0.5em] text-rose-gold font-semibold">Client journey</p>
+          </div>
+          <h2 className="text-4xl font-bold text-navy md:text-5xl lg:text-6xl tracking-tight leading-tight">
+            How we move from idea to celebration
+          </h2>
         </div>
-        <div className="mx-auto mt-12 grid max-w-5xl gap-6">
-          {journeyMoments.map((moment) => (
+        <div className="mx-auto mt-16 grid max-w-5xl gap-8">
+          {journeyMoments.map((moment, index) => (
             <div
               key={moment.label}
-              className="flex flex-col gap-4 rounded-3xl border border-charcoal/10 bg-white/80 p-6 shadow-sm md:flex-row md:items-center"
+              className="group relative flex flex-col gap-6 overflow-hidden rounded-[32px] border-2 border-charcoal/10 bg-gradient-to-br from-white to-pearl/30 p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:border-gold/40 hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] md:flex-row md:items-center md:gap-8"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 text-sm font-semibold text-navy">
+              {/* Shimmer effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              
+              {/* Number badge */}
+              <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-gold/30 bg-gradient-to-br from-gold/20 to-rose-gold/20 text-lg font-bold text-navy shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:border-gold/60 group-hover:shadow-xl md:h-20 md:w-20 md:text-xl">
                 {moment.label}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="flex-1">
-                <p className="text-xs uppercase tracking-[0.35em] text-charcoal/50">{moment.deliverable}</p>
-                <h3 className="mt-2 text-xl font-semibold text-navy">{moment.title}</h3>
-                <p className="mt-2 text-sm text-charcoal/70">{moment.detail}</p>
+              
+              <div className="relative flex-1 space-y-3">
+                <div className="inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5">
+                  <p className="text-[10px] uppercase tracking-[0.4em] text-charcoal/70 font-bold">{moment.deliverable}</p>
+                </div>
+                <h3 className="text-2xl font-bold text-navy leading-tight md:text-3xl">{moment.title}</h3>
+                <p className="text-base text-charcoal/70 leading-relaxed md:text-lg">{moment.detail}</p>
               </div>
+              
+              {/* Progress line connector (hidden on last item) */}
+              {index < journeyMoments.length - 1 && (
+                <div className="absolute bottom-0 left-10 h-8 w-0.5 translate-y-full bg-gradient-to-b from-gold/50 to-transparent md:left-14" />
+              )}
             </div>
           ))}
         </div>
       </Section>
 
+      {/* Service Pillars Section */}
       <Section background="pearl" padding="large">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold">Service blueprints</p>
-          <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
+        <div className="mx-auto max-w-4xl text-center space-y-5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-rose-gold/30 bg-rose-gold/5 px-5 py-2 backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-rose-gold animate-pulse" />
+            <p className="text-[10px] uppercase tracking-[0.5em] text-rose-gold font-semibold">Service blueprints</p>
+          </div>
+          <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl tracking-tight leading-tight">
             Each celebration is anchored by planning, design, and production care.
           </h2>
-          <p className="mt-4 text-charcoal/70">
-            These pillars keep logistics calm, aesthetics cohesive, and guests cared for—whether it’s 50 guests or 500.
+          <p className="text-lg text-charcoal/70 leading-relaxed max-w-3xl mx-auto">
+            These pillars keep logistics calm, aesthetics cohesive, and guests cared for—whether it's 50 guests or 500.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {servicePillars.map((card) => (
-            <div key={card.title} className="rounded-3xl border border-charcoal/10 bg-white p-8 shadow-lg">
-              <p className="text-xs uppercase tracking-[0.35em] text-charcoal/50">{card.metric}</p>
-              <h3 className="mt-3 text-2xl font-semibold">{card.title}</h3>
-              <p className="mt-3 text-charcoal/70">{card.highlight}</p>
-              <ul className="mt-6 space-y-2 text-sm text-charcoal/80">
-                {card.bullets.map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-charcoal/70" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+        <div className="mt-16 grid gap-8 md:grid-cols-3">
+          {servicePillars.map((card, index) => (
+            <div
+              key={card.title}
+              className="group relative overflow-hidden rounded-[32px] border-2 border-charcoal/10 bg-white p-10 shadow-xl transition-all duration-500 hover:-translate-y-4 hover:border-gold/40 hover:shadow-[0_30px_70px_rgba(0,0,0,0.15)]"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              {/* Shimmer effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 h-24 w-24 bg-gradient-to-bl from-gold/20 to-transparent rounded-bl-[32px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative space-y-5">
+                <div className="inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5">
+                  <p className="text-[10px] uppercase tracking-[0.4em] text-charcoal/70 font-bold">{card.metric}</p>
+                </div>
+                <h3 className="text-2xl font-bold text-navy leading-tight md:text-3xl">{card.title}</h3>
+                <p className="text-base text-charcoal/70 leading-relaxed">{card.highlight}</p>
+                <ul className="space-y-3 pt-4 text-sm text-charcoal/80">
+                  {card.bullets.map((item) => (
+                    <li key={item} className="flex items-start gap-3 leading-relaxed">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                      <span className="font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-gold to-rose-gold group-hover:w-full transition-all duration-700" />
             </div>
           ))}
         </div>
       </Section>
 
+      {/* Testimonials Section */}
       <Section background="champagne" padding="large">
-        <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-rose-gold">Proof of experience</p>
-          <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
+        <div className="mx-auto max-w-4xl text-center space-y-5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-rose-gold/30 bg-rose-gold/5 px-5 py-2 backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-rose-gold animate-pulse" />
+            <p className="text-[10px] uppercase tracking-[0.5em] text-rose-gold font-semibold">Proof of experience</p>
+          </div>
+          <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl tracking-tight leading-tight">
             Hosts trust us with their most meaningful gatherings.
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-charcoal/70">
+          <p className="text-xl text-charcoal/70 leading-relaxed max-w-3xl mx-auto">
             From black-tie galas to board retreats, we stay until every last candle is out and every recap is delivered.
           </p>
         </div>
-        <div className="mt-10">
+        <div className="mt-16">
           <TestimonialCarousel />
         </div>
       </Section>
 
+      {/* Final CTA Section - Cinematic */}
       <Section background="white" padding="large">
-        <div className="rounded-[36px] border border-charcoal/10 bg-gradient-to-br from-rose-gold/15 via-pearl to-gold/10 p-12 md:p-16">
-          <p className="text-xs uppercase tracking-[0.4em] text-charcoal/60">Next steps</p>
-          <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
-            Let’s plan an event experience your guests will never forget.
-          </h2>
-          <p className="mt-6 text-lg text-charcoal/70">
-            Share your date, guest count, and wish list—we’ll build a planning roadmap, introduce key partners, and stay
-            beside you through the final farewell.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-3 rounded-full bg-navy px-10 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow-xl transition hover:-translate-y-1"
-            >
-              Plan your event
-              <span aria-hidden>↗</span>
-            </Link>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-3 rounded-full border border-navy/30 px-8 py-4 text-xs font-semibold uppercase tracking-[0.3em] transition hover:-translate-y-1"
-            >
-              Meet the team
-            </Link>
+        <div className="group relative overflow-hidden rounded-[48px] border-2 border-charcoal/15 bg-gradient-to-br from-rose-gold/20 via-pearl to-gold/15 p-12 shadow-2xl transition-all duration-700 hover:border-gold/40 hover:shadow-[0_40px_90px_rgba(0,0,0,0.15)] md:p-20">
+          {/* Animated gradient mesh */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(212,176,124,0.4),transparent_50%),radial-gradient(circle_at_80%_70%,rgba(216,143,124,0.3),transparent_45%)]" />
           </div>
+          
+          {/* Shimmer effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500" />
+          
+          <div className="relative space-y-8">
+            <div className="space-y-5">
+              <div className="inline-flex items-center gap-2 rounded-full border border-charcoal/20 bg-white/60 px-5 py-2 backdrop-blur-md">
+                <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
+                <p className="text-[10px] uppercase tracking-[0.5em] text-charcoal/80 font-bold">Next steps</p>
+              </div>
+              <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl tracking-tight leading-tight max-w-4xl">
+                Let's plan an event experience your guests will never forget.
+              </h2>
+              <p className="text-xl text-charcoal/70 leading-relaxed max-w-3xl">
+                Share your date, guest count, and wish list—we'll build a planning roadmap, introduce key partners, and stay
+                beside you through the final farewell.
+              </p>
+            </div>
+            
+            <div className="flex flex-col gap-5 pt-4 sm:flex-row sm:flex-wrap">
+              <Link
+                href="/contact"
+                className="group/btn relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-navy px-12 py-5 text-xs font-bold uppercase tracking-[0.35em] text-white shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(13,19,33,0.4)]"
+              >
+                <span className="relative z-10">Plan your event</span>
+                <span aria-hidden className="relative z-10 transition-transform group-hover/btn:translate-x-1">
+                  →
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/30 to-gold/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
+              </Link>
+              <Link
+                href="/about"
+                className="group/btn inline-flex items-center justify-center gap-3 rounded-full border-2 border-navy/40 bg-white/60 px-10 py-5 text-xs font-bold uppercase tracking-[0.35em] text-navy backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-navy/70 hover:bg-white/80 hover:shadow-xl"
+              >
+                Meet the team
+                <span aria-hidden className="transition-transform group-hover/btn:translate-x-1">→</span>
+              </Link>
+            </div>
+          </div>
+          
+          {/* Corner accents */}
+          <div className="absolute top-0 right-0 h-32 w-32 bg-gradient-to-bl from-gold/30 to-transparent rounded-bl-[48px]" />
+          <div className="absolute bottom-0 left-0 h-32 w-32 bg-gradient-to-tr from-rose-gold/20 to-transparent rounded-tr-[48px]" />
         </div>
       </Section>
     </main>

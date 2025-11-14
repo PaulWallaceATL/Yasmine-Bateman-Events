@@ -905,7 +905,7 @@ a:hover {
   transform: rotate(4deg) translateY(-5px);
 }
 
-/* Infinite Scroll */
+/* Infinite Scroll / Marquee */
 @keyframes infinite-scroll {
   from {
     transform: translateX(0);
@@ -917,6 +917,20 @@ a:hover {
 
 .infinite-scroll {
   animation: infinite-scroll 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  will-change: transform;
 }
 
 /* Neumorphism */
