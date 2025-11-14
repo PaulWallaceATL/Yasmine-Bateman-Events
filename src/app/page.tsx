@@ -6,34 +6,6 @@ import Section from '@/components/Section';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 
-const heroCollage = [
-  {
-    src: '/yasmine-bateman.jpg',
-    title: 'Yasmine Bateman',
-    location: 'Atlanta Studio',
-    badge: 'Creative Director',
-    priority: true,
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
-    title: 'BeltLine Sunset Mixer',
-    location: 'Atlanta BeltLine',
-    badge: 'City Series',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=1200&q=80',
-    title: 'Buckhead Leadership Summit',
-    location: 'Buckhead, Atlanta',
-    badge: 'Executive Summit',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?auto=format&fit=crop&w=1200&q=80',
-    title: 'Savannah Riverfront Showcase',
-    location: 'Savannah, GA',
-    badge: 'Statewide Tour',
-  },
-];
-
 const statHighlights: Array<{
   label: string;
   value: number;
@@ -240,30 +212,21 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              {heroCollage.map((frame) => (
-                <div
-                  key={frame.title}
-                  className="relative min-h-[220px] overflow-hidden rounded-3xl border border-white/10 bg-white/5"
-                >
-                  <Image
-                    src={frame.src}
-                    alt={frame.title}
-                    fill
-                    priority={frame.priority}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/70" />
-                  <div className="absolute inset-0 flex flex-col justify-between p-5 text-white">
-                    <span className="text-[11px] uppercase tracking-[0.35em] text-white/70">{frame.badge}</span>
-                    <div>
-                      <p className="text-sm text-white/70">{frame.location}</p>
-                      <p className="text-lg font-semibold">{frame.title}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="relative h-[520px] w-full overflow-hidden rounded-[36px] border border-white/15 bg-white/5">
+              <Image
+                src="/yasmine-bateman.jpg"
+                alt="Portrait of Yasmine Bateman"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 40vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70" />
+              <div className="absolute inset-x-6 bottom-6 space-y-2 text-white">
+                <p className="text-[11px] uppercase tracking-[0.5em] text-white/70">Creative director</p>
+                <p className="text-2xl font-semibold">Yasmine Bateman</p>
+                <p className="text-sm text-white/70">Atlanta-based host of flawless events + better memories</p>
+              </div>
             </div>
           </div>
 

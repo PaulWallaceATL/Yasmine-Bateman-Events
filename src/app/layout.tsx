@@ -62,10 +62,10 @@ export const metadata: Metadata = {
     siteName: "YB Studio",
     images: [
       {
-        url: "/og-image.svg?v=flawless",
+        url: "/yasmine-bateman.jpg?v=share4",
         width: 1200,
-        height: 630,
-        alt: "YB Studio monogram with tagline Flawless Events Better Memories",
+        height: 1599,
+        alt: "Portrait of Yasmine Bateman at her Atlanta studio",
       },
     ],
   },
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     title: "YB Studio | Flawless Events, Better Memories",
     description:
       "Editorial events, intentional content, and guest-first experiences from Atlanta-based YB Studio.",
-    images: ["/og-image.svg?v=flawless"],
+    images: ["/yasmine-bateman.jpg?v=share4"],
   },
   icons: {
     icon: "/favicon.svg",
