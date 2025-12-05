@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  /* Modern Editorial Palette */
-  --navy: #0d1321;
-  --sage: #a4b7a7;
-  --cream: #f7f4ee;
-  --beige: #ece1d5;
+/* Soft Ivory & Blush Palette */
+  --navy: #3f2f36;
+  --sage: #f7dfe8;
+  --cream: #fff8f1;
+  --beige: #f4e5da;
   --white: #ffffff;
-  --charcoal: #111526;
-  --gold: #b973ff;
-  --rose-gold: #ff84da;
-  --champagne: #efe2ff;
-  --pearl: #fbf7f1;
-  --burgundy: #5f2b5b;
-  --bronze: #643dee;
-  --silver: #d6d1ca;
-  
+  --charcoal: #3b2a32;
+  --gold: #f3b8c6;
+  --rose-gold: #f8cddc;
+  --champagne: #fff1f6;
+  --pearl: #fffbf7;
+  --burgundy: #e3a8bb;
+  --bronze: #f4c6d6;
+  --silver: #efe6de;
+
   --background: var(--pearl);
   --foreground: var(--charcoal);
-  --accent: #d3806a;
+  --accent: #f2a5ba;
 }
 
 @theme inline {
@@ -50,8 +50,9 @@
 
 body {
   background:
-    radial-gradient(circle at 10% 20%, rgba(212, 176, 124, 0.18), transparent 45%),
-    radial-gradient(circle at 80% 0%, rgba(184, 148, 132, 0.16), transparent 40%),
+    radial-gradient(circle at 12% 20%, rgba(242, 194, 206, 0.24), transparent 45%),
+    radial-gradient(circle at 78% 5%, rgba(245, 214, 223, 0.2), transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(240, 205, 214, 0.16), transparent 45%),
     var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -66,7 +67,7 @@ body {
 /* Prevent layout shift during loading */
 html {
   overflow-x: hidden;
-  background: var(--white);
+  background: var(--pearl);
 }
 
 /* Better tap targets on mobile */
@@ -351,7 +352,7 @@ img {
 
 /* Metallic Text Effect */
 .text-gold {
-  background: linear-gradient(135deg, #c9a96e 0%, #f4e5c3 50%, #c9a96e 100%);
+  background: linear-gradient(135deg, #f3b8c6 0%, #ffdfe8 50%, #f3b8c6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -624,13 +625,13 @@ a:hover {
 /* Gradient Mesh Background */
 .gradient-mesh {
   background: 
-    radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.1) 0px, transparent 50%),
-    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 0.05) 0px, transparent 50%),
-    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 0.05) 0px, transparent 50%),
-    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 0.1) 0px, transparent 50%),
-    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.05) 0px, transparent 50%),
-    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.05) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.05) 0px, transparent 50%);
+    radial-gradient(at 27% 37%, hsla(340, 70%, 84%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 97% 21%, hsla(12, 78%, 84%, 0.12) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(330, 68%, 84%, 0.12) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(0, 68%, 92%, 0.18) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(25, 80%, 90%, 0.12) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(340, 76%, 88%, 0.12) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(10, 68%, 90%, 0.12) 0px, transparent 50%);
   animation: gradient-mesh-float 20s ease infinite;
   background-size: 200% 200%;
 }
@@ -937,8 +938,8 @@ a:hover {
 .neumorphic {
   background: var(--cream);
   box-shadow: 
-    20px 20px 60px #d1ccc4,
-    -20px -20px 60px #ffffff;
+    20px 20px 60px #e4d6cc,
+    -20px -20px 60px #fffdf7;
   border-radius: 20px;
   transition: all 0.3s ease;
 }

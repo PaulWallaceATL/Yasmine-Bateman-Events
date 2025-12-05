@@ -166,11 +166,11 @@ export default function Home() {
   return (
     <main className="bg-pearl text-charcoal">
       {/* Hero Section - World Class Immersive */}
-      <section className="relative overflow-hidden bg-navy text-cream pt-32 pb-28 lg:pt-40 lg:pb-36">
+      <section className="relative overflow-hidden bg-pearl text-charcoal pt-32 pb-28 lg:pt-40 lg:pb-36">
         {/* Cinematic Gradient Mesh Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050816] via-[#0f1422] to-[#050816]" />
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(212,176,124,0.4),transparent_50%),radial-gradient(circle_at_85%_10%,rgba(216,143,124,0.3),transparent_45%),radial-gradient(circle_at_50%_90%,rgba(183,110,121,0.2),transparent_40%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#fff7f0] via-[#ffe9f2] to-[#fff7f0]" />
+        <div className="absolute inset-0 opacity-60">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(242,185,200,0.35),transparent_50%),radial-gradient(circle_at_85%_10%,rgba(243,207,214,0.3),transparent_45%),radial-gradient(circle_at_50%_90%,rgba(242,168,189,0.25),transparent_40%)]" />
         </div>
         
         {/* Animated Accent Lines */}
@@ -183,20 +183,20 @@ export default function Home() {
             {/* Left Column: Hero Copy + CTAs + Stats */}
             <div className="space-y-10">
               {/* Eyebrow with subtle glow */}
-              <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 backdrop-blur-md">
+              <div className="inline-flex items-center gap-3 rounded-full border border-rose-gold/40 bg-white/80 px-5 py-2.5 backdrop-blur-md">
                 <span className="h-2 w-2 animate-pulse rounded-full bg-gold" />
-                <p className="text-[10px] uppercase tracking-[0.5em] text-cream/90 font-medium">
+                <p className="text-[10px] uppercase tracking-[0.5em] text-charcoal/70 font-medium">
                   Luxury Event Studio • Atlanta
                 </p>
               </div>
 
               {/* Hero Headline */}
-              <h1 className="text-5xl font-bold leading-[1.1] text-white md:text-6xl lg:text-7xl tracking-tight">
+              <h1 className="text-5xl font-bold leading-[1.1] text-charcoal md:text-6xl lg:text-7xl tracking-tight">
                 Immersive celebrations designed with editorial precision and production care.
               </h1>
 
               {/* Subheadline */}
-              <p className="text-lg text-cream/90 md:text-xl leading-relaxed max-w-2xl">
+              <p className="text-lg text-charcoal/80 md:text-xl leading-relaxed max-w-2xl">
                 We plan multi-day summits, civic programs, and brand dinners that feel effortless for guests and
                 measurable for hosts. Every touchpoint—from save-the-date to farewell brunch—is considered.
               </p>
@@ -205,17 +205,17 @@ export default function Home() {
               <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
                 <Link
                   href="/contact"
-                  className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-10 py-5 text-xs font-bold uppercase tracking-[0.3em] text-navy shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(255,255,255,0.3)] sm:w-auto relative overflow-hidden"
+                  className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-10 py-5 text-xs font-bold uppercase tracking-[0.3em] text-charcoal shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(243,184,198,0.35)] sm:w-auto relative overflow-hidden border border-rose-gold/50"
                 >
                   <span className="relative z-10">Plan your event</span>
                   <span aria-hidden className="relative z-10 transition-transform group-hover:translate-x-1">
                     →
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/20 to-gold/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/25 to-gold/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                 </Link>
                 <Link
                   href="/services"
-                  className="group inline-flex w-full items-center justify-center gap-3 rounded-full border-2 border-white/40 bg-white/5 px-8 py-5 text-xs font-bold uppercase tracking-[0.3em] text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/60 hover:bg-white/10 sm:w-auto"
+                  className="group inline-flex w-full items-center justify-center gap-3 rounded-full border-2 border-rose-gold/60 bg-rose-gold/15 px-8 py-5 text-xs font-bold uppercase tracking-[0.3em] text-charcoal backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-rose-gold hover:bg-rose-gold/25 sm:w-auto"
                 >
                   Explore services
                   <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
@@ -227,29 +227,29 @@ export default function Home() {
                 {statHighlights.map((stat, index) => (
                   <div
                     key={stat.label}
-                    className="group relative overflow-hidden rounded-[28px] border border-white/20 bg-gradient-to-br from-white/10 to-white/5 p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-gold/40 hover:shadow-[0_20px_60px_rgba(212,176,124,0.3)]"
+                    className="group relative overflow-hidden rounded-[28px] border border-rose-gold/30 bg-white/80 p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-gold/50 hover:shadow-[0_20px_60px_rgba(243,184,198,0.35)]"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     {/* Shimmer effect on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                     
                     <p className="relative text-4xl font-bold text-gold drop-shadow-lg md:text-5xl">
                       <AnimatedCounter end={stat.value} suffix={stat.suffix} decimals={stat.decimals} />
                     </p>
-                    <p className="relative mt-3 text-[10px] uppercase tracking-[0.4em] text-cream/80 font-semibold">
+                    <p className="relative mt-3 text-[10px] uppercase tracking-[0.4em] text-charcoal/70 font-semibold">
                       {stat.label}
                     </p>
-                    <p className="relative mt-3 text-sm leading-relaxed text-cream/70">{stat.subtext}</p>
+                    <p className="relative mt-3 text-sm leading-relaxed text-charcoal/70">{stat.subtext}</p>
                     
                     {/* Corner accent */}
-                    <div className="absolute top-0 right-0 h-16 w-16 bg-gradient-to-bl from-gold/20 to-transparent rounded-bl-3xl" />
+                    <div className="absolute top-0 right-0 h-16 w-16 bg-gradient-to-bl from-gold/25 to-transparent rounded-bl-3xl" />
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Right Column: Yasmine Portrait - Desktop visible, Mobile hidden then shown below */}
-            <div className="relative h-[580px] w-full overflow-hidden rounded-[40px] border-2 border-white/20 bg-white/5 shadow-2xl backdrop-blur-sm lg:sticky lg:top-32 group">
+            <div className="relative h-[580px] w-full overflow-hidden rounded-[40px] border-2 border-rose-gold/30 bg-white/80 shadow-2xl backdrop-blur-sm lg:sticky lg:top-32 group">
               <Image
                 src="/yasmine-bateman.jpg"
                 alt="Portrait of Yasmine Bateman"
@@ -259,32 +259,32 @@ export default function Home() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               {/* Sophisticated overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
+              <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-rose-gold/60" />
               
               {/* Name badge with glass morphism */}
-              <div className="absolute inset-x-7 bottom-7 space-y-3 text-white">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 backdrop-blur-md">
+              <div className="absolute inset-x-7 bottom-7 space-y-3 text-charcoal">
+                <div className="inline-flex items-center gap-2 rounded-full border border-rose-gold/40 bg-white/80 px-4 py-1.5 backdrop-blur-md">
                   <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
-                  <p className="text-[10px] uppercase tracking-[0.5em] text-white/90 font-medium">Creative director</p>
+                  <p className="text-[10px] uppercase tracking-[0.5em] text-charcoal/70 font-medium">Creative director</p>
                 </div>
                 <p className="text-3xl font-bold tracking-tight drop-shadow-lg">Yasmine Bateman</p>
-                <p className="text-base text-white/80 leading-relaxed">
+                <p className="text-base text-charcoal/80 leading-relaxed">
                   Atlanta-based host of flawless events + better memories
                 </p>
               </div>
               
               {/* Accent corner glow */}
-              <div className="absolute top-0 right-0 h-32 w-32 bg-gradient-to-bl from-gold/30 via-rose-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute top-0 right-0 h-32 w-32 bg-gradient-to-bl from-gold/30 via-rose-gold/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>
           </div>
 
           {/* Partner Logos Marquee */}
           <div className="mt-16 overflow-hidden">
-            <div className="flex gap-6 text-[11px] uppercase tracking-[0.5em] text-white/50 animate-marquee">
+            <div className="flex gap-6 text-[11px] uppercase tracking-[0.5em] text-charcoal/50 animate-marquee">
               {[...partnerLogos, ...partnerLogos].map((partner, idx) => (
                 <span
                   key={`${partner}-${idx}`}
-                  className="inline-flex items-center gap-3 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-6 py-3 backdrop-blur-sm transition-all hover:border-white/30 hover:bg-white/10 hover:text-white/70"
+                  className="inline-flex items-center gap-3 whitespace-nowrap rounded-full border border-rose-gold/30 bg-white/70 px-6 py-3 backdrop-blur-sm transition-all hover:border-rose-gold/60 hover:bg-white hover:text-charcoal"
                 >
                   {partner}
                 </span>
@@ -365,7 +365,7 @@ export default function Home() {
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90" />
+                <div className="absolute inset-0 bg-gradient-to-b from-rose-gold/30 via-transparent to-[#f4d6df]/75" />
                 
                 {/* Stat badge with glass morphism */}
                 <div className="absolute bottom-6 left-6">
@@ -415,7 +415,7 @@ export default function Home() {
           </div>
           <Link
             href="/gallery"
-            className="group inline-flex items-center gap-3 rounded-full border-2 border-navy/30 bg-navy/5 px-8 py-4 text-xs font-bold uppercase tracking-[0.35em] text-navy backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-navy/60 hover:bg-navy/10 hover:shadow-xl"
+            className="group inline-flex items-center gap-3 rounded-full border-2 border-rose-gold/50 bg-rose-gold/15 px-8 py-4 text-xs font-bold uppercase tracking-[0.35em] text-charcoal backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-rose-gold hover:bg-rose-gold/25 hover:shadow-xl"
           >
             View full archive
             <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
@@ -436,7 +436,7 @@ export default function Home() {
                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/90" />
+              <div className="absolute inset-0 bg-gradient-to-b from-rose-gold/25 via-transparent to-[#f2cddc]/70" />
               
               {/* Spotlight overlay on hover */}
               <div className="absolute inset-0 bg-gradient-radial from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -599,17 +599,17 @@ export default function Home() {
             <div className="flex flex-col gap-5 pt-4 sm:flex-row sm:flex-wrap">
               <Link
                 href="/contact"
-                className="group/btn relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-navy px-12 py-5 text-xs font-bold uppercase tracking-[0.35em] text-white shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(13,19,33,0.4)]"
+                className="group/btn relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-rose-gold px-12 py-5 text-xs font-bold uppercase tracking-[0.35em] text-charcoal shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(243,184,198,0.45)]"
               >
                 <span className="relative z-10">Plan your event</span>
                 <span aria-hidden className="relative z-10 transition-transform group-hover/btn:translate-x-1">
                   →
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/30 to-gold/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/35 to-gold/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
               </Link>
               <Link
                 href="/about"
-                className="group/btn inline-flex items-center justify-center gap-3 rounded-full border-2 border-navy/40 bg-white/60 px-10 py-5 text-xs font-bold uppercase tracking-[0.35em] text-navy backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-navy/70 hover:bg-white/80 hover:shadow-xl"
+                className="group/btn inline-flex items-center justify-center gap-3 rounded-full border-2 border-rose-gold/60 bg-white/70 px-10 py-5 text-xs font-bold uppercase tracking-[0.35em] text-charcoal backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-rose-gold hover:bg-white hover:shadow-xl"
               >
                 Meet the team
                 <span aria-hidden className="transition-transform group-hover/btn:translate-x-1">→</span>

@@ -156,7 +156,7 @@ export default function Blog() {
               </p>
               <Link 
                 href={`/blog/${featuredPost.slug}`}
-                className="inline-block bg-navy text-white px-8 py-3 font-sans text-sm tracking-widest uppercase hover:bg-sage transition-colors duration-300"
+                className="inline-block bg-rose-gold text-charcoal px-8 py-3 font-sans text-sm tracking-widest uppercase hover:bg-gold transition-colors duration-300"
               >
                 Read Article
               </Link>

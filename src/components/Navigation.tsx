@@ -83,7 +83,7 @@ export default function Navigation() {
               })}
               <Link
                 href="/contact"
-                className="ml-3 rounded-full bg-navy px-6 py-2 text-[11px] uppercase tracking-[0.45em] text-white transition hover:bg-charcoal"
+                className="ml-3 rounded-full bg-rose-gold px-6 py-2 text-[11px] uppercase tracking-[0.45em] text-charcoal transition hover:bg-gold"
               >
                 Plan
               </Link>
@@ -163,7 +163,7 @@ export default function Navigation() {
                   <Link
                     href="/contact"
                   onClick={() => setIsMenuOpen(false)}
-                  className="mt-4 block rounded-2xl bg-navy px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.35em] text-white"
+                  className="mt-4 block rounded-2xl bg-rose-gold px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.35em] text-charcoal"
                 >
                   Start a project
                 </Link>

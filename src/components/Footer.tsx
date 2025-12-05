@@ -54,20 +54,20 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-24 overflow-hidden bg-navy text-pearl">
-      <div className="absolute inset-0 opacity-50">
-        <div className="absolute -top-32 right-10 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-rose-gold/15 blur-3xl" />
+    <footer className="relative mt-24 overflow-hidden bg-champagne text-charcoal">
+      <div className="absolute inset-0 opacity-60">
+        <div className="absolute -top-32 right-10 h-72 w-72 rounded-full bg-gold/30 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-rose-gold/25 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 py-20 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.3fr,0.9fr,0.9fr]">
           <div>
-            <p className="text-xs uppercase tracking-[0.5em] text-cream/50">Yasmine Bateman</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+            <p className="text-xs uppercase tracking-[0.5em] text-charcoal/50">Yasmine Bateman</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-charcoal">
               Content Creator & Event Partner
             </h2>
-            <p className="mt-4 max-w-md text-base text-cream/80">
+            <p className="mt-4 max-w-md text-base text-charcoal/70">
               Creating authentic lifestyle content and brand partnerships based in Atlanta, Georgia,
               serving a community of 300K+ engaged followers.
             </p>
@@ -78,7 +78,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-pearl transition hover:border-white hover:bg-white/10"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-rose-gold/40 bg-white/80 text-charcoal transition hover:border-rose-gold hover:bg-white"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -88,13 +88,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-cream/50">Navigate</p>
-            <div className="mt-5 grid gap-3 text-sm text-cream/80">
+            <p className="text-xs uppercase tracking-[0.4em] text-charcoal/50">Navigate</p>
+            <div className="mt-5 grid gap-3 text-sm text-charcoal/70">
               {quickLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="flex items-center gap-2 rounded-full border border-white/0 px-4 py-2 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
+                  className="flex items-center gap-2 rounded-full border border-rose-gold/0 px-4 py-2 transition hover:border-rose-gold/50 hover:bg-white hover:text-charcoal"
                 >
                   <span className="inline-flex h-1.5 w-1.5 rounded-full bg-gold/60" />
                   {link.label}
@@ -104,17 +104,17 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-cream/50">Get in touch</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-charcoal/50">Get in touch</p>
             <div className="mt-5 space-y-5">
               {contactDetails.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="flex items-center gap-3 rounded-2xl border border-white/10 px-4 py-3 text-sm text-cream/80 transition hover:border-white/30 hover:text-white"
+                  className="flex items-center gap-3 rounded-2xl border border-rose-gold/30 px-4 py-3 text-sm text-charcoal/70 transition hover:border-rose-gold/60 hover:text-charcoal"
                 >
-                  <span className="rounded-full bg-white/10 p-2 text-gold">{item.icon}</span>
+                  <span className="rounded-full bg-white/70 p-2 text-gold">{item.icon}</span>
                   <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-cream/50">{item.label}</p>
+                    <p className="text-xs uppercase tracking-[0.3em] text-charcoal/50">{item.label}</p>
                     <p className="font-medium">{item.value}</p>
                   </div>
                 </a>
@@ -123,8 +123,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-white/10 pt-8 text-center">
-          <p className="text-sm text-cream/70">
+        <div className="mt-16 border-t border-rose-gold/40 pt-8 text-center">
+          <p className="text-sm text-charcoal/60">
             &copy; {currentYear} Yasmine Bateman. All rights reserved. Atlanta, Georgia.
           </p>
         </div>

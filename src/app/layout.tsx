@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   creator: "Yasmine Bateman",
   publisher: "Yasmine Bateman",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#a35bff" },
-    { media: "(prefers-color-scheme: dark)", color: "#7b34d5" },
+    { media: "(prefers-color-scheme: light)", color: "#fbeff4" },
+    { media: "(prefers-color-scheme: dark)", color: "#f6d8e4" },
   ],
   appleWebApp: {
     statusBarStyle: "black-translucent",
